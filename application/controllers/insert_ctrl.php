@@ -44,7 +44,8 @@ if ($this->form_validation->run() == FALSE) {
 
 } else {
 //Setting values for tabel columns
-$criptografado = md5($this->input->post('dsenha'));
+
+$criptografado = password_hash($this->input->post('dsenha'), PASSWORD_DEFAULT);
 $data = array(
 'nomecompleto' => $this->input->post('dnomecompleto'),
 'email' => $this->input->post('demail'),
