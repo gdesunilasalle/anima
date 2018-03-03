@@ -215,50 +215,54 @@
           </div>
         </div>
        
-            <!-- <img class="rounded-circle img-fluid" src="img/cadastro/1.jpg" alt=""> -->
-          
-          
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="contatoForm" name="sentMessage" novalidate>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="nomecompleto" type="text" placeholder="Nome Completo" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="text" placeholder="Email" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                    <div class="form-group">
-                    <input class="form-control" id="matricula" type="text" placeholder="Matricula La Salle" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                    <div class="form-group">
-                    <input class="form-control" id="logradouro" type="text" placeholder="Logradouro" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                    <div class="form-group">
-                    <input class="form-control" id="nunmero" type="text" placeholder="Número" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>                    
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="complemento" type="text" placeholder="Complemento" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                    <input class="form-control" id="cep" type="text" placeholder="CEP" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                    <input class="form-control" id="apelido" type="text" placeholder="Apelido" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                    <input class="form-control" id="senha" type="text" placeholder="Senha" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                    <p class="help-block text-danger"></p>
-                    <input class="form-control" id="confirmasenha" type="text" placeholder="Confirme a Senha" required data-validation-required-message="Campo obrigatório!">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
+<?php echo form_open('insert_ctrl'); ?>
+<?php if (isset($message)) { ?>
+<CENTER><h3 style="color:green;">Dados cadastrados com sucesso!</h3></CENTER><br>
+<?php } ?>
+
+<!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
+
+<?php echo form_error('dnomecompleto'); ?><br />
+<?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto')); ?><br />
+
+<?php echo form_error('dnomecompleto'); ?><br />
+<?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail')); ?><br />
+
+<?php echo form_error('dmatricula'); ?><br />
+<?php echo form_input(array('id' => 'dmatricula','placeholder' => 'Matrícula La Salle', 'name' => 'dmatricula')); ?><br />
+
+<?php echo form_error('dlogradouro'); ?><br />
+<?php echo form_input(array('id' => 'dlogradouro','placeholder' => 'Logradouro', 'name' => 'dlogradouro')); ?><br />
+
+<?php echo form_error('dnumero'); ?><br />
+<?php echo form_input(array('id' => 'dnumero','placeholder' => 'Número', 'name' => 'dnumero')); ?><br />
+
+<?php echo form_error('dcomplemento'); ?><br />
+<?php echo form_input(array('id' => 'dcomplemento','placeholder' => 'Complemento', 'name' => 'dcomplemento')); ?><br />
+
+<?php echo form_error('dcep'); ?><br />
+<?php echo form_input(array('id' => 'dcep','placeholder' => 'CEP (somente dígitos)', 'name' => 'dcep')); ?><br />
+
+<?php echo form_error('dapelido'); ?><br />
+<?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido')); ?><br />
+
+<?php echo form_error('dsenha'); ?><br />
+<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha')); ?><br />
+
+<?php echo form_error('dconfirmasenha'); ?><br />
+<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha')); ?><br />
+
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Submit')); ?>
+<?php echo form_close(); ?>
+
+<br/>
+<div id="fugo">
+                  
+              
+                  
+                  
+                  
+                  
                   
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
