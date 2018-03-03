@@ -60,8 +60,6 @@ $this->insert_model->form_insert($data);
 
 echo '<script>alert("Cadastro efetuado com sucesso!");</script>';
 redirect('index', 'refresh'); 
-
-
 //
 //
 //$data['message'] = 'Data Inserted Successfully';
