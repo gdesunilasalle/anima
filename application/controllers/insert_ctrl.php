@@ -28,7 +28,7 @@ $this->form_validation->set_rules('dapelido', 'Apelido (username)', 'required|mi
 //VALIDAÇÃO DA SENHA
 $this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[5]|max_length[100]');
 //VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
-$this->form_validation->set_rules('dconfirmasenha', 'Password Confirmation', 'required', 'required|min_length[5]|max_length[12]');
+$this->form_validation->set_rules('dconfirmasenha', 'Password Confirmation', 'required|matches[dsenha]|min_length[5]|max_length[12]');
 
 if ($this->form_validation->run() == FALSE) {
 
