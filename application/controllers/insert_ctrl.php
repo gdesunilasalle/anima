@@ -31,19 +31,20 @@ $this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[5]|max
 $this->form_validation->set_rules('dconfirmasenha', 'Password Confirmation', 'required', 'required|min_length[5]|max_length[12]');
 
 if ($this->form_validation->run() == FALSE) {
-    
-    
+
+
         //IMPLEMENTAR MENSAGEM DE ERRO ======================================
-    
+
    $this->session->set_flashdata("dnomecompleto","Não foi possível realizar o cadastro!");
         // redirect('orderManagement/index', 'refresh');
         //$this->load->view('index');
-   
+
         //IMPLEMENTAR MENSAGEM DE ERRO ======================================
 
 
 } else {
 //Setting values for tabel columns
+$criptografado = md5($this->input->post('dsenha'));
 $data = array(
 'nomecompleto' => $this->input->post('dnomecompleto'),
 'email' => $this->input->post('demail'),
@@ -53,13 +54,13 @@ $data = array(
 'complemento' => $this->input->post('dcomplemento'),
 'cep' => $this->input->post('dcep'),
 'apelido' => $this->input->post('dapelido'),
-'senha' => $this->input->post('dsenha'),
+'senha' => $criptografado,
 );
 //Transfering data to Model
 $this->insert_model->form_insert($data);
 
 echo '<script>alert("Cadastro efetuado com sucesso!");</script>';
-redirect('index', 'refresh'); 
+redirect('index', 'refresh');
 //
 //
 //$data['message'] = 'Data Inserted Successfully';
