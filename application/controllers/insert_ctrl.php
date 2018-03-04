@@ -5,7 +5,7 @@ function __construct() {
 parent::__construct();
 $this->load->model('insert_model');
 }
-function index() {
+public function index() {
 //Including validation library
 $this->load->library('form_validation');
 $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -35,9 +35,9 @@ if ($this->form_validation->run() == FALSE) {
 
         //IMPLEMENTAR MENSAGEM DE ERRO ======================================
 
-   $this->session->set_flashdata("dnomecompleto","Não foi possível realizar o cadastro!");
-        // redirect('orderManagement/index', 'refresh');
-        //$this->load->view('index');
+        $this->load->view('index');
+        
+        
 
         //IMPLEMENTAR MENSAGEM DE ERRO ======================================
 
@@ -61,7 +61,7 @@ $data = array(
 $this->insert_model->form_insert($data);
 
 echo '<script>alert("Cadastro efetuado com sucesso!");</script>';
-redirect(base_url().'#cadastro');
+redirect(base_url('#cadastro'));
 //
 //
 //$data['message'] = 'Data Inserted Successfully';

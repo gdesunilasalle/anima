@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
 
-        <a class="navbar-brand js-scroll-trigger" href="#">Anima?!</a>
+        <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url('login'); ?>">Anima?!</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -64,13 +64,13 @@
         <div class="intro-text">
           <div class="intro-lead-in">Seja muito bem vindo ao Anima!</div>
           <div class="intro-heading text-uppercase">JÁ SABE COMO FUNCIONA?<br>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">O que é?</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#oquee">O que é?</a>
         </div>
       </div>
     </header>
 
     <!-- O que é? -->
-    <section id="services">
+    <section id="oquee">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -223,36 +223,36 @@
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 
 <?php echo form_error('dnomecompleto'); ?><br />
-<?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto')); ?><br />
+<?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dnomecompleto'); ?><br />
-<?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail')); ?><br />
+<?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dmatricula'); ?><br />
-<?php echo form_input(array('id' => 'dmatricula','placeholder' => 'Matrícula La Salle', 'name' => 'dmatricula')); ?><br />
+<?php echo form_input(array('id' => 'dmatricula','placeholder' => 'Matrícula La Salle', 'name' => 'dmatricula', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dlogradouro'); ?><br />
-<?php echo form_input(array('id' => 'dlogradouro','placeholder' => 'Logradouro', 'name' => 'dlogradouro')); ?><br />
+<?php echo form_input(array('id' => 'dlogradouro','placeholder' => 'Logradouro', 'name' => 'dlogradouro', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dnumero'); ?><br />
-<?php echo form_input(array('id' => 'dnumero','placeholder' => 'Número', 'name' => 'dnumero')); ?><br />
+<?php echo form_input(array('id' => 'dnumero','placeholder' => 'Número', 'name' => 'dnumero', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dcomplemento'); ?><br />
-<?php echo form_input(array('id' => 'dcomplemento','placeholder' => 'Complemento', 'name' => 'dcomplemento')); ?><br />
+<?php echo form_input(array('id' => 'dcomplemento','placeholder' => 'Complemento', 'name' => 'dcomplemento', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dcep'); ?><br />
-<?php echo form_input(array('id' => 'dcep','placeholder' => 'CEP (somente dígitos)', 'name' => 'dcep')); ?><br />
+<?php echo form_input(array('id' => 'dcep','placeholder' => 'CEP (somente dígitos)', 'name' => 'dcep', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dapelido'); ?><br />
-<?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido')); ?><br />
+<?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dsenha'); ?><br />
-<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha')); ?><br />
+<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dconfirmasenha'); ?><br />
-<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha')); ?><br />
+<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'class'=>'form-control')); ?><br />
 
-<?php echo form_submit(array('id' => 'submit', 'value' => 'Submit')); ?>
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <?php echo form_close(); ?>
 
 <br/>
@@ -260,14 +260,15 @@
 
 
 
-
+<!-- ANALISAR E ARRUMAR ESSAS DIVS   -->
 
 
 
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Cadastrar</button>
+                  
+                  
                 </div>
 
               </div>
