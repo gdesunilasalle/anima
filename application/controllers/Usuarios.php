@@ -8,9 +8,12 @@ class Usuarios extends CI_Controller {
                 $this->load->view('index');
                 $this->load->helper('url');   
 	}
+        
         public function pag_login(){
-                $this->load->view('login');
+            $this->load->view('indice');
         }
+                
+                
         public function login(){
             $this->load->library('form_validation');
             $this->form_validation->set_rules('txt-user','Usuário'.'required|min_length[6]');
@@ -20,9 +23,9 @@ class Usuarios extends CI_Controller {
             }else{
                 $usuario=$this->input->post('txt-user');
                 $senha=$this->input->post('txt senha');
-                $this->db->where('user',$usuario);
+                $this->db->where('apelido',$usuario);
                 $this->db->where('senha',$senha); 
-                $userlogado = $this->db->get('usuario')->result();
+                $userlogado = $this->db->get('apelido')->result();
                 if(count($userlogado)==1){
                     $dadossessao['userlogado'] = $userlogado[0];
                     $dadossessao['logado'] = TRUE;
@@ -32,17 +35,8 @@ class Usuarios extends CI_Controller {
                     $dadossessao['userlogado'] = NULL;
                     $dadossessao['logado'] = FALSE;
                     $this->session->set_userdata($dadossessao);
-                    redirect(base_url('anima/login'));
+                    redirect(base_url('VOLTAR PARA INICIAL AJEITAR AQUI'));
                 }
             }
         }
 }
-
-
-
-
-
-
-
-
-
