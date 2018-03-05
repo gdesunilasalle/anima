@@ -33,13 +33,17 @@ $this->form_validation->set_rules('dconfirmasenha', 'Password Confirmation', 're
 if ($this->form_validation->run() == FALSE) {
 
 
-        //IMPLEMENTAR MENSAGEM DE ERRO ======================================
+        //IMPLEMENTAR REDIRECIONAMENTO PARA A ANCORA CADASTRO ======================================
 
-        $this->load->view('index');
-        
-        
+                $this->load->view('index/topo');
+                $this->load->view('index/inicio');
+                $this->load->view('index/oquee');
+                $this->load->view('index/comofunciona');
+                $this->load->view('index/cadastro');
+                $this->load->view('index/contato');
+                $this->load->view('index/rodape');                
 
-        //IMPLEMENTAR MENSAGEM DE ERRO ======================================
+        //IMPLEMENTAR REDIRECIONAMENTO PARA A ANCORA CADASTRO ======================================
 
 
 } else {
