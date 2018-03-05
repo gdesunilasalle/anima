@@ -39,6 +39,7 @@ section h3.section-subheading{
         padding:150px 0
     }
 }
+
 .btn{
     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight:700
@@ -58,6 +59,10 @@ section h3.section-subheading{
 }
 .btn-primary:active,.btn-primary:focus{
     box-shadow:0 0 0 .2rem rgba(254,209,55,.5)!important
+}
+.error{   // CSS da classe 'error' dos erros de cadastro
+color: #c0392b;
+
 }
 ::-moz-selection{
     background:#fed136;

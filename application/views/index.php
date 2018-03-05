@@ -156,7 +156,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/01-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/01-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Threads</h4>
@@ -170,7 +170,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/02-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/02-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Explore</h4>
@@ -184,7 +184,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/03-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Finish</h4>
@@ -198,7 +198,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/04-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/04-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Lines</h4>
@@ -212,7 +212,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/05-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/05-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Southwest</h4>
@@ -226,7 +226,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/comofunciona/06-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url('img/comofunciona/06-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
               <h4>Window</h4>
@@ -320,7 +320,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/1.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
               <h4>Pessoa 1</h4>
               <p class="text-muted">Lead Designer</p>
               <ul class="list-inline social-buttons">
@@ -344,7 +344,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/2.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/2.jpg'); ?>" alt="">
               <h4>Pessoa 2</h4>
               <p class="text-muted">Lead Marketer</p>
               <ul class="list-inline social-buttons">
@@ -368,7 +368,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 3</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -392,7 +392,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 4</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -416,7 +416,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 5</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -440,7 +440,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 6</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -464,7 +464,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 7</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -488,7 +488,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 8</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -512,7 +512,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" src="img/desenvolvedores/3.jpg" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 9</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -776,7 +776,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/comofunciona/04-full.jpg" alt="">
+                  <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/04-full.jpg'); ?>" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -810,7 +810,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/comofunciona/05-full.jpg" alt="">
+                  <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/05-full.jpg'); ?>" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -844,7 +844,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/comofunciona/06-full.jpg" alt="">
+                  <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/06-full.jpg'); ?>" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -871,7 +871,7 @@
 
     <!-- Contato form JavaScript -->
     <script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
-    <script src="js/contato_me.js"></script>
+    <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
 
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
