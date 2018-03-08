@@ -17,7 +17,7 @@
 <?php echo form_error('dnomecompleto'); ?><br />
 <?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto', 'class'=>'form-control')); ?><br />
 
-<?php echo form_error('dnomecompleto'); ?><br />
+<?php echo form_error('demail'); ?><br />
 <?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dmatricula'); ?><br />
@@ -39,10 +39,10 @@
 <?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dsenha'); ?><br />
-<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'type' => 'password', 'class'=>'form-control')); ?><br />
 
 <?php echo form_error('dconfirmasenha'); ?><br />
-<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'type' => 'password', 'class'=>'form-control')); ?><br />
 
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <?php echo form_close(); ?>
