@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost:8888/Anima_1_1c/';
+$config['base_url'] = 'http://localhost/Anima_1_1c/';
 
 /*
 |--------------------------------------------------------------------------
