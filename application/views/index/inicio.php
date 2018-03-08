@@ -18,8 +18,8 @@
                                         <br>
 					<h1>Acesso do usuário:</h1><br>
 				        <?php  
-                                            echo validation_errors('<div class="alert alert-danger">','</div>');
-                                            echo form_open('usuarios/login');
+                                            //echo validation_errors('<div class="alert alert-danger">','</div>');
+                                            //echo form_open('usuarios/login');
                                         ?>
                                         
 					<input type="text" name="user" placeholder="Apelido">
@@ -31,7 +31,7 @@
 					<input type="submit" name="login" class="login loginmodal-submit" value="Entrar">
                                         <button class="btn btn-primary btn-xl text-uppercase">Entrar</button>
                                         <?php  
-                                         echo form_close();
+                                         //echo form_close();
                                         ?>
                                      
 				  <div class="login-help">
@@ -42,22 +42,24 @@
 		  </div>
           
          FIM DO MODAL - VAMOS HABILITÁ-LO DEPOIS DOS TESTES DE LOGIN -->
+
+
           <?php  
                 echo validation_errors('<div class="alert alert-danger">','</div>');
                 echo form_open('usuarios/login');
           ?>
-                                        
-					<input type="text" name="txt-user" placeholder="Apelido">
-                                        <br>
-                                        <br>
-					<input type="password" name="txt-senha" placeholder="Senha">
-                                        <br>
-                                        <br>
-					
-                                        <button class="btn btn-primary btn-xl text-uppercase">Entrar</button>
-                                        <?php  
-                                         echo form_close();
-                                        ?>
+          <fieldset>
+          <div class="form-group">
+					<input class="form-control" type="text" name="txt-user" placeholder="Apelido">
+          </div>
+          <div class="form-group">
+					<input class="form-control" type="password" name="txt-senha" placeholder="Senha">
+          </div>					
+          <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Entrar</button>
+          </fieldset>
+          <?php  
+          echo form_close();
+          ?>
 
           <!-- FIM DO MODAL BOOTSTRAP - LAYER DE LOGIN -->
 

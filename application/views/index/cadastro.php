@@ -7,7 +7,7 @@
           </div>
         </div>
 
-<?php echo form_open('insert_ctrl'); ?>
+<?php echo form_open('cadastro'); ?>
 <?php if (isset($message)) { ?>
 <CENTER><h3 style="color:green;">Dados cadastrados com sucesso!</h3></CENTER><br>
 <?php } ?>

@@ -1,5 +1,5 @@
 <?php
-class insert_ctrl extends CI_Controller {
+class Cadastro extends CI_Controller {
 
 function __construct() {
 parent::__construct();
@@ -32,9 +32,6 @@ $this->form_validation->set_rules('dconfirmasenha', 'Password Confirmation', 're
 
 if ($this->form_validation->run() == FALSE) {
 
-
-        //IMPLEMENTAR REDIRECIONAMENTO PARA A ANCORA CADASTRO ======================================
-
                 $this->load->view('index/topo');
                 $this->load->view('index/inicio');
                 $this->load->view('index/oquee');
@@ -42,9 +39,6 @@ if ($this->form_validation->run() == FALSE) {
                 $this->load->view('index/cadastro');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');                
-
-        //IMPLEMENTAR REDIRECIONAMENTO PARA A ANCORA CADASTRO ======================================
-
 
 } else {
 //Setting values for tabel columns
@@ -64,13 +58,8 @@ $data = array(
 //Transfering data to Model
 $this->insert_model->form_insert($data);
 
-echo '<script>alert("Cadastro efetuado com sucesso!");</script>';
-redirect(base_url('#cadastro'));
-//
-//
-//$data['message'] = 'Data Inserted Successfully';
-//Loading View
-//$this->load->view('index', $data);
+redirect(base_url('sucesso'));
+
 }
 }
 }

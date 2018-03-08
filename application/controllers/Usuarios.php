@@ -3,39 +3,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller {
 
-	public function index()
-	{
-                $this->load->view('index');
-                $this->load->helper('url');   
+    public function __construct() {
+        parent::__construct();
+    }
+
+	public function index(){
+
+                $this->load->view('index/topo');
+                $this->load->view('index/inicio');
+                $this->load->view('index/oquee');
+                $this->load->view('index/comofunciona');
+                $this->load->view('index/cadastro');
+                $this->load->view('index/desenvolvedores');
+                $this->load->view('index/contato');
+                $this->load->view('index/rodape'); 
 	}
         
-        public function pag_login(){
-            $this->load->view('indice');
-        }
-                
-                
         public function login(){
             $this->load->library('form_validation');
-            $this->form_validation->set_rules('txt-user','Usuário'.'required|min_length[6]');
-            $this->form_validation->set_rules('txt-user','Senha'.'required|min_length[6]');
+            $this->form_validation->set_rules('txt-user','Apelido','required|min_length[6]');
+            $this->form_validation->set_rules('txt-senha','Senha','required|min_length[6]');
             if($this->form_validation->run() == FALSE){
-                $this->pag_login();
+                $this->index();
             }else{
                 $usuario=$this->input->post('txt-user');
-                $senha=$this->input->post('txt senha');
+                $senha=$this->input->post('txt-senha');
                 $this->db->where('apelido',$usuario);
                 $this->db->where('senha',$senha); 
-                $userlogado = $this->db->get('apelido')->result();
+                $userlogado = $this->db->get('cadastrousuario')->result();
                 if(count($userlogado)==1){
-                    $dadossessao['userlogado'] = $userlogado[0];
-                    $dadossessao['logado'] = TRUE;
-                    $this->session->set_userdata($dadossessao);
+                    $dadosSessao['userlogado'] = $userlogado[0];
+                    $dadosSessao['logado'] = TRUE;
+                    $this->session->set_userdata($dadosSessao);
                     redirect(base_url('anima'));
                 }else{
-                    $dadossessao['userlogado'] = NULL;
-                    $dadossessao['logado'] = FALSE;
-                    $this->session->set_userdata($dadossessao);
-                    redirect(base_url('VOLTAR PARA INICIAL AJEITAR AQUI'));
+                    $dadosSessao['userlogado'] = NULL;
+                    $dadosSessao['logado'] = FALSE;
+                    $this->session->set_userdata($dadosSessao);
+                    redirect(base_url('indice'));
+
                 }
             }
         }
