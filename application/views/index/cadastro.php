@@ -13,38 +13,38 @@
 <?php } ?>
 
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
+<div style=" border-color:white; height:330px; width:50%; margin:auto; display:-webkit-box;"><br>
 
-<?php echo form_error('dnomecompleto'); ?><br />
-<?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto', 'class'=>'form-control')); ?><br />
+<div style="border-color:white; width:120%; border-style:solid; float:left;">
+<?php echo form_error('dnomecompleto'); ?>
+<?php echo form_input(array('id' => 'dnomecompleto','placeholder' => 'Nome completo', 'name' => 'dnomecompleto', 'class'=>'form-control')); ?>
 
 <?php echo form_error('demail'); ?><br />
-<?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'demail','placeholder' => 'E-mail', 'name' => 'demail', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dmatricula'); ?><br />
-<?php echo form_input(array('id' => 'dmatricula','placeholder' => 'Matrícula La Salle', 'name' => 'dmatricula', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dmatricula','placeholder' => 'Matrícula La Salle', 'name' => 'dmatricula', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dlogradouro'); ?><br />
-<?php echo form_input(array('id' => 'dlogradouro','placeholder' => 'Logradouro', 'name' => 'dlogradouro', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dlogradouro','placeholder' => 'Logradouro', 'name' => 'dlogradouro', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dnumero'); ?><br />
-<?php echo form_input(array('id' => 'dnumero','placeholder' => 'Número', 'name' => 'dnumero', 'class'=>'form-control')); ?><br />
-
+<?php echo form_input(array('id' => 'dnumero','placeholder' => 'Número', 'name' => 'dnumero', 'class'=>'form-control')); ?>
+</div> <div style="border-color:white; width:60%; height:30px; border-style:solid; margin:auto; float:rigth;">
 <?php echo form_error('dcomplemento'); ?><br />
-<?php echo form_input(array('id' => 'dcomplemento','placeholder' => 'Complemento', 'name' => 'dcomplemento', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dcomplemento','placeholder' => 'Complemento', 'name' => 'dcomplemento', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dcep'); ?><br />
-<?php echo form_input(array('id' => 'dcep','placeholder' => 'CEP (somente dígitos)', 'name' => 'dcep', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dcep','placeholder' => 'CEP (somente dígitos)', 'name' => 'dcep', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dapelido'); ?><br />
-<?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dapelido','placeholder' => 'Apelido (username)', 'name' => 'dapelido', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dsenha'); ?><br />
-<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'type' => 'password', 'class'=>'form-control')); ?><br />
+<?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'type' => 'password', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dconfirmasenha'); ?><br />
-<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'type' => 'password', 'class'=>'form-control')); ?><br />
-
+<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'type' => 'password', 'class'=>'form-control')); ?>
+</div> </div> <center>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
-<?php echo form_close(); ?>
-
-<br/>
+<?php echo form_close(); ?> <br/></center>
