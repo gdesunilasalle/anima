@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325"  src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125"  src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
               <h4>Pessoa 1</h4>
               <p class="text-muted">Lead Designer</p>
               <ul class="list-inline social-buttons">
@@ -54,7 +54,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325" src="<?php echo base_url('img/desenvolvedores/2.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125" src="<?php echo base_url('img/desenvolvedores/2.jpg'); ?>" alt="">
               <h4>Pessoa 2</h4>
               <p class="text-muted">Lead Marketer</p>
               <ul class="list-inline social-buttons">
@@ -78,7 +78,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 3</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -102,7 +102,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 4</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -126,7 +126,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325"   src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125"   src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 5</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -150,7 +150,7 @@
           </div>
           <div class="col-sm-4">
             <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325"  src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" width="125" height="125"  src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
               <h4>Pessoa 6</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -172,82 +172,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325"   src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
-              <h4>Pessoa 7</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle"  width="325" height="325" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
-              <h4>Pessoa 8</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="desenvolvedores-member">
-              <img class="mx-auto rounded-circle" width="325" height="325" src="<?php echo base_url('img/desenvolvedores/3.jpg'); ?>" alt="">
-              <h4>Pessoa 9</h4>
-              <p class="text-muted">Lead Developer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Assim, estaremos sempre nos aperfeiçoando para melhorarmos cada vez mais a qualidade de nosso serviço. Obrigado por escolher o Anima.</p>
           </div>
         </div>
       </div>

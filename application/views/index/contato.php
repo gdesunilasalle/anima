@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Envie suas dúvidas, críticas ou sugestões por e-mail.</h2>
-            <h3 class="section-subheading text-muted">Entraremos em contato mais rápido possível</h3>
+            <h3 class="section-subheading text-muted">Entraremos em contato o mais rápido possível</h3>
           </div>
         </div>
         <div class="row">
