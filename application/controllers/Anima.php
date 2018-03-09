@@ -11,17 +11,18 @@ class Anima extends CI_Controller {
     }
 	
     public function index(){
+              $query = $this->HomeModel->getEmployees();
+              $data['EMPLOYEES'] = null;
+              if($query){
+              $data['EMPLOYEES'] =  $query;
+            }
 
                 $this->load->view('anima/topo');
-                $this->load->view('anima/main');
+                $this->load->view('anima/main',$data);
                 $this->load->view('anima/rodape');
-                
+
 	}
     
-    public function exibetransporte(){
-
-    $query = $this->db->select('*')->from('transportesemcurso')->get();
-    return $query->result();
-
-    }
+   
 }
+
