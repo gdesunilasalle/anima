@@ -43,20 +43,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#oquee">O que é?</a>
+              <a class="nav-link js-scroll-trigger" href="#oquee">Oferecer carona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#comofunciona">Como funciona?</a>
+              <a class="nav-link js-scroll-trigger" href="#comofunciona">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#cadastro">Cadastro</a>
+              <a class="nav-link js-scroll-trigger" href="#cadastro">Sair</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#desenvolvedores">Desenvolvedores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contato">Contato</a>
-            </li>
+            
           </ul>
         </div>
       </div>

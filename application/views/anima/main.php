@@ -1,5 +1,21 @@
-<?php
+<header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          
+          
+          
+          </div>
 
-echo ("<h1>O que tá rolando:</h1>");
 
-?>
+          
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+        </div>
+    </header>

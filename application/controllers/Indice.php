@@ -5,9 +5,13 @@ class Indice extends CI_Controller {
 
 public function __construct() {
         parent::__construct();
-        if(!$this->session->userdata('logado')){
+
+    }
+        public function index()
+        {
+                if(!$this->session->userdata('logado')){
                
-                
+                $this->load->view('index/topo');
                 $this->load->view('index/inicio');
                 $this->load->view('index/oquee');
                 $this->load->view('index/comofunciona');
@@ -15,15 +19,12 @@ public function __construct() {
                 $this->load->view('index/desenvolvedores');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
-        }
-    }
-        public function index()
-        {
+        }else{
                 $this->load->view('anima/topo');
                 $this->load->view('anima/main');
                 $this->load->view('anima/rodape');
         }
-    
-                
+          
+        }
 }
 
