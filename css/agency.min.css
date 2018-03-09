@@ -138,6 +138,7 @@ img::-moz-selection{
         padding:12px 0
     }
     header.mastheadlg{
+      //classe criada
         text-align:center;
         color:#fff;
         background-image:url(../img/header-bg.jpg);
