@@ -26,7 +26,8 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Sua mensagem *" required data-validation-required-message="Entre com a mensagem."></textarea>
+
+                    <textarea class="form-control" id="message" style="margin-top: 0px; margin-bottom: 0px; height: 146px;" placeholder="Sua mensagem *" required data-validation-required-message="Entre com a mensagem."></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
