@@ -1,5 +1,5 @@
 <?php
 
-echo ("<h1>Seja bem vindo à SEGUNDA FASE do projeto ANIMA!</h1>");
+echo ("<h1>O que tá rolando:</h1>");
 
 ?>

@@ -3,10 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Indice extends CI_Controller {
 
-
-	public function index()
-	{
-     
+public function __construct() {
+        parent::__construct();
+        if(!$this->session->userdata('logado')){
                 $this->load->view('index/topo');
                 $this->load->view('index/inicio');
                 $this->load->view('index/oquee');
@@ -15,7 +14,15 @@ class Indice extends CI_Controller {
                 $this->load->view('index/desenvolvedores');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
-     
-	}
+        }
+    }
+        public function index()
+        {
+                $this->load->view('anima/topo');
+                $this->load->view('anima/main');
+                $this->load->view('anima/rodape');
+        }
+    
                 
 }
+
