@@ -45,7 +45,6 @@
 
 
           <?php  
-
                 echo form_error('txt-user');
                 echo form_error('txt-senha');
 
