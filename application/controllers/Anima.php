@@ -12,6 +12,8 @@ class Anima extends CI_Controller {
 	public function index()
 	{
   
-                $this->load->view('anima/main');
+                $this->load->view('anima/topo');
+                $this->load->view('anima/transportes');
+                $this->load->view('anima/rodape');
 	}
 }

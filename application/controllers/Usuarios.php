@@ -7,7 +7,7 @@ class Usuarios extends CI_Controller {
         parent::__construct();
     }
 
-	public function index(){
+    public function index(){
 
                 $this->load->view('index/topo');
                 $this->load->view('index/inicio');
@@ -17,7 +17,7 @@ class Usuarios extends CI_Controller {
                 $this->load->view('index/desenvolvedores');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
-	}
+    }
 
   public function login()
 {

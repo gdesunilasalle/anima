@@ -38,7 +38,9 @@ if ($this->form_validation->run() == FALSE) {
                 $this->load->view('index/comofunciona');
                 $this->load->view('index/cadastro');
                 $this->load->view('index/contato');
-                $this->load->view('index/rodape');                
+                $this->load->view('index/rodape');
+           
+
 
 } else {
 //Setting values for tabel columns

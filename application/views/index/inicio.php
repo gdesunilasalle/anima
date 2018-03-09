@@ -45,7 +45,11 @@
 
 
           <?php  
-                echo validation_errors('<div class="alert alert-danger">','</div>');
+
+                echo form_error('txt-user');
+                echo form_error('txt-senha');
+
+                //echo validation_errors('<div class="alert alert-danger">','</div>');
                 echo form_open('usuarios/login');
           ?>
           <fieldset>
