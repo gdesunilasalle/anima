@@ -137,6 +137,17 @@ img::-moz-selection{
         font-size:1.25em;
         padding:12px 0
     }
+    header.mastheadlg{
+        text-align:center;
+        color:#fff;
+        background-image:url(../img/header-bg.jpg);
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:center center;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover
 }
 header.masthead{
     text-align:center;
