@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <header class="masthead">
       <div class="container">
         <div class="intro-text">
@@ -22,8 +21,6 @@
 
 
 
-=======
-
           <header class="mastheadlg">
                 <div class="container">
                   <div class="intro-text">
@@ -37,7 +34,6 @@
           </div>
 
 
->>>>>>> 0d3d034f6d905eebe8f9b6ee3e84d60d7a31802a
 
 
 
