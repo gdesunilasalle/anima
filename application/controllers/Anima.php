@@ -9,10 +9,19 @@ class Anima extends CI_Controller {
                 redirect(base_url());
         }
     }
-	public function index()
-	{
+	
+    public function index(){
+
                 $this->load->view('anima/topo');
                 $this->load->view('anima/main');
                 $this->load->view('anima/rodape');
+                
 	}
+    
+    public function exibetransporte(){
+
+    $query = $this->db->select('*')->from('transportesemcurso')->get();
+    return $query->result();
+
+    }
 }
