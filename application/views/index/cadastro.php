@@ -42,7 +42,7 @@
 <?php echo form_input(array('id' => 'dsenha','placeholder' => 'Senha', 'name' => 'dsenha', 'type' => 'password', 'class'=>'form-control')); ?>
 
 <?php echo form_error('dconfirmasenha'); ?><br />
-<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'type' => 'password', 'class'=>'form-control')); ?>
-
+<?php echo form_input(array('id' => 'dconfirmasenha','placeholder' => 'Confirme a senha', 'name' => 'dconfirmasenha', 'type' => 'password', 'class'=>'form-control')); ?><br />
+<center>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
-<?php echo form_close(); ?> <br/>
+<?php echo form_close(); ?> <br/></center>
