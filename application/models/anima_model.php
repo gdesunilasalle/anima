@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Anima extends CI_Model {
 
  function anima(){
@@ -13,3 +14,4 @@ class Anima extends CI_Model {
   $query = $this->db->get();
   return $query->result();
  }
+}
