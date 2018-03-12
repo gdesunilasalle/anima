@@ -126,6 +126,7 @@ img::-moz-selection{
         transition:all .3s
     }
     #mainNav .navbar-nav .nav-item .nav-link{
+        text-shadow: 0.001em 0.03em 0.05em #333;
         padding:1.1em 1em!important
     }
     #mainNav.navbar-shrink{
@@ -178,6 +179,7 @@ header.masthead .intro-text .intro-heading{
     font-weight:700;
     line-height:50px;
     margin-bottom:25px;
+    text-shadow: 0.001em 0.03em 0.05em #333;
     font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif
 }
 @media (min-width:768px){
@@ -190,6 +192,7 @@ header.masthead .intro-text .intro-heading{
         font-style:italic;
         line-height:40px;
         margin-bottom:25px;
+        text-shadow: 0.001em 0.03em 0.05em #333;
         font-family:'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif
     }
     header.masthead .intro-text .intro-heading{
