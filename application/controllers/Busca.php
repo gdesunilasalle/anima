@@ -1,11 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Animas extends CI_Controller {
+class Busca extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('anima_model');
         if(!$this->session->userdata('logado')){
                 redirect(base_url());
         }
@@ -14,15 +13,15 @@ class Animas extends CI_Controller {
 	public function index(){
 
         parent::Controller();
-        $this->load->model('anima');
+        $this->load->model('anima_model');
         $query = $this->anima->getCaronas();
         $data['CARONAS'] = null;
         if($query){
             $data['CARONAS'] =  $query;
         }
 
-                $this->load->view('anima/topo');
-                $this->load->view('anima/main', $data);
-                $this->load->view('anima/rodape');
+                $this->load->view('anima/busca/topo');
+                $this->load->view('anima/busca/main', $data);
+                $this->load->view('index/rodape');
 	}
 }

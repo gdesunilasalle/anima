@@ -43,13 +43,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#oquee">Oferecer carona</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url(); ?>">Buscar carona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#comofunciona">Contato</a>
+              <a class="nav-link js-scroll-trigger" href="">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#cadastro">Sair</a>
+              <a class="nav-link js-scroll-trigger" href="">Sair</a>
             </li>
             
           </ul>

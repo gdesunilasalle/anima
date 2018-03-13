@@ -4,25 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Usuarios extends CI_Controller
 {
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
     public function index()
-    {
-
-        $this->load->view('index/topo');
-        $this->load->view('index/inicio');
-        $this->load->view('index/oquee');
-        $this->load->view('index/comofunciona');
-        $this->load->view('index/cadastro');
-        $this->load->view('index/desenvolvedores');
-        $this->load->view('index/contato');
-        $this->load->view('index/rodape');
-    }
-
-    public function login()
     {
         try {
             $this->load->library("form_validation");
@@ -53,7 +35,7 @@ class Usuarios extends CI_Controller
                 $dadosSessao['userlogado'] = $userlogado[0];
                 $dadosSessao['logado']     = TRUE;
                 $this->session->set_userdata($dadosSessao);
-                redirect(base_url('anima'));
+                redirect(base_url());
             }
         }
         catch (Exception $e) {
@@ -62,8 +44,5 @@ class Usuarios extends CI_Controller
         catch (\Error $e) {
             echo $e->getMessage(); // Pega a mensagem de erro e printa
         }
-
     }
-
-
 }

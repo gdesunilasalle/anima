@@ -2,10 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Anima extends CI_Model {
+class Anima_model extends CI_Model {
 
  function anima(){
   parent::Model();
+  
  }
 
  function getCaronas(){

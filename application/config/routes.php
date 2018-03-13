@@ -52,4 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'indice';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-//$route['anima'] = '';
+//$route['carona/(:any)'] = 'caronas/index/$1';
+//$route['postagem/(:num)/(:any)'] = 'postagens/index/$1/$2';
+//$route[''] = '';

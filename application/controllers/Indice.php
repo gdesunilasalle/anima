@@ -20,9 +20,9 @@ public function __construct() {
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
         }else{
-                $this->load->view('anima/topo');
-                $this->load->view('anima/main');
-                $this->load->view('anima/rodape');
+                $this->load->view('anima/busca/topo');
+                $this->load->view('anima/busca/main');
+                $this->load->view('index/rodape');
         }
           
         }
