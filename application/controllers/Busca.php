@@ -19,9 +19,10 @@ class Busca extends CI_Controller {
         if($query){
             $data['CARONAS'] =  $query;
         }
+        $data = array('CARONAS' => $x);
 
                 $this->load->view('anima/busca/topo');
-                $this->load->view('anima/busca/main', $data);
+                $this->load->view('anima/busca/main', $x);
                 $this->load->view('index/rodape');
 	}
 }

@@ -3,16 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller
 {
-
     public function index()
     {
         try {
             $this->load->library("form_validation");
 
-
             $this->form_validation->set_rules('txt-user', 'Apelido', 'required|min_length[6]');
             $this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[6]');
-
 
             if (!$this->form_validation->run())
                 throw new UnexpectedValueException(validation_errors()); // Erros adversos de validaÃ§Ã£o
@@ -39,7 +36,16 @@ class Usuarios extends CI_Controller
             }
         }
         catch (Exception $e) {
-            echo $e->getMessage(); // Pega a mensagem da excessÃ£o e printa
+            // Pega a mensagem da excessÃ£o e printa
+                $data = array('e' => $e);
+                $this->load->view('index/topo');
+                $this->load->view('index/inicio',$data);
+                $this->load->view('index/oquee');
+                $this->load->view('index/comofunciona');
+                $this->load->view('index/cadastro');
+                $this->load->view('index/desenvolvedores');
+                $this->load->view('index/contato');
+                $this->load->view('index/rodape');
         }
         catch (\Error $e) {
             echo $e->getMessage(); // Pega a mensagem de erro e printa

@@ -2,13 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Anima_model extends CI_Model {
-
- function anima(){
-  parent::Model();
-  
- }
-
+class anima_model extends CI_Model {
+function __construct() {
+parent::__construct();
+}
  function getCaronas(){
   $this->db->select("origem,destino,horario");
   $this->db->from('transportesemcurso');
