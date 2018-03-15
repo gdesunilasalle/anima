@@ -22,8 +22,6 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="list-inline-item">

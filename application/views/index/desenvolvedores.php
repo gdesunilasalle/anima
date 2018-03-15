@@ -45,8 +45,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+
                   </a>
                 </li>
               </ul>
@@ -69,8 +68,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+
                   </a>
                 </li>
               </ul>
@@ -93,8 +91,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+
                   </a>
                 </li>
               </ul>
@@ -117,8 +114,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+                  
+
                   </a>
                 </li>
               </ul>
@@ -141,8 +138,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+
+
                   </a>
                 </li>
               </ul>
@@ -165,8 +162,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
+
+
                   </a>
                 </li>
               </ul>
