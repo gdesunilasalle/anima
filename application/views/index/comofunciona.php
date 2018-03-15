@@ -3,7 +3,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Como funciona?</h2>
-            <h3 class="section-subheading text-muted">A maneira mais prática e segura de voltar para casa.</h3>
+            <h3 class="section-subheading text-muted">A maneira mais prática e segura de voltar para casa.<br>Saiba mais.</h3>
           </div>
         </div>
         <div class="row">
@@ -17,8 +17,8 @@
               <img class="img-fluid" src="<?php echo base_url('img/comofunciona/01-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Carona</h4>
+              <p class="text-muted">Timeline</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 comofunciona-item">
@@ -32,7 +32,7 @@
             </a>
             <div class="comofunciona-caption">
               <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <p class="text-muted">Inovação</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 comofunciona-item">
@@ -45,8 +45,8 @@
               <img class="img-fluid" src="<?php echo base_url('img/comofunciona/03-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Reunam-se</h4>
+              <p class="text-muted">Identifique</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 comofunciona-item">
@@ -59,8 +59,8 @@
               <img class="img-fluid" src="<?php echo base_url('img/comofunciona/04-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Meios de Transportes</h4>
+              <p class="text-muted">Surpreenda-se</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 comofunciona-item">
@@ -73,8 +73,8 @@
               <img class="img-fluid" src="<?php echo base_url('img/comofunciona/05-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Segurança</h4>
+              <p class="text-muted">Diferencial</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 comofunciona-item">
@@ -87,8 +87,8 @@
               <img class="img-fluid" src="<?php echo base_url('img/comofunciona/06-thumbnail.jpg'); ?>" alt="">
             </a>
             <div class="comofunciona-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Amigos</h4>
+              <p class="text-muted">Faça parte</p>
             </div>
           </div>
         </div>
