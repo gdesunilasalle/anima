@@ -1,7 +1,7 @@
 <h1><div class="intro-heading text-uppercase"><center>Esteja conectado com o ANIMA?!</div></h1>
   <br>
   <br>
-  <center><h3>Siga nas redes Socias</h3></center><center><br>  <br>  <br>  <br>  <br>  <br> 
+  <center><h3>Siga nas redes Socias</h3></center><center><br>  <br>  <br>  <br>  <br>  <br>
   <h2>Nossa Logo</h2><br><br><br></center>
    <center>
    </div>
@@ -22,8 +22,6 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="list-inline-item">
@@ -64,18 +62,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Um clique</h2>
+                  <p class="item-intro text-muted">Encontre caronas de maneira rápida e agil.</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
-                  </ul>
+                  <p>A partir da Timeline você encontrará pessoas com o mesmo destino e origem que você.Podendo dessa forma, chegar com tranquilidade e sem atraso ao seu destino.</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>
@@ -98,18 +92,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Explore</h2>
+                  <p class="item-intro text-muted">Esqueça o Tradicionalismo!</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/02-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
-                  </ul>
+                  <p>Usando os nossos filtros de busca,você filtrará as possibilidades localizando aquelas que forem mais vantajosa para você. Explore esse novo mundo!</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>
@@ -132,18 +122,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Reunam-se</h2>
+                  <p class="item-intro text-muted">Pontos de encontros acessíveis a todos.</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/03-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
-                  </ul>
+                  <p>A partir do aplicativo identifique outros usuários que compartilharão com você essa nova experiência. Forme grupos e escreva momentos!</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>
@@ -166,18 +152,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Meios de Transportes</h2>
+                  <p class="item-intro text-muted">Surpreenda-se com as possibilidades.</p>
                   <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/04-full.jpg'); ?>" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
-                  </ul>
+                  <p>Visando suprir a necessidade de todos, o Anima surge com diferentes meios de transportes para compartilhar a sua trajetória. Carro , Ônibus, Uber, Bicicleta e a pé são as possibilidades de locomoção disponíveis em nosso aplicativo. A distância nunca mais será a mesma!</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>
@@ -200,18 +182,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Segurança</h2>
+                  <p class="item-intro text-muted">A Segurança é a nossa prioridade.</p>
                   <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/05-full.jpg'); ?>" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
-                  </ul>
+                  <p>Apenas alunos com e-mail institucional poderá usufruir deste serviço. Com isso aumentamos a segurança e você sempre saberá com quem está indo.</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>
@@ -234,18 +212,14 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h2 class="text-uppercase">Amigos</h2>
+                  <p class="item-intro text-muted">Curta o momento.</p>
                   <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/06-full.jpg'); ?>" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
-                  </ul>
+                  <p>Com base em nosso serviço você poderá conhecer novas pessoas de diferentes cursos e compatilhar experiências.</p>
+
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Close Project</button>
+                    Fechar</button>
                 </div>
               </div>
             </div>

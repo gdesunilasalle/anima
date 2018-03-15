@@ -56,10 +56,50 @@ $data = array(
 'cep' => $this->input->post('dcep'),
 'apelido' => $this->input->post('dapelido'),
 'senha' => $criptografado,
+'hash' => md5(rand(0, 1000)),
 );
 //Transfering data to Model
 $this->insert_model->form_insert($data);
 redirect(base_url('sucesso'));
 }
 }
+public function send_confirmation() {
+      $this->load->library('email');  	//load email library
+      $this->email->from('leonardo.martelotte@soulasalle.com.br', 'Leonardo - Unilasalle'); //sender's email
+      $address = $_POST['email'];	//receiver's email
+      $subject="Bem vindo ao Anima?!";	//subject
+      $message= /*-----------email body starts-----------*/
+        'Obrigado por fazer parte do Anima?!, '.$_POST['nomecompleto'].'!
+      
+        Sua conta foi criada com sucesso! 
+        Aqui estão os detalhes do seu login:
+        -------------------------------------------------
+        Apelido   : ' . $_POST['apelido'] . '
+        Senha: ' . $_POST['senha'] . '
+        -------------------------------------------------
+                        
+        Clique no link de confirmação abaixo para validar o seu cadastro:
+            
+        ' . base_url() . 'index.php/user_registration/verify?' . 
+        'apelido=' . $_POST['apelido'] . '&hash=' . $this->data['hash'] ;
+		/*-----------email body ends-----------*/		      
+      $this->email->to($address);
+      $this->email->subject($subject);
+      $this->email->message($message);
+      $this->email->send();
+    }
+public  function verify() {
+         $result = $this->user_registration_model->get_hash_value($_GET['apelido']); //get the hash value which belongs to given email from database
+         if($result){ 
+            if($result['hash']==$_GET['hash']){  //check whether the input hash value matches the hash value retrieved from the database
+                $this->user_registration_model->verify_user($_GET['apelido']); //update the status of the user as verified
+                /*---Now you can redirect the user to whatever page you want---*/
+            }
+         }
+    }
+
+
+
+
+
 }
