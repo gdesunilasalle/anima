@@ -1,8 +1,18 @@
+<h1><div class="intro-heading text-uppercase"><center>Esteja conectado com o ANIMA?!</div></h1>
+  <br>
+  <br>
+  <center><h3>Siga nas redes Socias</h3></center><center><br>  <br>  <br>  <br>  <br>  <br> 
+  <h2>Nossa Logo</h2><br><br><br></center>
+   <center>
+   </div>
+
+
+
 <footer>
-      <div class="container">
+     <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2018</span>
+            <span class="copyright">  </span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -26,16 +36,17 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="#"></a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                <a href="#"</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+
 
     <!-- Como funciona? Modals -->
 
@@ -256,6 +267,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
+
+
 
   </body>
 
