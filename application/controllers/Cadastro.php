@@ -76,7 +76,7 @@ $data = array(
                         
         Clique no link de confirmação abaixo para validar o seu cadastro:
             
-        ' . base_url() . 'index.php/user_registration/verify?' . 
+        ' . base_url() . 'index.php/user_registration?' . 
         'email=' . $_POST['demail'] . '&hash=' . $data['hash'] ;
 
 
