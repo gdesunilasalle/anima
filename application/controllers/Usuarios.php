@@ -61,8 +61,9 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
                 redirect(base_url('indice'));
             } else {
                 // Logado com sucesso
-                $dadosSessao['userlogado'] = $userlogado[0];
+                //$dadosSessao['userlogado'] = $userlogado[0];
                 $dadosSessao['logado']     = TRUE;
+                $dadosSessao['email']     = $user;
                 $this->session->set_userdata($dadosSessao);
                 redirect(base_url());
             }

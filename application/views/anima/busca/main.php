@@ -5,21 +5,24 @@
         <div class="intro-text">
    </div> 
 
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br>
 
+          <br><br><br><br><br><br>
 
-          <?php 
-$query = $this->db->get('transportesemcurso');
-foreach ($query->result() as $row)
-{
-        echo $row->origem;
-        echo $row->destino;
-        echo $row->horario;
-}
-
-
- ?>
+<tr>
+<?php foreach ($information as $info) { ?> 
+<?php echo $info->emailusuario; ?>
+ <br>
+<?php echo $info->origemusuario; ?>
+<br>
+<?php echo $info->destinousuario; ?>
+<br>
+<?php echo $info->horariousuario; ?>
+<br>
+<?php echo $info->meio; ?>
+<br>
+<br>
+<?php } ?>
+</tr>
           </div>
      
         </div>

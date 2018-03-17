@@ -1,19 +1,34 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Oferece extends CI_Controller {
+function __construct() {
+parent::__construct();
+$this->load->model('oferece_model');
+}
+public function index() {
+//Setting values for tabel columns
 
-    public function __construct() {
-        parent::__construct();
-        if(!$this->session->userdata('logado')){
-                redirect(base_url());
-        }
-    }
+    $this->load->view('anima/oferece/topo');
+    $this->load->view('anima/oferece/main');
 
-	public function index(){
+}
 
-                $this->load->view('anima/oferece/topo');
-                $this->load->view('anima/oferece/main');
-                $this->load->view('index/rodape');
-	}
+public function grava() {
+
+
+$data = array(
+'meiotransporte' => $this->input->post('dmeiotransporte'),
+'origem'         => $this->input->post('dorigem'),
+'destino'        => $this->input->post('ddestino'),
+'horario'        => $this->input->post('dhorario'),
+'usuario'        => $this->input->post('dusuario'),
+);
+
+//Transfering data to Model
+$this->oferece_model->form_insert($data);
+//$this->user_registration_model->insert_record($this->data);
+echo '<script>alert("Proposta de carona realizada com sucesso!");</script>';
+redirect(base_url('busca'));
+
+
+}
 }
