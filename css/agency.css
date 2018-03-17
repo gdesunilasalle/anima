@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: overpass;
 }
 
 p {
@@ -17,6 +17,13 @@ a:hover {
 
 .text-primary {
   color: #fed136 !important;
+}
+.required{
+font-family: overpass;
+}
+.required:after {
+  content:" *";
+  color: red;
 }
 
 h1,
@@ -78,7 +85,7 @@ section h3.section-subheading {
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
-.sombras{ 
+.sombras{
 text-shadow: 0.001em 0.03em 0.05em #333;
 }
 
@@ -130,7 +137,7 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: overpass;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {

@@ -10,7 +10,7 @@
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-building fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Anima</h4>
             <p class="text-muted">Baseada nas necessidades de locomoção dos estudantes da Unilasalle-RJ, os alunos de Sistema de Informção tiveram a ideia de promover um ambiente para compartilhamente de meio de transporte de um modo confiável e agradável.</p>
@@ -18,7 +18,7 @@
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Carona</h4>
             <p class="text-muted">Anima tem como objetivo promover a segurança e integração dos alunos. Assim, as caronas poderão ser promovidas por meios de transportes públicos, privados e a pé. Dessa forma, os alunos de diferentes cursos podem se conhecer melhor.</p>

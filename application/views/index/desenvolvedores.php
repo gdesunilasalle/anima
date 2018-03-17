@@ -20,6 +20,7 @@
 
     <!-- Desenvolvedores -->
     <section class="bg-light" id="desenvolvedores">
+      <center>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -114,7 +115,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  
+
 
                   </a>
                 </li>
@@ -176,4 +177,5 @@
           </div>
         </div>
       </div>
+    </center>
     </section>

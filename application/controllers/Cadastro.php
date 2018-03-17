@@ -28,9 +28,9 @@ $this->form_validation->set_rules('dcomplemento', 'Complemento', 'required|min_l
 //VALIDAÇÃO DO CEP
 $this->form_validation->set_rules('dcep', 'CEP', 'required|exact_length[8]');
 //VALIDAÇÃO DO APELIDO
-$this->form_validation->set_rules('dapelido', 'Apelido (username)', 'required|min_length[2]|max_length[15]');
+$this->form_validation->set_rules('dapelido', 'Apelido (username)', 'required|min_length[5]|max_length[20]');
 //VALIDAÇÃO DA SENHA
-$this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[5]|max_length[12]');
+$this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[8]|max_length[30]');
 //VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
 $this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'required|matches[dsenha]|min_length[5]|max_length[12]');
 

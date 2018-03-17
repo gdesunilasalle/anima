@@ -12,36 +12,47 @@
 <?php } ?>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 <?php echo form_error('dnomecompleto'); ?>
-<strong>Nome Completo</strong> <br>
-<input type="text" placeholder="Nome completo" class="form-control" name="dnomecompleto" id="dnomecompleto" value="<?php echo set_value('dnomecompleto');?>">
-<br />
+<font class="required"> Nome Completo</font>
+<input type="text" placeholder="Digite aqui seu nome completo" class="form-control" name="dnomecompleto" id="dnomecompleto" value="<?php echo set_value('dnomecompleto');?>" required>
+<br>
+<font class="required">Email</font> <br>
 <?php echo form_error('demail'); ?>
-<input type="text" placeholder="E-mail (apenas domínios @soulasalle.com.br e @lasalle.org.br são aceitos)" class="form-control" name="demail" id="demail" value="<?php echo set_value('demail');?>">
-<br />
+<input type="text" placeholder="Digite aqui seu email La Salle (exemplo@soulasalle.com.br ou exemplo@lasalle.org)" class="form-control" name="demail" id="demail" value="<?php echo set_value('demail');?>" required>
+<br>
+<font class="required">Matrícula</font> <br>
 <?php echo form_error('dmatricula'); ?>
-<input type="text" placeholder="Matrícula La Salle" class="form-control" name="dmatricula" id="dmatricula" value="<?php echo set_value('dmatricula');?>">
-<br />
+<input type="text" placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" value="<?php echo set_value('dmatricula');?>" required>
+<br>
+<font class="required">CEP</font> <br>
 <?php echo form_error('dcep'); ?>
-<input type="text" placeholder="CEP (somente dígitos)" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" value="<?php echo set_value('dcep');?>">
-<br />
+<input type="text" placeholder="Digite aqui o seu CEP" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" value="<?php echo set_value('dcep');?>" required>
+<br>
+<font class="required">Logradouro</font> <br>
 <?php echo form_error('dlogradouro'); ?>
-<input type="text" placeholder="Logradouro" class="form-control" name="dlogradouro" id="dlogradouro" value="<?php echo set_value('dlogradouro');?>">
+<input type="text" placeholder="Digite aqui o Logradouro" class="form-control" name="dlogradouro" id="dlogradouro" value="<?php echo set_value('dlogradouro');?>" required>
 <br />
+<font class="required">Número</font> <br>
 <?php echo form_error('dnumero'); ?>
-<input type="text" placeholder="Número" class="form-control" name="dnumero" id="dnumero" value="<?php echo set_value('dnumero');?>">
-<br />
+<input type="text" placeholder="Digite aqui o número" class="form-control" name="dnumero" id="dnumero" value="<?php echo set_value('dnumero');?>" required>
+<br>
+Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
-<input type="text" placeholder="Complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
-<br />
+<input type="text" placeholder="Digite aqui o complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
+<br>
+<font class="required">Nome de Usuário</font> <br>
 <?php echo form_error('dapelido'); ?>
-<input type="text" placeholder="Apelido (username)" class="form-control" name="dapelido" id="dapelido" value="<?php echo set_value('dapelido');?>">
-<br />
+<input type="text" placeholder="Digite aqui o seu usuario entre 5 e 20 caracteres " class="form-control" name="dapelido" id="dapelido" value="<?php echo set_value('dapelido');?>" required>
+<br>
+<font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>
-<input type="text" placeholder="Senha" class="form-control" name="dsenha" id="dsenha">
-<br />
+<input type="text" placeholder="Digite sua senha entre 8 e 30 caracteres" class="form-control" name="dsenha" id="dsenha" required>
+<br>
+<font class="required">Confirme a senha</font> <br>
 <?php echo form_error('dconfirmasenha'); ?>
-<input type="text" placeholder="Confirme a senha" class="form-control" name="dconfirmasenha" id="dconfirmasenha">
+<input type="text" placeholder="Confirme aqui sua senha" class="form-control" name="dconfirmasenha" id="dconfirmasenha" required>
+<br>
 <center>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
-<?php echo form_close(); ?> <br/>
+<br>
+<?php echo form_close(); ?> <br>
 </center>
