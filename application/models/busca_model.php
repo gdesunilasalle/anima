@@ -1,4 +1,4 @@
-<?php class busca_model extends CI_Model {
+<?php class Busca_model extends CI_Model {
 
         public function __construct()
         {
