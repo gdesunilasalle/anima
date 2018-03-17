@@ -40,17 +40,21 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
             $this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[8]');
 
             if (!$this->form_validation->run())
-                throw new UnexpectedValueException(validation_errors()); // Erros adversos de validaÃ§Ã£o
+                throw new UnexpectedValueException(validation_errors()); // Erros adversos de validação
 
             $user     = $this->input->post('txt-user');
             $password = $this->input->post('txt-senha');
             $query    = $this->db->select("*")->from("cadastrousuario")->where("email", $user)->get();
-            if ($query->num_rows() != 1)
-                throw new UnexpectedValueException('Usuario Incorreto'); // User Incorreto
+            $verifica = $this->db->select("*")->from("cadastrousuario")->where("is_verified", $user)->get();
+            if ($query->num_rows() != 1){
+                throw new UnexpectedValueException('Usuario Incorreto.'); // User Incorreto
+            } else if ($verifica->num_rows() != 1){
+                throw new UnexpectedValueException('Conta ainda não ativada. Acesse seu email La Salle e clique no link de ativação.'); // Usuário não ativado
+            }
             $row = $query->row();
             if (!password_verify($password, $row->senha)) {
                 // Senha Incorreta
-                throw new UnexpectedValueException('Senha Incorreta'); // Exception Senha incorreta
+                throw new UnexpectedValueException('Senha Incorreta.'); // Exception Senha incorreta
                 $dadosSessao['userlogado'] = NULL;
                 $dadosSessao['logado']     = FALSE;
                 $this->session->set_userdata($dadosSessao);
@@ -77,6 +81,15 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
         }
         catch (\Error $e) {
             echo $e->getMessage(); // Pega a mensagem de erro e printa
+            $data = array('e' => $e);
+                $this->load->view('index/topo');
+                $this->load->view('index/inicio',$data);
+                $this->load->view('index/oquee');
+                $this->load->view('index/comofunciona');
+                $this->load->view('index/cadastro');
+                $this->load->view('index/desenvolvedores');
+                $this->load->view('index/contato');
+                $this->load->view('index/rodape');
         }
 
 

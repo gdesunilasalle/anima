@@ -61,19 +61,25 @@ $data = array(
       $address = $_POST['demail']; //EMAIL DE DESTINO
       $subject="Bem vindo ao Anima?!";  //TITULO EMAIL
       $message= /*-----------INICIO DO CORPO DO EMAIL-----------*/
-        'Obrigado por fazer parte do Anima?!, '.$_POST['dnomecompleto'].'!
+        'Olá, '.$_POST['dnomecompleto'].'! 
+
+        Obrigado por fazer parte do Anima!
       
         Sua conta foi criada com sucesso! 
         Aqui estão os detalhes do seu login:
+
         -------------------------------------------------
         Email: ' . $_POST['demail'] . '
         Senha: ' . $_POST['dconfirmasenha'] . '
         -------------------------------------------------
+        
                         
         Clique no link de confirmação abaixo para validar o seu cadastro:
             
         ' . base_url() . 'index.php/user_registration/verify?' . 
-        'apelido=' . $_POST['dapelido'] . '&hash=' . $data['hash'] ;
+        'email=' . $_POST['demail'] . '&hash=' . $data['hash'] ;
+
+
     /*-----------FIM DO CORPO DO EMAIL-----------*/         
       $this->email->to($address);
       $this->email->subject($subject);

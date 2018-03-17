@@ -9,3 +9,6 @@ function form_insert($data){
 $this->db->insert('cadastrousuario', $data);
 }
 }
+
+
+
