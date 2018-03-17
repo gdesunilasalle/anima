@@ -9,10 +9,7 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-
-
                 </div>
-
               </div>
             </form>
           </div>
@@ -173,6 +170,7 @@
 
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
+            <br>
             <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Assim, estaremos sempre nos aperfeiçoando para melhorarmos cada vez mais a qualidade de nosso serviço. Obrigado por escolher o Anima.</p>
           </div>
         </div>
