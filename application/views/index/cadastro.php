@@ -12,6 +12,7 @@
 <?php } ?>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 <?php echo form_error('dnomecompleto'); ?>
+<strong>Nome Completo</strong> <br>
 <input type="text" placeholder="Nome completo" class="form-control" name="dnomecompleto" id="dnomecompleto" value="<?php echo set_value('dnomecompleto');?>">
 <br />
 <?php echo form_error('demail'); ?>
@@ -19,6 +20,9 @@
 <br />
 <?php echo form_error('dmatricula'); ?>
 <input type="text" placeholder="Matrícula La Salle" class="form-control" name="dmatricula" id="dmatricula" value="<?php echo set_value('dmatricula');?>">
+<br />
+<?php echo form_error('dcep'); ?>
+<input type="text" placeholder="CEP (somente dígitos)" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" value="<?php echo set_value('dcep');?>">
 <br />
 <?php echo form_error('dlogradouro'); ?>
 <input type="text" placeholder="Logradouro" class="form-control" name="dlogradouro" id="dlogradouro" value="<?php echo set_value('dlogradouro');?>">
@@ -28,9 +32,6 @@
 <br />
 <?php echo form_error('dcomplemento'); ?>
 <input type="text" placeholder="Complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
-<br />
-<?php echo form_error('dcep'); ?>
-<input type="text" placeholder="CEP (somente dígitos)" class="form-control" name="dcep" id="dcep" value="<?php echo set_value('dcep');?>">
 <br />
 <?php echo form_error('dapelido'); ?>
 <input type="text" placeholder="Apelido (username)" class="form-control" name="dapelido" id="dapelido" value="<?php echo set_value('dapelido');?>">

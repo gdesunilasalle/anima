@@ -22,7 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
-
+ <script src="<?php echo base_url('js/cep.js'); ?>"></script> 
   </head>
 
   <body id="page-top">
