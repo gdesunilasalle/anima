@@ -36,7 +36,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
+          <ul class="navbar-nav text-uppercase ml-auto sombras">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#oquee">O que é?</a>
             </li>

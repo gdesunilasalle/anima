@@ -64,6 +64,8 @@ section h3.section-subheading{
 color: #c0392b;
 
 }
+
+
 ::-moz-selection{
     background:#fed136;
     text-shadow:none
