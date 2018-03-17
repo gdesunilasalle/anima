@@ -27,15 +27,13 @@ $this->form_validation->set_rules('dnumero', 'Número', 'required|min_length[1]|
 $this->form_validation->set_rules('dcomplemento', 'Complemento', 'required|min_length[2]|max_length[100]');
 //VALIDAÇÃO DO CEP
 $this->form_validation->set_rules('dcep', 'CEP', 'required|exact_length[8]');
-//VALIDAÇÃO DO APELIDO
-$this->form_validation->set_rules('dapelido', 'Apelido (username)', 'required|min_length[5]|max_length[20]');
 //VALIDAÇÃO DA SENHA
 $this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[8]|max_length[30]');
 //VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
 $this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'required|matches[dsenha]|min_length[5]|max_length[12]');
 
 if ($this->form_validation->run() == FALSE) {
-$data = array('nomecompleto','email', 'matricula','logradouro' ,'numero', 'complemento', 'cep', 'apelido');
+$data = array('nomecompleto','email', 'matricula','logradouro' ,'numero', 'complemento', 'cep');
                 $this->load->view('index/topo');
                 $this->load->view('index/inicio');
                 $this->load->view('index/oquee');
@@ -54,13 +52,12 @@ $data = array(
 'numero' => $this->input->post('dnumero'),
 'complemento' => $this->input->post('dcomplemento'),
 'cep' => $this->input->post('dcep'),
-'apelido' => $this->input->post('dapelido'),
 'senha' => $criptografado,
 'hash' => md5(rand(0, 1000)),
 );
  
 //ENVIA EMAIL
-      $this->email->from('leonardo.martelotte@soulasalle.com.br', 'Leonardo - Unilasalle'); //EMAIL DE ORIGEM
+      $this->email->from('anima@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
       $address = $_POST['demail']; //EMAIL DE DESTINO
       $subject="Bem vindo ao Anima?!";  //TITULO EMAIL
       $message= /*-----------INICIO DO CORPO DO EMAIL-----------*/
@@ -69,7 +66,7 @@ $data = array(
         Sua conta foi criada com sucesso! 
         Aqui estão os detalhes do seu login:
         -------------------------------------------------
-        Apelido: ' . $_POST['dapelido'] . '
+        Email: ' . $_POST['demail'] . '
         Senha: ' . $_POST['dconfirmasenha'] . '
         -------------------------------------------------
                         

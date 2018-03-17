@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller
 {
+    public function email_check($email) 
+{
+  return strpos($email, '@soulasalle.com.br') || strpos($email, '@lasalle.org.br') !== false;
+}
+
     public function index()
     {
       // Libs Recaptcha
@@ -30,15 +35,16 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
         try {
             $this->load->library("form_validation");
 
-            $this->form_validation->set_rules('txt-user', 'Apelido', 'required|min_length[6]');
-            $this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[6]');
+            $this->form_validation->set_rules('txt-user', 'Email La Salle', 'required|valid_email|callback_email_check');
+            $this->form_validation->set_message('email_check', 'É obrigatório o uso de email com os domínios @soulasalle.com.br ou @lasalle.org.br'); 
+            $this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[8]');
 
             if (!$this->form_validation->run())
                 throw new UnexpectedValueException(validation_errors()); // Erros adversos de validaÃ§Ã£o
 
             $user     = $this->input->post('txt-user');
             $password = $this->input->post('txt-senha');
-            $query    = $this->db->select("*")->from("cadastrousuario")->where("apelido", $user)->get();
+            $query    = $this->db->select("*")->from("cadastrousuario")->where("email", $user)->get();
             if ($query->num_rows() != 1)
                 throw new UnexpectedValueException('Usuario Incorreto'); // User Incorreto
             $row = $query->row();

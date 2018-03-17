@@ -39,10 +39,6 @@ Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
 <input type="text" placeholder="Digite aqui o complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
 <br>
-<font class="required">Nome de Usuário</font> <br>
-<?php echo form_error('dapelido'); ?>
-<input type="text" placeholder="Digite aqui o seu usuario entre 5 e 20 caracteres " class="form-control" name="dapelido" id="dapelido" value="<?php echo set_value('dapelido');?>" required>
-<br>
 <font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>
 <input type="text" placeholder="Digite sua senha entre 8 e 30 caracteres" class="form-control" name="dsenha" id="dsenha" required>

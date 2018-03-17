@@ -10,16 +10,14 @@
 <form action="<?=base_url()?>" method="post">
      <center>
             <div class="form-group col-lg-3">
-                <input style="text-align: center;" class="form-control" type="text" name="txt-user" placeholder="Apelido">
+                <input style="text-align: center;" class="form-control" type="text" name="txt-user" placeholder="Email La Salle">
             </div>
             <div class="col-lg-3">
                 <input style="text-align: center;" class="form-control col-xs-1" type="password" name="txt-senha" placeholder="Senha">
             </div>
 <br>
     <div class="g-recaptcha" data-sitekey="6Ld0pkwUAAAAAPoc-WBI4SQmUu6dKz6eJIeUtJn8"></div>
-
-					<script type="text/javascript"
-					src="https://www.google.com/recaptcha/api.js?hl=pt">
+          <script type="text/javascript"src="https://www.google.com/recaptcha/api.js?hl=pt">
 					</script>
 </form>
           <br>
