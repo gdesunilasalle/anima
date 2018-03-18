@@ -12,5 +12,6 @@
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso ORDER BY horario");
             return $query->result();
         }
+
 /*INNER JOIN name ON table1.id = name.id GROUP BY id */
 }
