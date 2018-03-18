@@ -6,14 +6,14 @@ $this->load->model('oferece_model');
 }
 public function index() {
 //Setting values for tabel columns
-
+ob_start();
     $this->load->view('anima/oferece/topo');
     $this->load->view('anima/oferece/main');
 
 }
 
 public function grava() {
-
+ob_start();
 
 $data = array(
 'meiotransporte' => $this->input->post('dmeiotransporte'),

@@ -6,7 +6,7 @@ parent::__construct();
 $this->load->model('busca_model');
 }
 public function index()
-    {
+    {ob_start();
 
         $data['caronas'] = $this->busca_model->userInformation();
 
