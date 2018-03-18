@@ -1,9 +1,14 @@
 body{
   background-image:url("../img/posloginbg.jpg");
+  color: #660298;
   background-repeat: no-repeat;
   background-size: cover;
   font-family:overpass;
   background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 #mainNav
 {
