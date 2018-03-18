@@ -10,11 +10,6 @@ body{
   background-color: #660298;
   height: 15px;
 }
-select
-{
-color: #fec810;
-background-color: #660298;
-}
 h2
 {
   color:#ffff;
@@ -22,6 +17,7 @@ h2
 h3
 {
   color:#fff;
+  font-style: italic;
 }
 .required{
   color:#fff;
