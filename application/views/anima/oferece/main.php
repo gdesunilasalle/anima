@@ -3,16 +3,18 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Oferecer carona</h2>
-            <h3 class="section-subheading text-muted">Preencha corretamente os dados abaixo:</h3>
+            <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
           </div>
         </div>
 <?php echo form_open('oferece/grava'); ?>
 <CENTER>
+  <fieldset>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 <center>
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
 <font class="required">Meio</font>
 <br>
+
 <select name="dmeiotransporte">
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
@@ -40,7 +42,8 @@
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
-  </select>
+  </select></fielset>
+
  <br>
   <font class="required">Horário</font>
   <br>

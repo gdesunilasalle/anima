@@ -1,0 +1,28 @@
+body{
+  background-image:url("../img/posloginbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:overpass;
+}
+
+#mainNav
+{
+  background-color: #660298;
+  height: 15px;
+}
+select
+{
+color: #fec810;
+background-color: #660298;
+}
+h2
+{
+  color:#ffff;
+}
+h3
+{
+  color:#fff;
+}
+.required{
+  color:#fff;
+}
