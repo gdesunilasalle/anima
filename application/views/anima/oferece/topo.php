@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('css/agency.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
   </head>
   <body id="page-top">
     <!-- Navigation -->
@@ -41,7 +41,7 @@
               <a class="nav-link js-scroll-trigger" href="">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="">Sair</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('logout');">Sair</a>
             </li>
             
           </ul>

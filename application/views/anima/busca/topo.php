@@ -40,7 +40,7 @@
               <a class="nav-link js-scroll-trigger" href="">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="">Sair</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('logout');">Sair</a>
             </li>
             
           </ul>
