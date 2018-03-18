@@ -8,7 +8,7 @@ public function __construct() {
 
     }
         public function index()
-        {
+        { ob_start();
                 if(!$this->session->userdata('logado')){
                
                 $this->load->view('index/topo');

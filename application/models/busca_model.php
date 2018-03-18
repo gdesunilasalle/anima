@@ -13,5 +13,15 @@
             return $query->result();
         }
 
+                function apagaCarona()
+        {
+            $query = $this->db->query("DELETE origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = ($this->session->userdata('email')");
+            return $query->result();
+        }
+
+
+
+
+
 /*INNER JOIN name ON table1.id = name.id GROUP BY id */
 }

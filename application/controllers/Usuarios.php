@@ -10,6 +10,8 @@ class Usuarios extends CI_Controller
 
     public function index()
     {
+        ob_start();
+
       // Libs Recaptcha
 require_once('vendor/google/recaptcha/src/ReCaptcha/ReCaptcha.php');
 require_once('vendor/google/recaptcha/src/ReCaptcha/RequestMethod.php');
@@ -65,7 +67,7 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
                 $dadosSessao['logado']     = TRUE;
                 $dadosSessao['email']     = $user;
                 $this->session->set_userdata($dadosSessao);
-                redirect(base_url());
+                redirect(base_url('busca'));
             }
         }
         catch (Exception $e) {
