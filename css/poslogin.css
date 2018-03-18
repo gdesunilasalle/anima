@@ -5,11 +5,10 @@ body{
   font-family:overpass;
   background-attachment: fixed;
 }
-
 #mainNav
 {
   background-color: #660298;
-  height: 15px;
+  height: 10%;
 }
 h2
 {
@@ -18,7 +17,6 @@ h2
 h3
 {
   color:#fff;
-  font-style: italic;
 }
 .required{
   color:#fff;
