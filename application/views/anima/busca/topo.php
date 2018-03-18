@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('css/agency.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
   </head>
   <body id="page-top">
     <!-- Navigation -->
