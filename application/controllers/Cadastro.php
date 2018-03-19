@@ -30,7 +30,7 @@ $this->form_validation->set_rules('dcep', 'CEP', 'required|exact_length[8]');
 //VALIDAÇÃO DA SENHA
 $this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[8]|max_length[30]');
 //VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
-$this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'required|matches[dsenha]|min_length[5]|max_length[12]');
+$this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'required|matches[dsenha]|min_length[8]|max_length[30]');
 
 if ($this->form_validation->run() == FALSE) {
 $data = array('nomecompleto','email', 'matricula','logradouro' ,'numero', 'complemento', 'cep');
@@ -66,14 +66,7 @@ $data = array(
         Obrigado por fazer parte do Anima!
       
         Sua conta foi criada com sucesso! 
-        Aqui estão os detalhes do seu login:
-
-        -------------------------------------------------
-        Email: ' . $_POST['demail'] . '
-        Senha: ' . $_POST['dconfirmasenha'] . '
-        -------------------------------------------------
         
-                        
         Clique no link de confirmação abaixo para validar o seu cadastro:
             
         ' . base_url() . 'index.php/user_registration?' . 
