@@ -6,7 +6,7 @@
             <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
             <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
           </div>
-        
+
 <?php echo form_open('oferece/grava'); ?>
 <CENTER>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
@@ -15,7 +15,7 @@
 <font class="required">Meio</font>
 <br>
 
-<select name="dmeiotransporte">
+<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa();">
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
     <option value="Ônibus">Ônibus</option>
@@ -24,19 +24,19 @@
     <option value="Táxi">Táxi</option>
   </select>
   <br>
-  <font class="required">Origem</font>
+  <font class="required" >Origem</font>
   <br>
-  <select name="dorigem">
+  <select name="dorigem" id="select-origem" onchange="loadestimativa();">
+    <option value="Terminal">Terminal</option>
     <option value="Casa">Casa</option>
     <option value="Unilasalle">Unilasalle</option>
-    <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
   </select>
   <br>
   <font class="required">Destino</font>
   <br>
-  <select name="ddestino">
+  <select name="ddestino" id="select-destino" onchange="loadestimativa();">
     <option value="Unilasalle">Unilasalle</option>
     <option value="Casa">Casa</option>
     <option value="Terminal">Terminal</option>
@@ -56,6 +56,8 @@
 	}?>
 </select>
 <br>
+<br>
+<h3 class="section-subheading sombras" id="estimativas"></h3>
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <br>
