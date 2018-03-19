@@ -53,12 +53,12 @@
    			<p align="left" class="text-secondary">
    			<?php echo form_error('dsenha'); ?>
 			<font class="required">Senha</font></p>
-   			<input type="text" class="form-control" name="edita_dsenha" id="edita_dsenha" value="" required>
+   			<input type="password" class="form-control" name="edita_dsenha" id="edita_dsenha" value="" required>
    			<br>
    			<p align="left" class="text-secondary">
    			<?php echo form_error('dconfirmasenha'); ?>
 			<font class="required">Confirme a senha</font></p>
-   			<input type="text" class="form-control" name="edita_dconfirmasenha" id="edita_dconfirmasenha" value="" required>
+   			<input type="password" class="form-control" name="edita_dconfirmasenha" id="edita_dconfirmasenha" value="" required>
    			<br>
 	<a href="" class="btn btn-primary">Atualizar dados cadastrais</a>
 <a href="<?php echo base_url('busca'); ?>" class="btn btn-primary">Cancelar</a>

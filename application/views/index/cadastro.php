@@ -41,11 +41,11 @@ Complemento <br>
 <br>
 <font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>
-<input type="password" placeholder="Digite sua senha entre 8 e 30 caracteres" class="form-control" name="dsenha" id="dsenha" required>
+<input pattern=".{8,30}" type="password" placeholder="Digite sua senha entre 8 e 30 caracteres" class="form-control" name="dsenha" id="dsenha" required>
 <br>
 <font class="required">Confirme a senha</font> <br>
 <?php echo form_error('dconfirmasenha'); ?>
-<input type="password" placeholder="Confirme aqui sua senha" class="form-control" name="dconfirmasenha" id="dconfirmasenha" required>
+<input pattern=".{8,30}" type="password" placeholder="Confirme aqui sua senha" class="form-control" name="dconfirmasenha" id="dconfirmasenha" required>
 <br>
 <center>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
