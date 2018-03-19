@@ -1,7 +1,6 @@
 <header class="masthead">
       <div class="container" id="inicio">
         <div class="intro-text">
-          
           <div class="intro-lead-in sombras">Seja muito bem vindo ao Anima!</div>
           <div class="intro-heading text-uppercase sombras">JÁ É CADASTRADO?<br>
           </div>
