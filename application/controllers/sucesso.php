@@ -14,7 +14,7 @@ class Sucesso extends CI_Controller {
                 $this->load->view('index/desenvolvedores');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
-                echo '<script>alert("Cadastro efetuado com sucesso!\nAcesse seu email La Salle para confirmá-lo e depois preencha Apelido e Senha para acessar o sistema.");</script>';
+                echo '<script>alert("Cadastro efetuado com sucesso!\nAcesse seu email La Salle para confirmá-lo e depois preencha Email e Senha para acessar o sistema.");</script>';
         }
 
 }
