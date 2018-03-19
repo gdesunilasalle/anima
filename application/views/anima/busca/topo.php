@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Anima 1.0 beta</title>
-
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -51,9 +47,11 @@
               <a class="nav-link js-scroll-trigger" href="">Contato</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('editausuario'); ?>">Dados cadastrais</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('logout');?>">Sair</a>
             </li>
-
           </ul>
         </div>
       </div>

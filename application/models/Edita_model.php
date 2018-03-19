@@ -1,4 +1,4 @@
-<?php class Busca_model extends CI_Model {
+<?php class Edita_model extends CI_Model {
 
         public function __construct()
         {
@@ -7,13 +7,14 @@
                 //$this->db2 = $CI->load->database('Anima', TRUE);
         }
 
-        function userInformation()
+        function dadosUsuario()
         {
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso ORDER BY horario");
+            $emailcadastrado = $this->session->userdata('email');
+            $query = $this->db->query("SELECT nomecompleto as edita_nomecompleto, matricula as edita_matricula, email as edita_email, logradouro as edita_logradouro, numero as edita_numero, complemento as edita_complemento, cep as edita_cep FROM cadastrousuario WHERE email = '$emailcadastrado'" );
             return $query->result();
         }
 
-                function apagaCarona()
+                function editaDados()
         {
             $query = $this->db->query("DELETE origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = ($this->session->userdata('email')");
             return $query->result();
