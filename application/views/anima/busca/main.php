@@ -1,21 +1,14 @@
 
 <div>
-<header class="mastheadlg">
+<header class="martelotte">
       <div class="container">
-        <div class="intro-text">
-   		</div>
-<br><br><br><br><br><br>
+    
 <center>
-
-
-	<!--COLOCAR O EFEITO LEGAL NESTE TITULO DA PAGINA!! -->
+<section id="cadastro">
+      <div class="container">
   <h2 class="section-heading text-uppercase sombras">Buscar Carona</h2>
   <h3 class="section-subheading sombras">O que está Rolando... Anima?!</h3>
-	<!--COLOCAR O EFEITO LEGAL NESTE TITULO DA PAGINA!! -->
-
-
 	<br>
-
 <?php foreach ($caronas as $info) { ?>
 <div class="card w-75">
 	  <div class="card-header">

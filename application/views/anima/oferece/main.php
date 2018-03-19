@@ -1,14 +1,14 @@
+<header class="martelotte">
+<div class="container">
+<center>
 <section id="cadastro">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Oferecer carona</h2>
+            <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
             <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
           </div>
-        </div>
+        
 <?php echo form_open('oferece/grava'); ?>
 <CENTER>
-  <fieldset>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 <center>
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
@@ -59,6 +59,6 @@
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <br>
-<?php echo form_close(); ?>
-<br>
+<?php echo form_close(); ?></div>
+<br><br><br><br><br><br><br>
 </center>
