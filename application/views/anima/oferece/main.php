@@ -15,10 +15,10 @@
 <font class="required">Meio</font>
 <br>
 <?php foreach ($local as $info) { ?>
-<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
-    <option value="Ônibus">Ônibus</option>
+    <option value="bus">Ônibus</option>
     <option value="Uber">Uber</option>
     <option value="Bicicleta">Bicicleta</option>
     <option value="Táxi">Táxi</option>
@@ -26,20 +26,21 @@
   <br>
   <font class="required" >Origem</font>
   <br>
-  <select name="dorigem" id="select-origem" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-    <option value="Terminal">Terminal</option>
+  <select name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Unilasalle">Unilasalle</option>
+    <option value="Terminal">Terminal</option>
+    <option value="mestre">Mestre dos Sucos</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
   </select>
   <br>
   <font class="required">Destino</font>
   <br>
-  <select name="ddestino" id="select-destino" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-      <option value="A pé">A pé</option>
+  <select name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="Unilasalle">Unilasalle</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
+    <option value="mestre">Mestre dos Sucos</option>
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
