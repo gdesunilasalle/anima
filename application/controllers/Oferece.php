@@ -7,8 +7,12 @@ $this->load->model('oferece_model');
 public function index() {
 //Setting values for tabel columns
 ob_start();
+
+
+	$data['local'] = $this->oferece_model->buscaLogradouro();
+
     $this->load->view('anima/oferece/topo');
-    $this->load->view('anima/oferece/main');
+    $this->load->view('anima/oferece/main',$data);
 
 }
 

@@ -14,9 +14,8 @@
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
 <font class="required">Meio</font>
 <br>
-
-<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-    <option value="A pé">A pé</option>
+<?php foreach ($local as $info) { ?>
+<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
     <option value="Ônibus">Ônibus</option>
@@ -27,10 +26,9 @@
   <br>
   <font class="required" >Origem</font>
   <br>
-  <select name="dorigem" id="select-origem" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-      <option value="A pé">A pé</option>
+  <select name="dorigem" id="select-origem" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="Terminal">Terminal</option>
-    <option value="Casa">Casa</option>
+    <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Unilasalle">Unilasalle</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
@@ -38,10 +36,10 @@
   <br>
   <font class="required">Destino</font>
   <br>
-  <select name="ddestino" id="select-destino" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+  <select name="ddestino" id="select-destino" onchange="loadestimativa(<?php echo $info->logradourousuario;?>);"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
       <option value="A pé">A pé</option>
     <option value="Unilasalle">Unilasalle</option>
-    <option value="Casa">Casa</option>
+    <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
@@ -67,3 +65,4 @@
 <?php echo form_close(); ?></div>
 <br><br><br><br><br><br><br>
 </center>
+<?php } ?>

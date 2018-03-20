@@ -9,7 +9,7 @@
   <h2 class="section-heading text-uppercase sombras">Buscar Carona</h2>
   <h3 class="section-subheading sombras">O que está Rolando... Anima?!</h3>
 	<br>
-<?php foreach ($caronas as $info) { ?>
+<?php foreach ($logradouro as $info) { ?>
 <div class="card w-75">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
