@@ -45,4 +45,6 @@ function callback(data) {
     let mensagem1 = "A distancia da origem até destino é aproximadamente ";
     document.getElementById("estimativas").innerHTML = mensagem1 + distancia + mensagem2 + tempo;
 }
-function setup(){}
+function setup(){
+  noCanvas();
+}
