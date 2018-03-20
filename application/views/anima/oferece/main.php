@@ -15,7 +15,8 @@
 <font class="required">Meio</font>
 <br>
 
-<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa();">
+<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option value="A pé">A pé</option>
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
     <option value="Ônibus">Ônibus</option>
@@ -26,7 +27,8 @@
   <br>
   <font class="required" >Origem</font>
   <br>
-  <select name="dorigem" id="select-origem" onchange="loadestimativa();">
+  <select name="dorigem" id="select-origem" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+      <option value="A pé">A pé</option>
     <option value="Terminal">Terminal</option>
     <option value="Casa">Casa</option>
     <option value="Unilasalle">Unilasalle</option>
@@ -36,7 +38,8 @@
   <br>
   <font class="required">Destino</font>
   <br>
-  <select name="ddestino" id="select-destino" onchange="loadestimativa();">
+  <select name="ddestino" id="select-destino" onchange="loadestimativa();"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+      <option value="A pé">A pé</option>
     <option value="Unilasalle">Unilasalle</option>
     <option value="Casa">Casa</option>
     <option value="Terminal">Terminal</option>
