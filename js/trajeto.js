@@ -13,7 +13,9 @@ if(address=="Barcas")
   return"Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030"
 }
 if(address=="Casa"){
+
   return casa;
+
 }
 return "Error";
 
@@ -30,8 +32,8 @@ function loadestimativa(casa)
   {
   if(endereco(origem,casa)!="Error"&&endereco(destino,casa)!="Error")
   {
-  endorigem= endereco(origem);
-  enddestino= endereco(destino);
+  endorigem= endereco(origem,casa);
+  enddestino= endereco(destino,casa);
   teste = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins="+endorigem+"&destinations="+enddestino+"&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
   loadJSON(teste, callback);
 }
