@@ -6,7 +6,6 @@
             <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
             <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
           </div>
-
 <?php echo form_open('oferece/grava'); ?>
 <CENTER>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
@@ -30,9 +29,9 @@
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Unilasalle">Unilasalle</option>
     <option value="Terminal">Terminal</option>
-    <option value="mestre">Mestre dos Sucos</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
+    <option value="mestre">Mestre dos Sucos</option>
   </select>
   <br>
   <font class="required">Destino</font>
@@ -40,20 +39,29 @@
   <select name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
     <option value="Unilasalle">Unilasalle</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
-    <option value="mestre">Mestre dos Sucos</option>
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas</option>
+    <option value="mestre">Mestre dos Sucos</option>
   </select></fielset>
-
  <br>
   <font class="required">Horário</font>
   <br>
   <select name="dhorario">
 	<?php
-	date_default_timezone_set("Europe/London");
-	$range=range(strtotime("5:00"),strtotime("23:00"),30*60);
-	foreach($range as $time){
+date_default_timezone_set("America/Sao_Paulo");
+$now = getdate();
+$minutes = $now['minutes'] - $now['minutes']%30;
+ //Abaixo ajustamos os intervalos
+  $rmin  = $now['minutes']%30;
+  if ($rmin > 37){
+    $minutes = $now['minutes'] + (30-$rmin);
+   }else{
+      $minutes = $now['minutes'] - $rmin;
+  }
+  $rounded = $now['hours'].":".$minutes;
+	 $range=range(strtotime(date("$rounded")),strtotime("23:00"),30*60);
+	 foreach($range as $time){
     echo '<option value="'. date("H:i",$time).'">'. date("H:i",$time).'</option>'. date("H:i",$time)."\n";
 	}?>
 </select>
