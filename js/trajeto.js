@@ -101,14 +101,6 @@ else {
 }
 
 function setup(){
-  origem="Terminal";
-  destino = "Unilasalle";
-  endorigem= endereco(origem);
-  enddestino= endereco(destino);
-  teste = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins="+endorigem+"&destinations="+enddestino+"&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-  loadJSON(teste, callback);
-
-  // document.getElementById("estimativas").value = testee.rows[0].elements[0].distance.text;
 
 }
 
@@ -135,12 +127,6 @@ function callback_bike(data){
 
 
 function draw(){
-
-//  origem = document.getElementById("select-origem").options[document.getElementById("select-origem").selectedIndex].value;
-//  destino = document.getElementById("select-destino").options[document.getElementById("select-destino").selectedIndex].value;
-//console.log(origem);
- //loadestimativa();
-
 
 
 

@@ -15,6 +15,7 @@
 <br>
 <?php foreach ($local as $info) { ?>
 <select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value> -- Selecione o meio -- </option>
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
     <option value="bus">Ônibus</option>
@@ -26,6 +27,7 @@
   <font class="required" >Origem</font>
   <br>
   <select name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value> -- Selecione a origem  -- </option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Unilasalle">Unilasalle</option>
     <option value="Terminal">Terminal</option>
@@ -37,6 +39,7 @@
   <font class="required">Destino</font>
   <br>
   <select name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value> -- Selecione o destino  -- </option>
     <option value="Unilasalle">Unilasalle</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Terminal">Terminal</option>
