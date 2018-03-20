@@ -1,6 +1,6 @@
 
 
-function endereco(address){
+function endereco(address,casa){
 
 if(address=="Unilasalle"){
   return"Rua Gastão Gonçalves, 79";
@@ -12,22 +12,28 @@ if(address=="Barcas")
 {
   return"Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030"
 }
+if(address=="Casa"){
+
+  return casa;
+
+}
 return "Error";
 
 
 }
 
-function loadestimativa()
+function loadestimativa(casa)
 {
+
   origem= document.getElementById("select-origem").options[document.getElementById("select-origem").selectedIndex].value;
   destino = document.getElementById("select-destino").options[document.getElementById("select-destino").selectedIndex].value;
   transporte=document.getElementById("select-transporte").options[document.getElementById("select-transporte").selectedIndex].value;
   if(transporte=="A pé")
   {
-  if(endereco(origem)!="Error"&&endereco(destino)!="Error")
+  if(endereco(origem,casa)!="Error"&&endereco(destino,casa)!="Error")
   {
-  endorigem= endereco(origem);
-  enddestino= endereco(destino);
+  endorigem= endereco(origem,casa);
+  enddestino= endereco(destino,casa);
   teste = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins="+endorigem+"&destinations="+enddestino+"&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
   loadJSON(teste, callback);
 }
