@@ -1,4 +1,3 @@
-
 <div>
 <header class="martelotte">
       <div class="container">
@@ -9,7 +8,7 @@
   <h2 class="section-heading text-uppercase sombras">Buscar Carona</h2>
   <h3 class="section-subheading sombras">O que está Rolando... Anima?!</h3>
 	<br>
-<?php foreach ($caronas as $info) { ?>
+<?php foreach ($cards as $info) { ?>
 <div class="card w-75">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
@@ -29,8 +28,7 @@ if(($this->session->userdata('email')) == ($info->emailusuario))
 {
 	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a>';
 }
-else{echo '<a href="card?usuario='.$info->emailusuario.'" class="btn btn-primary">Animo!</a>';
-}
+else{echo '<a href="#" class="btn btn-primary">Animo!</a>';}
 ?>
 </div>
 </div>
