@@ -8,17 +8,12 @@ public function index() {
 //Setting values for tabel columns
 ob_start();
 
-
 	$data['local'] = $this->oferece_model->buscaLogradouro();
-
     $this->load->view('anima/oferece/topo');
     $this->load->view('anima/oferece/main',$data);
-
 }
-
 public function grava() {
 ob_start();
-
 $data = array(
 'meiotransporte' => $this->input->post('dmeiotransporte'),
 'origem'         => $this->input->post('dorigem'),
@@ -26,13 +21,8 @@ $data = array(
 'horario'        => $this->input->post('dhorario'),
 'usuario'        => $this->input->post('dusuario'),
 );
-
-//Transfering data to Model
-$this->oferece_model->form_insert($data);
-//$this->user_registration_model->insert_record($this->data);
-echo '<script>alert("Proposta de carona realizada com sucesso!");</script>';
+$this->oferece_model->criacarona($data);
+$this->oferece_model->gravacarona($data);
 redirect(base_url('busca'));
-
-
 }
 }
