@@ -14,8 +14,8 @@
 <font class="required">Meio</font>
 <br>
 <?php foreach ($local as $info) { ?>
-<select name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-    <option disabled selected value> -- Selecione o meio -- </option>
+<select class="form-control.col-lg form-control-lg" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value>Meio de transporte</option>
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
     <option value="bus">Ônibus</option>
@@ -26,8 +26,8 @@
   <br>
   <font class="required" >Origem</font>
   <br>
-  <select name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-    <option disabled selected value> -- Selecione a origem  -- </option>
+  <select class="form-control.col-lg form-control-lg" name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value>Origem</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Unilasalle-RJ">Unilasalle</option>
     <option value="Terminal">Terminal</option>
@@ -38,8 +38,8 @@
   <br>
   <font class="required">Destino</font>
   <br>
-  <select name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
-    <option disabled selected value> -- Selecione o destino  -- </option>
+  <select class="form-control.col-lg form-control-lg" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+    <option disabled selected value>Destino</option>
     <option value="Unilasalle-RJ">Unilasalle</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Terminal">Terminal</option>
@@ -50,7 +50,7 @@
  <br>
   <font class="required">Horário</font>
   <br>
-  <select name="dhorario">
+  <select class="form-control.col-lg form-control-lg" name="dhorario">
 	<?php
 date_default_timezone_set("America/Sao_Paulo");
 $now = getdate();
@@ -68,7 +68,6 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     echo '<option value="'. date("H:i",$time).'">'. date("H:i",$time).'</option>'. date("H:i",$time)."\n";
 	}?>
 </select>
-<br>
 <br>
 <h3 class="section-subheading sombras" id="estimativas"></h3>
 <br>

@@ -32,15 +32,14 @@ function gravacarona($data)
                 }
 function gravaindice($data)
         {    
-
         $email = ($this->session->userdata('email'));
         $result = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email' ")->num_rows();
         if( $result > 0) {
-        $this->db->query("UPDATE transportesemcurso SET origem = '$data[origem]', destino = '$data[destino]', horario = '$data[horario]', meiotransporte = '$data[meiotransporte]', usuario = '$data[usuario]' WHERE ID = 0 ");
-        } else {
-        $this->db->query("INSERT INTO transportesemcurso (`ID`,`origem`, `destino`, `horario`, `meiotransporte`, `usuario`) 
-              VALUES (0,'$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]'"); 
+            $this->db->where('usuario', $email);
+            $this->db->update('transportesemcurso', $data);
 
+        } else {   
+            $this->db->insert('transportesemcurso', $data);
                 }
         }
 }

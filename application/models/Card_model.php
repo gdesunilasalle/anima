@@ -7,9 +7,18 @@
                 //$this->db2 = $CI->load->database('Anima', TRUE);
         }
         function exibecarona($data)
-        {
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario 
-                FROM `$data`");
+        {   
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario = '$data'");
+            return $query->result();
+        }
+        function exibeconfirmados($data)
+        {   
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario != '$data'");
+            return $query->result();
+        }
+        function usuarioativo($data)
+        {   
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario = '$data'");
             return $query->result();
         }
 

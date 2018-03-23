@@ -12,4 +12,21 @@ public function index()
         redirect(base_url('busca'));
 
     }
+
+ public function sairdacarona()
+    {
+    	ob_start();
+    	$data = $this->uri->segment(3);
+        $this->apagar_model->sairCarona($data);
+        redirect(base_url('busca'));
+
+    }
+
+
+
+
+
+
+
+    
 }
