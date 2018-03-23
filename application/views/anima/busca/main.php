@@ -24,14 +24,28 @@
 			<?php echo $info->horariousuario; ?>
 			<br>
 			<?php echo $info->meio; ?></p>
+
+
+
+	<?php echo form_open('card'); ?>
+	<input type="hidden" name="dusuario" id="dusuario" value="<?php echo $info->emailusuario; ?>">
+
 <?php
 if(($this->session->userdata('email')) == ($info->emailusuario))
 {
-	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a>';
+	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a>';
 }
-else{echo '<a href="card?usuario='.$info->emailusuario.'" class="btn btn-primary">Animo!</a>';
+else{echo form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary'));
+
+
+
+
+
+
 }
+echo form_close();
 ?>
+
 </div>
 </div>
 <br>

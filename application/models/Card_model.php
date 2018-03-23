@@ -6,14 +6,10 @@
                 $CI = &get_instance();
                 //$this->db2 = $CI->load->database('Anima', TRUE);
         }
-
-        function userInformation($usuario)
+        function exibecarona($data)
         {
-
-
-            
-
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$usuario'");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario 
+                FROM `$data`");
             return $query->result();
         }
 
