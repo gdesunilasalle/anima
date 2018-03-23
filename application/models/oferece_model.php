@@ -11,20 +11,16 @@ function buscaLogradouro()
             return $query->result();
         }
 function criacarona($data)
-        {   $result = $this->db->query("SHOW TABLES LIKE '".$data['usuario']."'");
-            if($result->num_rows >= 1) {
-             $query = $this->db->query("CREATE TABLE `$data[usuario]`(
+        {   
+$query = $this->db->query("CREATE TABLE IF NOT EXISTS `$data[usuario]`(
                 `ID` int(11) NOT NULL,
                 `origem` varchar(200) NOT NULL,
                 `destino` varchar(200) NOT NULL,
                 `horario` varchar(200) NOT NULL,
                 `meiotransporte` varchar(11) NOT NULL,
                 `usuario` varchar(240) NOT NULL);");
-            $query = $this->db->query("ALTER TABLE `$data[usuario]` ADD PRIMARY KEY (`ID`)");
-            } else {
-        // NADA ATRIBUIDO POR ENQUANTO PARA O ELSE//       
-        }
-        }
+            $query = $this->db->query("ALTER TABLE `$data[usuario]`");
+            }
 function gravacarona($data)
         {    $result = $this->db->query("SELECT * FROM `$data[usuario]` WHERE ID = 0 ")->num_rows();
         if( $result > 0) {

@@ -22,21 +22,17 @@
 
 
 
-
+<?php echo form_open('adere'); ?>
+<input type="hidden" name="dproponente" id="dproponente" value="<?php echo $info->emailusuario; ?>">
 
 <?php
 if(($this->session->userdata('email')) == ($info->emailusuario))
 {
 	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a>';
 }
-else{echo '<a href="#" class="btn btn-primary">Estou dentro!</a>'; echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';}
+else{echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';}
 ?>
-
-
-
 </form>
-
-
 </div>
 </div>
 <br>
