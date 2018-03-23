@@ -15,28 +15,26 @@ function buscaLogradouro()
             return $query->result();
         }
 function criacarona($data)
-        { 	if ($result = $this->db->query("SHOW TABLES LIKE '".$table."'")) {
+        { 	$result = $this->db->query("SHOW TABLES LIKE '".$data['usuario']."'");
     		if($result->num_rows >= 1) {
-        	// NÃO CRIA TABELA... ELSE...
-    	}
-			} else {
-   							$query = $this->db->query("CREATE TABLE `$data[usuario]`(
+        	$query = $this->db->query("CREATE TABLE `$data[usuario]`(
   							`ID` int(11) NOT NULL,
   							`origem` varchar(200) NOT NULL,
   							`destino` varchar(200) NOT NULL,
   							`horario` varchar(200) NOT NULL,
   							`meiotransporte` varchar(11) NOT NULL,
   							`usuario` varchar(240) NOT NULL)");
-					}
-
-        }
+    		} 
+		}
 function gravacarona($data)
         {
+
+
+
+        	
         	$this->db->query("INSERT INTO `$data[usuario]` (
-            	`origem`, `destino`, `horario`, `meiotransporte`, `usuario`) VALUES 
-            	('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]');");
+            	`ID`,`origem`, `destino`, `horario`, `meiotransporte`, `usuario`) 
+            	VALUES (0,'$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]') 
+          		");  
         }
 }
-
-
-
