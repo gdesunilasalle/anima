@@ -83,7 +83,7 @@ $data = array(
 $this->insert_model->form_insert($data);
 //$this->user_registration_model->insert_record($this->data);
 
-redirect(base_url('sucesso'));
+redirect(base_url());
 }
 }
 }

@@ -1,6 +1,6 @@
 <?php  
 
-class EditaUsuario extends CI_Controller {
+class Editausuario extends CI_Controller {
 function __construct() {
 parent::__construct();
 $this->load->model('edita_model');
