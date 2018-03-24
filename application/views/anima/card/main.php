@@ -20,7 +20,12 @@
 			Usuários confirmados:
 			<br>
 			<?php foreach ($confirmados as $infoconfirmados) {?>
-			- <?php echo $infoconfirmados->emailusuario; ?>
+			- <?php 
+
+//ADICIONAR CONDICAO PARA SE NAO TIVER NENHUM USUARIO DENTRO D CARONA
+
+
+			echo $infoconfirmados->emailusuario; ?>
 			<br>
 			<?php } ?>
 			</p>
