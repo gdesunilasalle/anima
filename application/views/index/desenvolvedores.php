@@ -13,7 +13,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
               <h4>Leonardo Martelotte</h4>
-              <p class="text-muted">Gestor do Projeto Anima e Desenvolvedor Full stack</p>
+              <p class="text-muted">Desenvolvedor Full stack</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -85,7 +85,7 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4>Gabriel Rolan</h4>
+              <h4>Gabriel Roland</h4>
               <p class="text-muted">Lead Designer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
