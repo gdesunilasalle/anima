@@ -65,7 +65,7 @@
                   <h2 class="text-uppercase">Um clique</h2>
                   <p class="item-intro text-muted">Encontre caronas de maneira rápida e agil.</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/01-full.jpg" alt="">
-                  <p>A partir da Timeline você encontrará pessoas com o mesmo destino e origem que você.Podendo dessa forma, chegar com tranquilidade e sem atraso ao seu destino.</p>
+                  <p>A partir da Timeline você encontrará pessoas com o mesmo destino e origem que você. Podendo dessa forma, chegar com tranquilidade e sem atraso ao seu destino.</p>
 
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -95,7 +95,7 @@
                   <h2 class="text-uppercase">Explore</h2>
                   <p class="item-intro text-muted">Esqueça o Tradicionalismo!</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/02-full.jpg" alt="">
-                  <p>Usando os nossos filtros de busca,você filtrará as possibilidades localizando aquelas que forem mais vantajosa para você. Explore esse novo mundo!</p>
+                  <p>Usando os nossos filtros de busca, você filtrará as possibilidades localizando aquelas que forem mais vantajosa para você. Explore esse novo mundo!</p>
 
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -185,7 +185,7 @@
                   <h2 class="text-uppercase">Segurança</h2>
                   <p class="item-intro text-muted">A Segurança é a nossa prioridade.</p>
                   <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/05-full.jpg'); ?>" alt="">
-                  <p>Apenas alunos com e-mail institucional poderá usufruir deste serviço. Com isso aumentamos a segurança e você sempre saberá com quem está indo.</p>
+                  <p>Apenas alunos com e-mail institucional poderá usufruir deste serviço. Com isso, aumentamos a segurança e você sempre saberá com quem está indo.</p>
 
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>

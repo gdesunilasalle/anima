@@ -29,7 +29,7 @@
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Segurança</h4>
-            <p class="text-muted">O método de carona promovido pelo Anima tem como prioridade a segurança. Dessa maneira, somente alunos da Unilasalle-RJ com matriculas ativas e e-mail institucional poderão destrutar desse serviço.</p>
+            <p class="text-muted">O método de carona promovido pelo Anima tem como prioridade a segurança. Dessa maneira, somente alunos da Unilasalle-RJ com matriculas ativas e e-mail institucional poderão desfrutar desse serviço.</p>
           </div>
         </div>
       </div>

@@ -61,7 +61,31 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4>Kay Garland</h4>
+              <h4>Guilherme Alexandre</h4>
+              <p class="text-muted">Desenvolvedor web front-end</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/guilherme014s">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.facebook.com/guilherme.alexandre0714?ref=bookmarks">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <h4>Gabriel Rolan</h4>
               <p class="text-muted">Lead Designer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
@@ -85,31 +109,7 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4>Kay Garland</h4>
+              <h4>Lucas José</h4>
               <p class="text-muted">Lead Designer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">

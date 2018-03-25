@@ -14,7 +14,7 @@
 <font class="required">Meio</font>
 <br>
 <?php foreach ($local as $info) { ?>
-<select class="form-control.col-lg form-control-lg" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+<select class="form-control.col-lg form-control-lg" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value>Meio de transporte</option>
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
@@ -26,25 +26,25 @@
   <br>
   <font class="required" >Origem</font>
   <br>
-  <select class="form-control.col-lg form-control-lg" name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+  <select class="form-control.col-lg form-control-lg" name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value>Origem</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
-    <option value="Unilasalle-RJ">Unilasalle</option>
+    <option value="Unilasalle-RJ">Unilasalle-RJ</option>
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
-    <option value="Barcas">Barcas</option>
+    <option value="Barcas">Barcas - Estação Arariboia</option>
     <option value="Mestre dos Sucos">Mestre dos Sucos</option>
   </select>
   <br>
   <font class="required">Destino</font>
   <br>
-  <select class="form-control.col-lg form-control-lg" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parentses dessa função (Parametro)    -->
+  <select class="form-control.col-lg form-control-lg" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value>Destino</option>
-    <option value="Unilasalle-RJ">Unilasalle</option>
+    <option value="Unilasalle-RJ">Unilasalle-RJ</option>
     <option value="<?php echo $info->logradourousuario;?>">Casa (<?php echo $info->logradourousuario;?>)</option>
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
-    <option value="Barcas">Barcas</option>
+    <option value="Barcas">Barcas - Estação Arariboia</option>
     <option value="Mestre dos Sucos">Mestre dos Sucos</option>
   </select></fielset>
  <br>
