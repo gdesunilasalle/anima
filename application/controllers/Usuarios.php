@@ -49,7 +49,7 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
             $query    = $this->db->select("*")->from("cadastrousuario")->where("email", $user)->get();
             $verifica = $this->db->select("*")->from("cadastrousuario")->where("is_verified", $user)->get();
             if ($query->num_rows() != 1){
-                throw new UnexpectedValueException('Usuario Incorreto.'); // User Incorreto
+                throw new UnexpectedValueException('Usuario inexistente, efetue seu cadastro.'); // User Incorreto
             } else if ($verifica->num_rows() != 1){
                 throw new UnexpectedValueException('Conta ainda não ativada. Acesse seu email La Salle e clique no link de ativação.'); // Usuário não ativado
             }
@@ -63,7 +63,7 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
                 redirect(base_url('indice'));
             } else {
                 // Logado com sucesso
-                //$dadosSessao['userlogado'] = $userlogado[0];
+                $dadosSessao['userlogado'] = $userlogado[0];
                 $dadosSessao['logado']     = TRUE;
                 $dadosSessao['email']     = $user;
                 $this->session->set_userdata($dadosSessao);
