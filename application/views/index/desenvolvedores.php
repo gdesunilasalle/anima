@@ -65,12 +65,12 @@
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="https://twitter.com/guilherme014s">
+                  <a href="https://twitter.com/guilherme014s" target="_Blank">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://www.facebook.com/guilherme.alexandre0714?ref=bookmarks">
+                  <a href="https://www.facebook.com/guilherme.alexandre0714?ref=bookmarks" target="_Blank">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
