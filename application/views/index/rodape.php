@@ -1,49 +1,14 @@
-<h1><div class="intro-heading text-uppercase"><center>Esteja conectado com o ANIMA?!</div></h1>
-  <br>
-  <br>
-  <center><h3>Siga nas redes Socias</h3></center><center><br>  <br>  <br>  <br>  <br>  <br>
-  <h2>Nossa Logo</h2><br><br><br></center>
-   <center>
-   </div>
 
+      <div class="copyright bg-warning">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-12"><br>
+			<p>&copy; Todos os direitos reservados.</p>
 
-
-<footer>
-     <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">  </span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#"</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+			</div>
+			</div>
+			</div>
+		  </div>
 
 
     <!-- Como funciona? Modals -->
