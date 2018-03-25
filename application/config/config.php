@@ -382,7 +382,7 @@ $config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200; //7200 são 2 horas
 $config['sess_save_path'] = 'ci_session';
-$config['sess_match_ip'] = true; //rastreia o ip da sessao
+$config['sess_match_ip'] = FALSE; //rastreia o ip da sessao
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
 
