@@ -34,6 +34,7 @@ $this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'r
 
 if ($this->form_validation->run() == FALSE) {
 $data = array('nomecompleto','email', 'matricula','logradouro' ,'numero', 'complemento', 'cep');
+$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Erro! </strong>Os dados inseridos são inválidos.<br>Preencha corretamente os dados cadastrais clicando <a href="#cadastro" class="alert-link">aqui.</a><br></div>');
                 $this->load->view('index/topo');
                 $this->load->view('index/inicio');
                 $this->load->view('index/oquee');
@@ -82,7 +83,8 @@ $data = array(
 //Transfering data to Model
 $this->insert_model->form_insert($data);
 //$this->user_registration_model->insert_record($this->data);
-
+$this->session->set_flashdata('message', '
+<div class="alert alert-success" role="alert"><strong>Cadastro efetuado com sucesso! </strong>Verifique seu email e ative sua conta para acessar.<br>Não deixe de verificar a caixa <i>SPAM</i> de seu email!</div>');
 redirect(base_url());
 }
 }

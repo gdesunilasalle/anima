@@ -51,12 +51,12 @@ if ($resp->isSuccess()) { // Se Recaptcha foi digitado certo executa os procedim
             if ($query->num_rows() != 1){
                 throw new UnexpectedValueException('Usuario inexistente, efetue seu cadastro.'); // User Incorreto
             } else if ($verifica->num_rows() != 1){
-                throw new UnexpectedValueException('Conta ainda não ativada. Acesse seu email La Salle e clique no link de ativação.'); // Usuário não ativado
+                throw new UnexpectedValueException('<div class="alert alert-danger" role="alert"><strong>Conta ainda não ativada! </strong>Acesse seu email La Salle e clique no link de ativação.<br>Não deixe de verificar a caixa <i>SPAM</i> de seu email!<br></div>'); // Usuário não ativado
             }
             $row = $query->row();
             if (!password_verify($password, $row->senha)) {
                 // Senha Incorreta
-                throw new UnexpectedValueException('Senha Incorreta.'); // Exception Senha incorreta
+                throw new UnexpectedValueException('<div class="alert alert-danger" role="alert"><strong>Senha incorreta! </strong>Digite novamente</div>'); // Exception Senha incorreta
                 $dadosSessao['userlogado'] = NULL;
                 $dadosSessao['logado']     = FALSE;
                 $this->session->set_userdata($dadosSessao);
