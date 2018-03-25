@@ -49,3 +49,5 @@ Complemento <br>
 <br>
 <?php echo form_close(); ?> <br>
 </center>
+</div>
+</section>
