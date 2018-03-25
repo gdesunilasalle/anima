@@ -110,7 +110,7 @@
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
               <h4>Lucas José</h4>
-              <p class="text-muted">Lead Designer</p>
+              <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -120,6 +120,7 @@
                 <li class="list-inline-item">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
+                     <a href="https://www.facebook.com/lucas.jose.355" target="_Blank">
                   </a>
                 </li>
                 <li class="list-inline-item">
