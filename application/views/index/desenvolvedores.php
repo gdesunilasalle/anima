@@ -12,8 +12,8 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4>Leonardo Martelotte</h4>
-              <p class="text-muted">Gestor do projeto Anima e desenvolvedor Full stack</p>
+              <h4></h4>
+              <p class="text-muted"></p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
