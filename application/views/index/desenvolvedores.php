@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Desenvolvedores Anima</h2>
+            <h2 class="section-heading-text-uppercase">Desenvolvedores Anima</h2>
             <h3 class="section-subheading text-muted">Conheça nosso time.</h3>
           </div>
         </div>
@@ -88,7 +88,7 @@
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="">
+                  <a href="#">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
@@ -117,9 +117,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.facebook.com/lucas.jose.355" target="_Blank"">
                     <i class="fa fa-facebook"></i>
-                     <a href="https://www.facebook.com/lucas.jose.355" target="_Blank">
                   </a>
                 </li>
                 <li class="list-inline-item">

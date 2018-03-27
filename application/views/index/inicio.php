@@ -16,7 +16,7 @@
             </div>
 <br>
     <div class="g-recaptcha" data-sitekey="6Ld0pkwUAAAAAPoc-WBI4SQmUu6dKz6eJIeUtJn8"></div>
-          <script type="text/javascript"src="https://www.google.com/recaptcha/api.js?hl=pt">
+          <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt">
 					</script>
 </form>
           <br>
