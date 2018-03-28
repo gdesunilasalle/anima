@@ -9,6 +9,7 @@
   <h2 class="section-heading text-uppercase sombras">Buscar Carona</h2>
   <h3 class="section-subheading sombras">O que está Rolando... Anima?!</h3>
 	<br>
+	<?php echo $this->session->flashdata('message');?>
 <?php foreach ($caronas as $info) { ?>
 <div class="card w-75">
 	  <div class="card-header">
@@ -27,22 +28,13 @@
 
 
 
-	<?php echo form_open('card'); ?>
-	<input type="hidden" name="dusuario" id="dusuario" value="<?php echo $info->emailusuario; ?>">
+<?php echo form_open('card'); ?>
+
+<input type="hidden" name="dusuario" id="dusuario" value="<?php echo $info->emailusuario; ?>">
 
 <?php
-if(($this->session->userdata('email')) == ($info->emailusuario))
-{
-	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a>';
-}
-else{echo form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary'));
+echo form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary'));
 
-
-
-
-
-
-}
 echo form_close();
 ?>
 

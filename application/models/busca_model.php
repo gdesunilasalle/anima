@@ -8,8 +8,9 @@
         }
 
         function userInformation()
-        {
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso ORDER BY horario");
+        {   
+            $email = ($this->session->userdata('email'));
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE host = 1 AND usuario != '$email' ORDER BY horario");
             return $query->result();
         }
 

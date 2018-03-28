@@ -20,10 +20,9 @@ $data = array(
 'destino'        => $this->input->post('ddestino'),
 'horario'        => $this->input->post('dhorario'),
 'usuario'        => $this->input->post('dusuario'),
+'host'        => $this->input->post('dhost'),
 );
-$this->oferece_model->criacarona($data);
 $this->oferece_model->gravacarona($data);
-$this->oferece_model->gravaindice($data);
 redirect(base_url('busca'));
 }
 }

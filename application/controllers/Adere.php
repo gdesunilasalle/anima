@@ -4,14 +4,15 @@ function __construct() {
 parent::__construct();
 $this->load->model('adere_model');
 }
-public function index() {ob_start();
-	$data = array('proponente' => $this->input->post('dproponente'),
-				  'usuario'    => $this->session->userdata('email'),
-);
-
-	$this->adere_model->criacarona($data);
-
-	redirect(base_url());
+public function index() {
+	ob_start();
+	$data = ($this->session->userdata('email'));
+	$proponente = $this->input->post('dproponente');
+	$id = $this->adere_model->consultaid($proponente);
+	$this->adere_model->criacarona($id, $data);
+	$this->session->set_flashdata('message', '
+<div class="alert alert-success" role="alert"><strong>Adesão à carona realizada com sucesso! </strong>Acesse os detalhes da carona para interagir com os demais usuários!</div>');
+	redirect(base_url('minha'));
 
 }
 }

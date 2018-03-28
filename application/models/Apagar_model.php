@@ -13,7 +13,7 @@
         function sairCarona($data)
         {
             $email = ($this->session->userdata('email'));
-            $query = $this->db->query("DELETE FROM `$data` WHERE usuario = '$email'"); 
+            $query = $this->db->query("DELETE FROM transportesemcurso WHERE usuario = '$email'"); 
 
         }
 }

@@ -8,21 +8,28 @@
         }
         function exibecarona($data)
         {
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario = '$data'");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
 // FAZER CONDIÇÃO PARA TESTE
-
-
-
         }
-        function exibeconfirmados($data)
+        function exibeconfirmados($data, $id)
         {   
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario != '$data'");
+            
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario != '$data' AND passageiro = '$id' ");
             return $query->result();
         }
+        function consultaid($data)
+        {
+            $passageiro = $this->db->query("SELECT ID FROM transportesemcurso WHERE usuario = '$data' ");
+            $result = $passageiro->row();
+            return $result->ID;
+            return $passageiro->result(); //peguei o 6
+
+        }
+
         function usuarioativo($data)
         {   
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM `$data` WHERE usuario = '$data'");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
         }
 

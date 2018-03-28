@@ -4,17 +4,22 @@ class Adere_model extends CI_Model{
 function __construct() {
 parent::__construct();
 }
-function criacarona($data){
-
-        $email = ($this->session->userdata('email'));
-        $result = $this->db->query("SELECT * FROM `$data[proponente]` WHERE usuario = '$email' ")->num_rows();
+        function criacarona($id, $data){
+            $result = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$data' ")->num_rows();
         if( $result > 0) {
-        //  A CARONA JA EXISTE
+        $this->db->query("UPDATE transportesemcurso SET passageiro = '$id' WHERE usuario = '$data'");
         } else {
-        $this->db->query("INSERT INTO `$data[proponente]` (`usuario`, `origem`, `destino`, `horario`, `meiotransporte`) 
-              VALUES ('$data[usuario]', 0, 0, 0, 0) 
-              ");
-
-                }
-            }
+        $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`)
+              VALUES ('$data', '$id') 
+              "); }  
         }
+        function consultaid($data)
+        {
+            $passageiro = $this->db->query("SELECT ID FROM transportesemcurso WHERE usuario = '$data' ");
+            $result = $passageiro->row();
+            return $result->ID;
+            return $passageiro->result(); //peguei o 6
+
+        }
+
+}

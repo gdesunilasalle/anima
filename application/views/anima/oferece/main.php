@@ -5,6 +5,7 @@
       <div class="container">
             <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
             <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
+            <?php echo $this->session->flashdata('message');?>
           </div>
 <?php echo form_open('oferece/grava'); ?>
 <CENTER>
@@ -68,6 +69,7 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     echo '<option value="'. date("H:i",$time).'">'. date("H:i",$time).'</option>'. date("H:i",$time)."\n";
 	}?>
 </select>
+ <input type="hidden" name="dhost" value="1">
 <br>
 <h3 class="section-subheading sombras" id="estimativas"></h3>
 <br>

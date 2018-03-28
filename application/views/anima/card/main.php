@@ -19,7 +19,19 @@
 			<p class="text-secondary" align="left">
 			Usuários confirmados:
 			<br>
-			<?php foreach ($confirmados as $infoconfirmados) {?>
+<?php if (!$confirmados){echo 'Não há usuários confirmados nesta carona<br>';
+
+
+
+echo form_open('adere'); ?>
+<input type="hidden" name="dproponente" id="dproponente" value="<?php echo $info->emailusuario; ?>">
+<?php
+
+
+	echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';}else{
+
+
+			foreach ($confirmados as $infoconfirmados) {?>
 			- <?php 
 
 //ADICIONAR CONDICAO PARA SE NAO TIVER NENHUM USUARIO DENTRO D CARONA
@@ -31,7 +43,6 @@
 			</p>
 <?php echo form_open('adere'); ?>
 <input type="hidden" name="dproponente" id="dproponente" value="<?php echo $info->emailusuario; ?>">
-
 <?php
 if(($this->session->userdata('email')) == ($infoconfirmados->emailusuario))
 {
@@ -45,7 +56,7 @@ else{
 </div>
 </div>
 <br>
-<?php } ?>
+<?php }} ?>
 </div>
 </div>
 </header>
