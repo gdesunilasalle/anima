@@ -47,14 +47,12 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('oferece'); ?>">Oferecer carona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('contato'); ?>">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('editausuario'); ?>">Dados cadastrais</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('busca'); ?>">Buscar carona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('logout');?>">Sair</a>
             </li>
+
           </ul>
         </div>
       </div>
