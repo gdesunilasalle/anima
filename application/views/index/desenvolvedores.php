@@ -30,17 +30,17 @@
               <p class="text-muted">Desenvolvedor Full stack</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://twitter.com/rafael_faustini">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
+                  <a href="http://rafaelfaustini.com.br">
+                    <i class="fa fa-globe"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/rafaelfaustini">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
