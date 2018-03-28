@@ -8,11 +8,16 @@ $this->load->model('minha_model');
 public function index()
     {ob_start();
 
-        $data['caronas'] = $this->minha_model->minhacarona();
+if($this->session->userdata('logado')){
+                     
+ $data['caronas'] = $this->minha_model->minhacarona();
         $host = $this->minha_model->consultahost();
         $data['passageiro'] = $this->minha_model->passageiro($host);
 		$this->load->view('anima/minha/topo');
         $this->load->view('anima/minha/main',$data);
+        }else{
+                redirect(base_url());
+        }
     }
 }
 

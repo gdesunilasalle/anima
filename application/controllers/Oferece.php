@@ -7,10 +7,13 @@ $this->load->model('oferece_model');
 public function index() {
 //Setting values for tabel columns
 ob_start();
-
-	$data['local'] = $this->oferece_model->buscaLogradouro();
+if($this->session->userdata('logado')){
+$data['local'] = $this->oferece_model->buscaLogradouro();
     $this->load->view('anima/oferece/topo');
     $this->load->view('anima/oferece/main',$data);
+        }else{
+                redirect(base_url());
+        }
 }
 public function grava() {
 ob_start();
@@ -20,7 +23,7 @@ $data = array(
 'destino'        => $this->input->post('ddestino'),
 'horario'        => $this->input->post('dhorario'),
 'usuario'        => $this->input->post('dusuario'),
-'host'        => $this->input->post('dhost'),
+'host'       	 => $this->input->post('dhost'),
 );
 $this->oferece_model->gravacarona($data);
 redirect(base_url('busca'));

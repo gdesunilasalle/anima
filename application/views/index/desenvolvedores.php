@@ -12,21 +12,11 @@
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
-              <h4></h4>
-              <p class="text-muted"></p>
+              <h4>Leonardo Martelotte</h4>
+              <p class="text-muted">Desenvolvedor Full stack</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://br.linkedin.com/in/leonardo-martelotte-a727a550" target="_Blank">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
