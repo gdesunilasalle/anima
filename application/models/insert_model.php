@@ -8,6 +8,10 @@ function form_insert($data){
 // Inserting in Table(cadastrousuario) of Database(anima)
 $this->db->insert('cadastrousuario', $data);
 }
+function form_update($data){
+// Inserting in Table(cadastrousuario) of Database(anima)
+$this->db->update('cadastrousuario', $data);
+}
 }
 
 
