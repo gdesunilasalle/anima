@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading-text-uppercase">Desenvolvedores Anima</h2>
+            <h2 class="section-heading">Desenvolvedores Anima</h2>
             <h3 class="section-subheading text-muted">Conheça nosso time.</h3>
           </div>
         </div>
@@ -14,10 +14,18 @@
               <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
               <h4>Leonardo Martelotte</h4>
               <p class="text-muted">Desenvolvedor Full stack</p>
-              <ul class="list-inline social-buttons">
+            <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="https://br.linkedin.com/in/leonardo-martelotte-a727a550" target="_Blank">
-                    <i class="fa fa-linkedin"></i>
+                  <a href="#" target="_Blank">
+                    <i class="fa fa-envelope"></i></a>
+                    <li class="list-inline-item">
+                  <a href="#" target="_Blank">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+                  <li class="list-inline-item">
+                    <a href="https://br.linkedin.com/in/leonardo-martelotte-a727a550" target="_Blank">
+                      <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
@@ -59,8 +67,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://www.facebook.com/guilherme.alexandre0714?ref=bookmarks" target="_Blank">
-                    <i class="fa fa-facebook"></i>
+                  <a href="https://github.com/GuilhermeAs7" target="_Blank">
+                    <i class="fa fa-github"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
