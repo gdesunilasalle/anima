@@ -48,6 +48,7 @@ Complemento <br>
 <?php echo form_error('dconfirmasenha'); ?>
 <input pattern=".{8,30}" type="password" placeholder="Confirme aqui sua senha" class="form-control" name="dconfirmasenha" oninvalid="this.setCustomValidity('Não esqueça de preencher a confirmação de senha (Entre 8 e 30 caracteres)!')" onchange="this.setCustomValidity('')" id="dconfirmasenha" required>
 <br>
+<center><input type="checkbox" name="termo" value="termo">&emsp;Declaro que li e estou de acordo com os termos de uso.</center><br>
 <center>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Cadastrar', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <br>

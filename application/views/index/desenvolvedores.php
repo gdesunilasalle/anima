@@ -78,13 +78,9 @@
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://www.facebook.com/gabriel.fernandes.1238" target="_Blank">
-                    <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
