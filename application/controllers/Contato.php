@@ -11,7 +11,7 @@ public function index(){
 
     $this->load->view('anima/contato/topo');
     $this->load->view('anima/contato/main');
-      
+    $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }

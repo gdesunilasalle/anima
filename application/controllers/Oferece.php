@@ -11,6 +11,7 @@ if($this->session->userdata('logado')){
 $data['local'] = $this->oferece_model->buscaLogradouro();
     $this->load->view('anima/oferece/topo');
     $this->load->view('anima/oferece/main',$data);
+    $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }

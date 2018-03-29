@@ -15,6 +15,7 @@ if($this->session->userdata('logado')){
         $data['passageiro'] = $this->minha_model->passageiro($host);
 		$this->load->view('anima/minha/topo');
         $this->load->view('anima/minha/main',$data);
+        $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }

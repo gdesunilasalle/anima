@@ -3,16 +3,13 @@
 			<div class="container">
 			<div class="row">
 			<div class="col-md-12"><br>
-			<p>&copy; Todos os direitos reservados.</p>
+			<p>&copy; Anima - Todos os direitos reservados.</p>
 
 			</div>
 			</div>
 			</div>
 		  </div>
-
-
     <!-- Como funciona? Modals -->
-
     <!-- Modal 1 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -42,7 +39,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 2 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal2" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -72,7 +68,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 3 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal3" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -102,7 +97,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 4 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -132,7 +126,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 5 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal5" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -162,7 +155,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 6 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal6" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -192,23 +184,15 @@
         </div>
       </div>
     </div>
-
     <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
-
     <!-- Plugin JavaScript -->
     <script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
-
     <!-- Contato form JavaScript -->
     <script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
     <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
-
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
-
-
-
   </body>
-
 </html>

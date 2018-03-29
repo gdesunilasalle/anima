@@ -12,6 +12,8 @@ public function index()
 
 		$this->load->view('anima/edita/topo');
         $this->load->view('anima/edita/main',$data);
+        $this->load->view('index/rodape');
+
     }
 }
 
