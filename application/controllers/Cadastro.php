@@ -31,6 +31,8 @@ $this->form_validation->set_rules('dcep', 'CEP', 'required|exact_length[8]');
 $this->form_validation->set_rules('dsenha', 'Senha', 'required|min_length[8]|max_length[30]');
 //VALIDAÇÃO DA CONFIRMAÇÃO DE SENHA
 $this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'required|matches[dsenha]|min_length[8]|max_length[30]');
+//VALIDAÇÃO DOS TERMOS DE USO
+$this->form_validation->set_rules('termo', 'termo', 'required');
 
 if ($this->form_validation->run() == FALSE) {
 $data = array('nomecompleto','email', 'matricula','logradouro' ,'numero', 'complemento', 'cep');
