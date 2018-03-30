@@ -906,3 +906,10 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
+/*Aumenta o tamnho do checkbox do termos de uso */
+input[type=checkbox] {
+    transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    padding: 10px;
+}
