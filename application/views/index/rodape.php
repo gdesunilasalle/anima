@@ -1,14 +1,14 @@
-
-      <div class="copyright bg-warning">
-			<div class="container">
+   <div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298">
+			<div class="container">  </style>
 			<div class="row">
 			<div class="col-md-12"><br>
-			<p>&copy; Anima - Todos os direitos reservados.</p>
+			<p> &copy; Anima - Todos os direitos reservados.</p>
 
 			</div>
 			</div>
 			</div>
-		  </div>
+    </div>
+  </style>
     <!-- Como funciona? Modals -->
     <!-- Modal 1 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal1" tabindex="-1" role="dialog" aria-hidden="true">
