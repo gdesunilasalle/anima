@@ -1,21 +1,6 @@
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks
 RewriteEngine On
-RewriteBase /
-Options -Indexes
-
-# Always use www in the domain
-RewriteCond %{HTTP_HOST} ^([a-z.]+)?domain\.com$ [NC]
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule .? localhost/anima%{REQUEST_URI} [R=301,L]
-
-# Check if HTTPS is not used, then jump to HTTPS
-RewriteCond %{SERVER_PORT} !^443$
-RewriteRule ^(.*)$ localhost/anima$1 [NC,R=301,L]
-
-# Redirect Trailing Slashes...
-RewriteRule ^(.*)/$ /$1 [L,R=301]
-
 # Handle Front Controller...
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
