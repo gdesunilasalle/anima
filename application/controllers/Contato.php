@@ -26,7 +26,12 @@ public function grava(){
 $this->contato_model->enviacontato($data);
 $this->session->set_flashdata('message', '
 <div class="alert alert-success" role="alert"><strong>Mensagem enviada com sucesso! </strong>Obrigado por entrar em contato, responderemos em breve!</div>');
-redirect(base_url('contato'));
+if($this->session->userdata('logado')){
+
+        redirect(base_url('contato'));}else{
+                
+                redirect(base_url());
+        }
 }
 }
 
