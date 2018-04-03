@@ -908,8 +908,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 /*Aumenta o tamnho do checkbox do termos de uso */
 input[type=checkbox] {
-    transform: scale(1.8);
-    -ms-transform: scale(1.8);
-    -webkit-transform: scale(1.8);
+    transform: scale(2.0);
+    -ms-transform: scale(2.0);
+    -webkit-transform: scale(2.0);
     padding: 10px;
 }
