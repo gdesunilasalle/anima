@@ -16,10 +16,10 @@
               <p class="text-muted">Desenvolvedor Full stack</p>
             <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#" target="_Blank">
+                  <a href="mailto:leonardo.martelotte@soulasalle.com.br" target="_Blank">
                     <i class="fa fa-envelope"></i></a>
                     <li class="list-inline-item">
-                  <a href="#" target="_Blank">
+                  <a href="https://github.com/leonardomartelotte/" target="_Blank">
                     <i class="fa fa-github"></i>
                   </a>
                 </li>
