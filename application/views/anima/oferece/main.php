@@ -71,8 +71,7 @@ $minutes = $now['minutes'] - $now['minutes']%30;
   </select></fielset>
  <br>
  <input type="hidden" name="dhost" value="1">
-<br>
-<h3 class="section-subheading sombras" id="estimativas"></h3>
+<h3 style="display:none;height:0px;margin-top:10px;" class="section-subheading sombras" id="estimativas"></h3>
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-xl text-uppercase')); ?>
 <br>

@@ -1,6 +1,6 @@
 <div>
 <header class="martelotte">
-<div class="container"> 
+<div class="container">
 <center>
 <section id="cadastro">
       <div class="container">
@@ -32,7 +32,7 @@ echo form_open('adere'); ?>
 
 
 			foreach ($confirmados as $infoconfirmados) {?>
-			- <?php 
+			- <?php
 
 //ADICIONAR CONDICAO PARA SE NAO TIVER NENHUM USUARIO DENTRO D CARONA
 

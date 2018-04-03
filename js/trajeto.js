@@ -1,34 +1,30 @@
 var mensagem2 = "";
+var casag = "";
 
 function endereco(address, casa) {
-
-  if (address == "Unilasalle-RJ") {
-    return "Rua Gastão Gonçalves, 79";
+  switch (address) {
+    case "Unilasalle-RJ":
+      return "Rua Gastão Gonçalves, 79";
+    case "Terminal":
+      return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
+    case "Rodoviária":
+      return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
+    case "Barcas":
+      return "Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030";
+    case "Mestre dos Sucos":
+      return "R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401";
+    case casa:
+      return casa
+    default:
+      return undefined;
   }
-  if (address == "Terminal") {
-    return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
-  }
-  if (address == "Rodoviária") {
-    return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
-  }
-  if (address == "Barcas") {
-    return "Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030"
-  }
-  if (address == "Mestre dos Sucos") {
-    return "R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401"
-  }
-  if (address == casa) {
-
-    return casa;
-
-  }
-  return "Error";
-
-
 }
 
 function loadestimativa(casa) {
-
+  casag = casa;
+  var estimativa = document.getElementById("estimativas");
+  estimativa.innerHTML = "";
+  estimativa.style.display = "none";
   var origem = document.getElementById("select-origem")
     .options[document.getElementById("select-origem")
       .selectedIndex].value;
@@ -40,7 +36,8 @@ function loadestimativa(casa) {
       .selectedIndex].value;
   origem = endereco(origem, casa);
   destino = endereco(destino, casa);
-  if (origem == "" || destino == "") {
+
+  if (origem == undefined || destino == undefined) {
     document.getElementById("estimativas")
       .innerHTML = "";
     return;
@@ -81,8 +78,11 @@ function callback(data) {
   let mensagem1 = "A distancia da origem até destino é aproximadamente ";
   document.getElementById("estimativas")
     .innerHTML = mensagem1 + distancia + mensagem2 + tempo;
+  document.getElementById("estimativas")
+    .style.display = "block";
 }
 
 function setup() {
   noCanvas();
+  setInterval(loadestimativa(casag), 1000);
 }
