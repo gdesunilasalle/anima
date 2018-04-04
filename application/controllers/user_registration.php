@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class user_registration extends CI_Controller {
+class User_registration extends CI_Controller {
 function __construct() {
 parent::__construct();
 $this->load->model('user_registration_model');
