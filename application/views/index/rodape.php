@@ -2,7 +2,7 @@
 			<div class="container">  </style>
 			<div class="row">
 			<div class="col-md-12"><br>
-			<p> &copy; Anima - Todos os direitos reservados.</p>
+			<p>Anima - Todos os direitos reservados.</p>
 
 			</div>
 			</div>
