@@ -4,15 +4,6 @@ class Adere_model extends CI_Model{
 function __construct() {
 parent::__construct();
 }
-        function criacarona($id, $data){
-            $result = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$data' ")->num_rows();
-        if( $result > 0) {
-        $this->db->query("UPDATE transportesemcurso SET passageiro = '$id' WHERE usuario = '$data'");
-        } else {
-        $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`)
-              VALUES ('$data', '$id') 
-              "); }  
-        }
         function consultaid($data)
         {
             $passageiro = $this->db->query("SELECT ID FROM transportesemcurso WHERE usuario = '$data' ");
@@ -22,4 +13,29 @@ parent::__construct();
 
         }
 
+        function consultameio($id, $proponente)
+        {            
+        $transporte = $this->db->query("SELECT meiotransporte FROM transportesemcurso WHERE usuario = '$proponente' ");
+        $resultadotransoporte = $transporte->row();
+        return $resultadotransoporte->meiotransporte;
+        return $transporte->result();
+        }
+        function criacarona($id, $data, $meio){
+            $result  = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$data' ")->num_rows();
+            $result2 = $this->db->query("SELECT passageiro FROM transportesemcurso WHERE passageiro = '$id' ")->num_rows();
+                if( $result > 0) {
+                    $this->db->query("UPDATE transportesemcurso SET passageiro = '$id' WHERE usuario = '$data'");
+                }else if( $meio == 'Uber' && $result2 < 3 ) {
+                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    return 2;
+                }else if( $meio == 'Uber' && $result2 >= 3 ){
+                    return 3;
+                }else if( $meio == 'Carro' && $result2 < 4 ) {
+                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    return 2;
+                }else if( $meio == 'Carro' && $result2 >= 4 ){
+                    return 1;
+                }  
+        }
+        
 }

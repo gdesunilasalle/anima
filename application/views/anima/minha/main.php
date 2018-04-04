@@ -43,7 +43,8 @@ echo form_close();
 </div>
 <br>
 <?php } ?>
-<?php if (!$passageiro){echo '<h3 class="section-heading text-uppercase sombras">Caronas onde sou passageiro</h3><h3 class="section-subheading sombras">Você não possui nenhuma carona ativa no momento</h3>';}?>	
+<?php if (!$passageiro){echo '<h3 class="section-heading text-uppercase sombras">Caronas onde sou passageiro</h3><h3 class="section-subheading sombras">Você não possui nenhuma carona ativa no momento</h3>';}?>
+<?php echo $this->session->flashdata('message');?>	
 <?php foreach ($passageiro as $info) { ?>
 <h3 class="section-heading text-uppercase sombras">Carona onde sou passageiro</h3>
 <h3 class="section-subheading sombras">Aqui você sair da carona ou conversar com seus colegas pelo chat</h3>
