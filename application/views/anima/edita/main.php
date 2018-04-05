@@ -58,7 +58,7 @@ Complemento <br>
 <input pattern=".{8,30}" type="password" placeholder="Confirme aqui sua senha" class="form-control" name="dconfirmasenha" oninvalid="this.setCustomValidity('Não esqueça de preencher a confirmação de senha (Entre 8 e 30 caracteres)!')" onchange="this.setCustomValidity('')" id="dconfirmasenha" required>
 <br>
 <center>
-<?php echo form_submit(array('id' => 'submit', 'value' => 'Atualizar dados', 'class'=>'btn btn-primary text-uppercase')); ?> <a href="<?php echo base_url('busca'); ?>" class="btn btn-primary">Cancelar</a>
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Atualizar dados', 'class'=>'btn btn-primary')); ?> <a href="<?php echo base_url('busca'); ?>" class="btn btn-primary">Cancelar</a>
 </center>
 <br>
 <?php echo form_close(); ?> <br>
