@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'Anima',
+	'hostname' => 'mysql.hostinger.com',
+	'username' => 'u681875341_anima',
+	'password' => 'fljiwcm44c8utcmmf4c8ojmwo8t4',
+	'database' => 'u681875341_anima',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
