@@ -11,7 +11,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.png'); ?>" alt="">
               <h4>Leonardo Martelotte</h4>
               <p class="text-muted">Desenvolvedor Full stack</p>
             <ul class="list-inline social-buttons">
@@ -33,7 +33,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/2.png'); ?>" alt="">
               <h4>Rafael Faustini</h4>
               <p class="text-muted">Desenvolvedor Full stack</p>
               <ul class="list-inline social-buttons">
@@ -57,7 +57,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/3.png'); ?>" alt="">
               <h4>Guilherme Alexandre</h4>
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
@@ -81,7 +81,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/4.png'); ?>" alt="">
               <h4>Gabriel Roland</h4>
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
@@ -101,7 +101,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/1.jpg'); ?>" alt="">
+              <img class="mx-auto rounded-circle" src="<?php echo base_url('img/desenvolvedores/5.png'); ?>" alt="">
               <h4>Lucas José</h4>
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
@@ -127,7 +127,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <br>
-            <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Assim, estaremos sempre nos aperfeiçoando para melhorarmos cada vez mais a qualidade de nosso serviço. Obrigado por escolher o Anima.</p>
+            <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Estaremos sempre nos aperfeiçoando para melhorarmos cada vez mais a qualidade de nosso serviço. Obrigado por escolher o Anima.</p>
           </div>
         </div>
       </div>

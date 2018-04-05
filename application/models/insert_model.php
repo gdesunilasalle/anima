@@ -1,6 +1,5 @@
 <?php
 class insert_model extends CI_Model{
-
 function __construct() {
 parent::__construct();
 }
@@ -10,7 +9,7 @@ $this->db->insert('cadastrousuario', $data);
 }
 function form_update($data){
 // Inserting in Table(cadastrousuario) of Database(anima)
-$this->db->update('cadastrousuario', $data);
+$this->db->replace('cadastrousuario', $data);
 }
 }
 

@@ -16,19 +16,18 @@ class Adere extends CI_Controller
             $proponente = $this->input->post('dproponente');
             $id         = $this->adere_model->consultaid($proponente);
             $meio       = $this->adere_model->consultameio($id, $proponente);
-            $this->adere_model->criacarona($id, $data, $meio);
+            $status     = $this->adere_model->criacarona($id, $data, $meio);
             
-            if ($this->adere_model->criacarona($id, $data, $meio) == 3) {
+            if ($status == 3) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O Uber está cheio!<br></div>');
                 redirect(base_url('busca'));
-            } else if ($this->adere_model->criacarona($id, $data, $meio) == 1) {
+            } else if ($status == 1) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O carro está cheio!<br></div>');
                 redirect(base_url('busca'));
-            } else if ($this->adere_model->criacarona($id, $data, $meio) == 2) {
-                $this->session->set_flashdata('message', '
-<div class="alert alert-success" role="alert"><strong>Adesão à carona realizada com sucesso! </strong>Acesse os detalhes da carona para interagir com os demais usuários!</div>');
+            } else if ($status == 2) {
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"><strong>Adesão à carona realizada com sucesso! </strong>Acesse os detalhes da carona para interagir com os demais usuários!</div>');
+                redirect(base_url('minha'));
             }
-            redirect(base_url('minha'));
         } else {
             redirect(base_url());
         }

@@ -26,12 +26,9 @@
 			<br>
 			<?php echo $info->meio; ?></p>
 
-
-
 <?php echo form_open('card'); ?>
 
 <input type="hidden" name="dusuario" id="dusuario" value="<?php echo $info->emailusuario; ?>">
-
 <?php
 echo form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary'));
 

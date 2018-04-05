@@ -25,16 +25,19 @@ parent::__construct();
             $result2 = $this->db->query("SELECT passageiro FROM transportesemcurso WHERE passageiro = '$id' ")->num_rows();
                 if( $result > 0) {
                     $this->db->query("UPDATE transportesemcurso SET passageiro = '$id' WHERE usuario = '$data'");
-                }else if( $meio == 'Uber' && $result2 < 3 ) {
+                }else if ($meio == 'Uber' && $result2 < 3) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     return 2;
-                }else if( $meio == 'Uber' && $result2 >= 3 ){
+                }else if ($meio == 'Uber' && $result2 >= 3){
                     return 3;
-                }else if( $meio == 'Carro' && $result2 < 4 ) {
+                }else if ($meio == 'Carro' && $result2 < 4 ) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     return 2;
-                }else if( $meio == 'Carro' && $result2 >= 4 ){
+                }else if ($meio == 'Carro' && $result2 >= 4){
                     return 1;
+                }else if ($meio != 'Carro' && $meio != 'Uber') {
+                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    return 2;
                 }  
         }
         
