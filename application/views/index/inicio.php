@@ -1,7 +1,7 @@
 <header class="masthead">
         <div class="intro-text"  id="inicio">
           <div class="intro-lead-in sombras">Seja muito bem vindo ao Anima!</div>
-          <div class="intro-heading text-uppercase sombras">JÁ É CADASTRADO?<br>TESTEEEEE!!!
+          <div class="intro-heading text-uppercase sombras">JÁ É CADASTRADO?<br>
           </div>
           <?php echo $this->session->flashdata('message');?>
           <?php if(isset($e)){ echo $e->getMessage();}?>
