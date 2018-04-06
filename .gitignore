@@ -24,3 +24,4 @@ application/.DS_Store
 application/config/config.php
 application/config/database.php
 application/.DS_Store
+.DS_Store
