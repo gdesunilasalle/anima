@@ -33,8 +33,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
  <script src="<?php echo base_url('js/trajeto.js'); ?>"></script>
-
-
   </head>
   <body id="page-top">
     <!-- Navigation -->
@@ -51,7 +49,10 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('busca'); ?>">Buscar carona</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('oferece'); ?>">Oferecer carona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Busca'); ?>">Buscar carona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('contato'); ?>">Contato</a>

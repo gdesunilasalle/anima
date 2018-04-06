@@ -41,13 +41,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('oferece'); ?>">Oferecer carona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Busca'); ?>">Buscar carona</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('contato'); ?>">Contato</a>

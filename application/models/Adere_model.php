@@ -10,9 +10,7 @@ parent::__construct();
             $result = $passageiro->row();
             return $result->ID;
             return $passageiro->result(); //peguei o 6
-
         }
-
         function consultameio($id, $proponente)
         {            
         $transporte = $this->db->query("SELECT meiotransporte FROM transportesemcurso WHERE usuario = '$proponente' ");
@@ -24,7 +22,8 @@ parent::__construct();
             $result  = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$data' ")->num_rows();
             $result2 = $this->db->query("SELECT passageiro FROM transportesemcurso WHERE passageiro = '$id' ")->num_rows();
                 if( $result > 0) {
-                    $this->db->query("UPDATE transportesemcurso SET passageiro = '$id' WHERE usuario = '$data'");
+                    $this->db->query("UPDATE transportesemcurso SET passageiro = '$id', host = 0 WHERE usuario = '$data'");
+                    return 2;
                 }else if ($meio == 'Uber' && $result2 < 3) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     return 2;
@@ -34,11 +33,10 @@ parent::__construct();
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     return 2;
                 }else if ($meio == 'Carro' && $result2 >= 4){
-                    return 1;
+                    return 4;
                 }else if ($meio != 'Carro' && $meio != 'Uber') {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     return 2;
                 }  
-        }
-        
+        }        
 }

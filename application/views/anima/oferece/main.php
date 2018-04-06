@@ -5,6 +5,20 @@
       <div class="container">
             <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
             <h3 class="section-subheading">Preencha corretamente os dados abaixo:</h3>
+
+            <!--INICIO DE EXIBE OS ALERTAS GERAIS -->
+                <?php foreach ($host as $info) { ?>
+                <?php if($info->host == 1){
+                  echo '<div class="alert alert-danger" role="alert"><strong>ATENÇÃO! </strong>Você já possui uma proposta de carona ativa. Se fizer nova proposta os passageiros ativos serão retirados da carona e o chat será apagado!<br></div>';
+                } ?>
+                <?php } ?>
+                <?php foreach ($passageiro as $info) { ?>
+                 <?php if($info->passageiro != 0){
+                  echo '<div class="alert alert-danger" role="alert"><strong>ATENÇÃO! </strong>Você já é passageiro de um carona ativa. Se fizer uma oferta de carona você automaticamente deixará de ser passageiro na outra carona!<br></div>';
+                } ?>
+                <?php } ?>
+              <!--FIM DE EXIBE OS ALERTAS GERAIS -->
+
             <?php echo $this->session->flashdata('message');?>
           </div>
 <?php echo form_open('oferece/grava'); ?>

@@ -21,7 +21,7 @@ class Adere extends CI_Controller
             if ($status == 3) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O Uber está cheio!<br></div>');
                 redirect(base_url('busca'));
-            } else if ($status == 1) {
+            } else if ($status == 4) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O carro está cheio!<br></div>');
                 redirect(base_url('busca'));
             } else if ($status == 2) {
