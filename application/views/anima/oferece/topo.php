@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="robots" content="noindex">
     <title>Anima 1.0 beta</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -28,7 +29,7 @@
     <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>">
-    
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
