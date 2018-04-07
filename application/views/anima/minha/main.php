@@ -9,7 +9,7 @@
 <h3 class="section-heading text-uppercase sombras">Carona oferecida por mim</h3>
 <h3 class="section-subheading sombras">Aqui você pode editar a carona, removê-la ou conversar com seus colegas pelo chat</h3>
 <?php echo $this->session->flashdata('message');?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>
@@ -49,7 +49,7 @@ echo form_close();
 <h3 class="section-heading text-uppercase sombras">Carona onde sou passageiro</h3>
 <h3 class="section-subheading sombras">Aqui você sair da carona ou conversar com seus colegas pelo chat</h3>
 <?php echo $this->session->flashdata('message');?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>

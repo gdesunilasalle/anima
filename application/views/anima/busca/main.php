@@ -11,7 +11,7 @@
 	<br>
 	<?php echo $this->session->flashdata('message');?>
 <?php foreach ($caronas as $info) { ?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>

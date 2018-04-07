@@ -7,7 +7,7 @@
   <h2 class="section-heading text-uppercase sombras">Detalhes da carona</h2>
   <h3 class="section-subheading sombras">E então... Anima?!</h3>
 <?php foreach ($caronas as $info) {?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>

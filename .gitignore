@@ -35,3 +35,4 @@ application/.DS_Store
 application/config/database.php
 application/config/config.php
 .htaccess
+application/.DS_Store
