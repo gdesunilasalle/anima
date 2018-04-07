@@ -23,6 +23,20 @@
 
 
 if ($info->emailusuario == $this->session->userdata('email')){
+
+//INÍCIO DE EXIBIÇÃO DO CHAT
+foreach ($chat as $infochat) {
+			
+			echo '<div class="form-group">
+  	<textarea class="form-control" style="min-width: 100%" id="chat">'; 
+			echo $infochat->horachat;
+			echo $infochat->hostchat;
+			echo $infochat->passageirochat;
+			echo $infochat->mensagemchat;
+			echo '</textarea></div>';
+			}
+//FIM DE EXIBIÇÃO DO CHAT
+
   echo '<center><a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a></center>';
 }
 
@@ -45,6 +59,20 @@ if ($info->emailusuario != $this->session->userdata('email')){
 <?php
 if(($this->session->userdata('email')) == ($infoconfirmados->emailusuario))
 {
+
+//INÍCIO DE EXIBIÇÃO DO CHAT
+foreach ($chat as $infochat) {
+			
+			echo '<div class="form-group">
+  	<textarea class="form-control" style="min-width: 100%" id="chat">'; 
+			echo $infochat->horachat;
+			echo $infochat->hostchat;
+			echo $infochat->passageirochat;
+			echo $infochat->mensagemchat;
+			echo '</textarea></div>';
+			}
+//FIM DE EXIBIÇÃO DO CHAT
+
 	echo '<div class="alert alert-success" role="alert"><strong>Você já está dentro dessa carona! </strong>Aqui você pode acessar o chat ou sair da carona.</div><br><a href="apagacarona/sairdacarona/'."$info->emailusuario".'" class="btn btn-primary">Sair da carona</a> <a href="#" class="btn btn-primary">Chat</a> <a href="busca" class="btn btn-primary">Voltar para busca</a>';
 }
 else{

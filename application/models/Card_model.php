@@ -31,5 +31,10 @@
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
         }
+        function le_chat($id)
+        {   
+            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE host = '$id' OR passageiro = '$id' ");
+            return $query->result();
+        }
 
 }

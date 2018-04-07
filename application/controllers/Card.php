@@ -22,6 +22,10 @@ if($this->session->userdata('logado')){
         /* FIM DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
 
 
+        $detalhes['chat'] = $this->card_model->le_chat($id);  
+
+
+
 
 
         
