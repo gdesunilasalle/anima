@@ -30,8 +30,10 @@
     <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
+        <link href="<?php echo base_url('css/poslogin.css'); ?>" rel="stylesheet" type="text/css">
   </head>
   <body id="page-top" class="poslogin">
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
