@@ -20,13 +20,13 @@
 <link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
- <script src="<?php echo base_url('js/cep.js'); ?>"></script> 
+ <script src="<?php echo base_url('js/cep.js'); ?>"></script>
   </head>
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#inicio"">Anima?!</a>
+        <a class="navbar-brand js-scroll-trigger" href="#inicio">Anima?!</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
