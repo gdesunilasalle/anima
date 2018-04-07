@@ -30,3 +30,8 @@ application/config/database.php
 application/config/config.php
 application/.DS_Store
 .htaccess
+application/config/config.php
+application/.DS_Store
+application/config/database.php
+application/config/config.php
+.htaccess

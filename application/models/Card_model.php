@@ -26,7 +26,6 @@
             return $passageiro->result(); //peguei o 6
 
         }
-
         function usuarioativo($data)
         {   
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
