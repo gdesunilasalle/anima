@@ -21,10 +21,7 @@ if($this->session->userdata('logado')){
         $detalhes['passageiro'] = $this->confirma_model->confirma_passageiro(); 
         /* FIM DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
 
-
-
-
-        
+        $detalhes['chat'] = $this->card_model->le_chat($id);  
 
 		$this->load->view('anima/card/topo');
         $this->load->view('anima/card/main',$detalhes);

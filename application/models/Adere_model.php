@@ -18,7 +18,7 @@ parent::__construct();
         return $resultadotransoporte->meiotransporte;
         return $transporte->result();
         }
-        function criacarona($id, $data, $meio){
+        function criacarona($id, $data, $meio, $proponente){
             $result  = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$data' ")->num_rows();
             $result2 = $this->db->query("SELECT passageiro FROM transportesemcurso WHERE passageiro = '$id' ")->num_rows();
                 if( $result > 0) {
@@ -26,16 +26,19 @@ parent::__construct();
                     return 2;
                 }else if ($meio == 'Uber' && $result2 < 3) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
                     return 2;
                 }else if ($meio == 'Uber' && $result2 >= 3){
                     return 3;
                 }else if ($meio == 'Carro' && $result2 < 4 ) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
                     return 2;
                 }else if ($meio == 'Carro' && $result2 >= 4){
                     return 4;
                 }else if ($meio != 'Carro' && $meio != 'Uber') {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
                     return 2;
                 }  
         }        
