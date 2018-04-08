@@ -17,10 +17,9 @@ function gravacarona($data)
         if( $result > 0) {
         $this->db->query("UPDATE transportesemcurso SET origem = '$data[origem]', destino = '$data[destino]', horario = '$data[horario]', meiotransporte = '$data[meiotransporte]', usuario = '$data[usuario]', host = '$data[host]', passageiro = 0 WHERE usuario = '$email'");
 } else {
-        $email = ($this->session->userdata('email'));
         $this->db->query("INSERT INTO transportesemcurso (`origem`, `destino`, `horario`, `meiotransporte`, `usuario`, `host`) 
-              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]', '$data[host]')");
-        $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$email', '0', 'Entrou na carona...')");
-        }  
-        }
-}
+              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]', '$data[host]') 
+              "); }  
+                }
+
+            }
