@@ -31,10 +31,8 @@
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
         <link href="<?php echo base_url('css/poslogin.css'); ?>" rel="stylesheet" type="text/css">
   </head>
-
   <body id="page-top" class="poslogin">
     <!-- Navigation -->
-      <header class="martelotte">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url(); ?>">Anima?!</a>
@@ -43,7 +41,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto" id="mainNav">
+          <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
             </li>

@@ -1,14 +1,15 @@
-  <header class="martelotte">
+<div>
+<header class="martelotte">
       <div class="container">
 <center>
 <section id="cadastro">
       <div class="container">
-<?php if (!$caronas){echo '<h3 class="section-heading text-uppercase sombras">Carona oferecida por mim</h3><h3 class="section-subheading sombras">Você não possui nenhuma oferta ativa de carona no momento</h3>';}?>
+<?php if (!$caronas){echo '<h3 class="section-heading text-uppercase sombras">Carona oferecida por mim</h3><h3 class="section-subheading sombras">Você não possui nenhuma oferta ativa de carona no momento</h3>';}?>	
 <?php foreach ($caronas as $info) { ?>
 <h3 class="section-heading text-uppercase sombras">Carona oferecida por mim</h3>
 <h3 class="section-subheading sombras">Aqui você pode editar a carona, removê-la ou conversar com seus colegas pelo chat</h3>
 <?php echo $this->session->flashdata('message');?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>
@@ -28,7 +29,7 @@
 <?php
 if(($this->session->userdata('email')) == ($info->emailusuario))
 {
-	echo
+	echo 
 	form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn-primary')).
 	'<a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a>';
 }
@@ -48,7 +49,7 @@ echo form_close();
 <h3 class="section-heading text-uppercase sombras">Carona onde sou passageiro</h3>
 <h3 class="section-subheading sombras">Aqui você sair da carona ou conversar com seus colegas pelo chat</h3>
 <?php echo $this->session->flashdata('message');?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>
@@ -79,11 +80,9 @@ else{echo form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'
 }
 echo form_close();
 ?>
-</section>
 </div>
 </div>
 <?php } ?>
 </div>
 </div>
-
-</section>
+</header>

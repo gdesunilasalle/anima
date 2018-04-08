@@ -29,12 +29,10 @@
     <script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
     <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
     <link href="<?php echo base_url('css/poslogin.css'); ?>" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url('css/login-noflex.css'); ?>" rel="stylesheet" type="text/css">
 
 
   </head>
   <body id="page-top" class="poslogin">
-    <header class="martelotte">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -44,7 +42,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto"id="mainNav">
+          <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
             </li>

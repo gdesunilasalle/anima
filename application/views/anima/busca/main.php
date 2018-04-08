@@ -1,5 +1,8 @@
 
-<div class="container">
+<div>
+<header class="martelotte">
+      <div class="container">
+    
 <center>
 <section id="cadastro">
       <div class="container">
@@ -8,7 +11,7 @@
 	<br>
 	<?php echo $this->session->flashdata('message');?>
 <?php foreach ($caronas as $info) { ?>
-<div class="card w-75">
+<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
   </div>
@@ -38,4 +41,4 @@ echo form_close();
 <?php } ?>
 </div>
 </div>
-</section>
+</header>
