@@ -30,18 +30,21 @@
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
         <link href="<?php echo base_url('css/poslogin.css'); ?>" rel="stylesheet" type="text/css">
+
   </head>
   <body id="page-top" class="poslogin">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
+
+  <header class="martelotte">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top container" id="mainNav">
+
         <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url(); ?>">Anima?!</a>
         <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
+          <ul class="navbar-nav text-uppercase ml-auto" id="mainNav" style="width:100%">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('minha'); ?>">Minha carona</a>
             </li>
@@ -63,4 +66,6 @@
           </ul>
         </div>
       </div>
+
+
     </nav>

@@ -2,6 +2,18 @@ html, body {
   height: 100%;
 }
 
+#contato {
+  min-height: 95vh;
+  position: relative;
+  margin: 0;
+}
+
+#martelotte {
+  min-height: 95vh;
+  position: relative;
+  margin: 0;
+}
+
 body {
   background-image: url("../img/posloginbg.jpg");
   color: #660298;
@@ -17,7 +29,6 @@ body {
 
 #mainNav {
   background-color: #660298;
-  height: 10%;
 }
 
 h2 {

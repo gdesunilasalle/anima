@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <link rel="shortcut icon" href="<?php echo base_url('img/favicon.ico'); ?>" type="image/x-icon">
     <meta charset="utf-8">
@@ -16,11 +16,11 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href='http://overpass-30e2.kxcdn.com/overpass.css' rel='stylesheet' type='text/css'>
-<link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
+    <link href='http://overpass-30e2.kxcdn.com/overpass.css' rel='stylesheet' type='text/css'>
+    <link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
- <script src="<?php echo base_url('js/cep.js'); ?>"></script>
+    <script src="<?php echo base_url('js/cep.js'); ?>"></script>
   </head>
   <body id="page-top">
     <!-- Navigation -->
