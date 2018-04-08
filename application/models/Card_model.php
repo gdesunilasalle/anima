@@ -1,5 +1,4 @@
 <?php class Card_model extends CI_Model {
-
         public function __construct()
         {
                 parent::__construct();
@@ -10,7 +9,6 @@
         {
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
-// FAZER CONDIÇÃO PARA TESTE
         }
         function exibeconfirmados($data, $id)
         {   
@@ -24,12 +22,19 @@
             $result = $passageiro->row();
             return $result->ID;
             return $passageiro->result(); //peguei o 6
-
         }
         function usuarioativo($data)
         {   
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
         }
-
+        function le_chat($data)
+        {   $email = ($this->session->userdata('email'));
+            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE host = '$email' OR passageiro = '$data' ");
+            return $query->result();
+        }
+        function grava_chat($data)
+        {   $email = ($this->session->userdata('email'));
+            $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$email', '$email', '$data[mensagem]')");
+        }
 }
