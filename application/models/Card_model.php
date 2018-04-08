@@ -32,8 +32,8 @@
             return $query->result();
         }
         function le_chat($id)
-        {   
-            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE host = '$id' OR passageiro = '$id' ");
+        {   $email = ($this->session->userdata('email'));
+            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE host = '$email' OR passageiro = '$email' ");
             return $query->result();
         }
 

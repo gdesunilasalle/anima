@@ -28,16 +28,21 @@ if ($info->emailusuario == $this->session->userdata('email')){
 foreach ($chat as $infochat) {
 			
 			echo '<div class="form-group">
-  	<textarea class="form-control" style="min-width: 100%" id="chat">'; 
+  	<textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
 			echo $infochat->horachat;
-			echo $infochat->hostchat;
-			echo $infochat->passageirochat;
+			echo ' '; 
+			if ($infochat->hostchat){
+			echo $infochat->hostchat;}
+			echo ' ';
+			if ($infochat->passageirochat){
+			echo $infochat->passageirochat;}
+			echo ' ';
 			echo $infochat->mensagemchat;
 			echo '</textarea></div>';
 			}
 //FIM DE EXIBIÇÃO DO CHAT
 
-  echo '<center><a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a></center>';
+  echo '<center><a href="#" class="btn btn-primary">Enviar mensagem</a> <a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a></center>';
 }
 
 echo form_open('adere'); ?>
@@ -64,16 +69,21 @@ if(($this->session->userdata('email')) == ($infoconfirmados->emailusuario))
 foreach ($chat as $infochat) {
 			
 			echo '<div class="form-group">
-  	<textarea class="form-control" style="min-width: 100%" id="chat">'; 
+  	<textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
 			echo $infochat->horachat;
-			echo $infochat->hostchat;
-			echo $infochat->passageirochat;
+			echo ' '; 
+			if ($infochat->hostchat){
+			echo $infochat->hostchat;}
+			echo ' ';
+			if ($infochat->passageirochat){
+			echo $infochat->passageirochat;}
+			echo ' ';
 			echo $infochat->mensagemchat;
 			echo '</textarea></div>';
 			}
 //FIM DE EXIBIÇÃO DO CHAT
 
-	echo '<div class="alert alert-success" role="alert"><strong>Você já está dentro dessa carona! </strong>Aqui você pode acessar o chat ou sair da carona.</div><br><a href="apagacarona/sairdacarona/'."$info->emailusuario".'" class="btn btn-primary">Sair da carona</a> <a href="#" class="btn btn-primary">Chat</a> <a href="busca" class="btn btn-primary">Voltar para busca</a>';
+	echo '<div class="alert alert-success" role="alert"><strong>Você já está dentro dessa carona! </strong>Aqui você pode acessar o chat ou sair da carona.</div><br><a href="#" class="btn btn-primary">Enviar mensagem</a> <a href="apagacarona/sairdacarona/'."$info->emailusuario".'" class="btn btn-primary">Sair da carona</a> <a href="busca" class="btn btn-primary">Voltar para busca</a>';
 }
 else{
 

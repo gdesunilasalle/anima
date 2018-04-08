@@ -16,7 +16,7 @@ class Adere extends CI_Controller
             $proponente = $this->input->post('dproponente');
             $id         = $this->adere_model->consultaid($proponente);
             $meio       = $this->adere_model->consultameio($id, $proponente);
-            $status     = $this->adere_model->criacarona($id, $data, $meio);
+            $status     = $this->adere_model->criacarona($id, $data, $meio, $proponente);
             
             if ($status == 3) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O Uber está cheio!<br></div>');
