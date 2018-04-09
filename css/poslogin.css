@@ -1,33 +1,28 @@
-html, body {
-  height: 100%;
-}
-
-body {
-  background-image: url("../img/posloginbg.jpg");
+body{
+  background-image:url("../img/posloginbg.jpg");
   color: #660298;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: overpass;
+  font-family:overpass;
   background-attachment: fixed;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-
-#mainNav {
+#mainNav
+{
   background-color: #660298;
   height: 10%;
 }
-
-h2 {
-  color: #ffff;
+h2
+{
+  color:#ffff;
 }
-
-h3 {
-  color: #fff;
+h3
+{
+  color:#fff;
 }
-
-.required {
-  color: #fff;
+.required{
+  color:#fff;
 }
