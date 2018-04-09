@@ -8,7 +8,7 @@
     <meta name="robots" content="noindex">
     <title>Anima 1.0 beta</title>
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
     <!-- Custom fonts for this template -->
     <link href="<?php echo base_url('vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -21,16 +21,14 @@
     <link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
-
     <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <!-- Plugin JavaScript -->
     <script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
     <!-- Contato form JavaScript -->
     <script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
     <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
-    <link href="<?php echo base_url('css/poslogin.css'); ?>" rel="stylesheet" type="text/css">
-
-
+    <!-- Custom scripts for this template -->
+    <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
   </head>
   <body id="page-top" class="poslogin">
     <!-- Navigation -->
