@@ -25,19 +25,19 @@ parent::__construct();
                     return 2;
                 }else if ($meio == 'Uber' && $result2 < 3) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
-                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                     return 2;
                 }else if ($meio == 'Uber' && $result2 >= 3){
                     return 3;
                 }else if ($meio == 'Carro' && $result2 < 4 ) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
-                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                     return 2;
                 }else if ($meio == 'Carro' && $result2 >= 4){
                     return 4;
                 }else if ($meio != 'Carro' && $meio != 'Uber') {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
-                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data', '$proponente', 'Entrou na carona...')");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                     return 2;
                 }  
         }        

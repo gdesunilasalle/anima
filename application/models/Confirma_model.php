@@ -19,7 +19,7 @@ function confirma_passageiro()
 function confirma_oferta($confirma)
         {   
             $email = ($this->session->userdata('email'));            
-            $ID = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email' AND  ");
+            $ID = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email'");
             $result = $ID->row();
             if($result){
             return $result->ID;

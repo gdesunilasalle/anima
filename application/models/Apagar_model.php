@@ -14,6 +14,6 @@
         {
             $email = ($this->session->userdata('email'));
             $this->db->query("DELETE FROM transportesemcurso WHERE usuario = '$email' AND host = 0");
-            $this->db->query("DELETE FROM chat WHERE host = '$email'"); 
+            $this->db->query("DELETE FROM chat WHERE passageiro = '$email'"); 
         }
 }

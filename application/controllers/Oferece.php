@@ -11,6 +11,7 @@ ob_start();
 if($this->session->userdata('logado')){
 
 $data['local'] = $this->oferece_model->buscaLogradouro();
+
 /* INICIO DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
 $data['host'] = $this->confirma_model->confirma_host(); 
 $data['passageiro'] = $this->confirma_model->confirma_passageiro(); 

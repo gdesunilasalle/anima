@@ -13,7 +13,7 @@
         function exibeconfirmados($data, $id)
         {   
             
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario != '$data' AND passageiro = '$id' ");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$id' ");
             return $query->result();
         }
         function consultaid($data)
@@ -30,11 +30,11 @@
         }
         function le_chat($data)
         {   $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE host = '$email' OR passageiro = '$data' ");
+            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE passageiro = '$data' OR host = '$data'");
             return $query->result();
         }
         function grava_chat($data)
         {   $email = ($this->session->userdata('email'));
-            $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$email', '$email', '$data[mensagem]')");
+            $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data[autor]', '$email', '$data[mensagem]')");
         }
 }
