@@ -48,11 +48,15 @@ echo '
 			echo '</textarea></div>';
 //FIM DE EXIBIÇÃO DO CHAT
   echo form_open('chat_mensagem').'<p><input type="text" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">'.
+value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
 <a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
+
+
+
+
 }else{
 
 echo '<center>';
@@ -95,7 +99,7 @@ echo '
 			echo '</textarea></div>';
 //FIM DE EXIBIÇÃO DO CHAT
   echo form_open('chat_mensagem').'<p><input type="text" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">'.
+value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 

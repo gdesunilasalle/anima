@@ -22,6 +22,9 @@ parent::__construct();
             $result2 = $this->db->query("SELECT passageiro FROM transportesemcurso WHERE passageiro = '$id' ")->num_rows();
                 if( $result > 0) {
                     $this->db->query("UPDATE transportesemcurso SET passageiro = '$id', host = 0 WHERE usuario = '$data'");
+                    $this->db->query("DELETE FROM chat WHERE passageiro = '$data' or host = '$data'");
+                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')"); 
+
                     return 2;
                 }else if ($meio == 'Uber' && $result2 < 3) {
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");

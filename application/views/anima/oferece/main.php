@@ -14,7 +14,7 @@
                 <?php } ?>
                 <?php foreach ($passageiro as $info) { ?>
                  <?php if($info->passageiro != 0){
-                  echo '<div class="alert alert-danger" role="alert"><strong>ATENÇÃO! </strong>Você já é passageiro de um carona ativa. Se fizer uma oferta de carona você automaticamente deixará de ser passageiro na outra carona!<br></div>';
+                  echo '<div class="alert alert-danger" role="alert"><strong>ATENÇÃO! </strong>Você já é passageiro de um carona ativa. Se fizer uma oferta de carona você automaticamente deixará de ser passageiro!<br></div>';
                 } ?>
                 <?php } ?>
               <!--FIM DE EXIBE OS ALERTAS GERAIS -->
