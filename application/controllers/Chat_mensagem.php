@@ -10,6 +10,7 @@ public function index() {
 $data = array(
 'mensagem' => $this->input->post('dmensagem'),
 'autor' => $this->input->post('dproponente'),
+'hora' => $this->input->post('dhora'),
 
 );
 

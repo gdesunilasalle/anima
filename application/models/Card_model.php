@@ -30,11 +30,11 @@
         }
         function le_chat($data)
         {   $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT hora as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE passageiro = '$data' OR host = '$data'");
+            $query = $this->db->query("SELECT DATE_FORMAT(hora, '%H:%i') as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE passageiro = '$data' OR host = '$data'");
             return $query->result();
         }
         function grava_chat($data)
         {   $email = ($this->session->userdata('email'));
-            $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$data[autor]', '$email', '$data[mensagem]')");
+            $this->db->query("INSERT INTO chat (`hora`, `host`, `passageiro`, `mensagem`) VALUES ('$data[hora]', '$data[autor]', '$email', '$data[mensagem]')");
         }
 }
