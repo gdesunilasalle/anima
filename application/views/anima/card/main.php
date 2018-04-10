@@ -86,6 +86,11 @@ else if ($info->emailusuario == $this->session->userdata('email') || $infoconfir
 //INÍCIO DE EXIBIÇÃO DO CHAT
 echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
 
+echo form_open('chat_mensagem').'<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+form_submit(array('id' => 'submit', 'value' => 'Refresh', 'class'=>'btn btn-primary'));
+echo form_close();
+echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
+
 foreach ($chat as $infochat) {
 
 			echo $infochat->horachat;
