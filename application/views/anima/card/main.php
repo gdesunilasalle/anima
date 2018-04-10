@@ -30,7 +30,7 @@ foreach ($confirmados as $infoconfirmados) {
 if ($info->emailusuario == $this->session->userdata('email') || $infoconfirmados->emailusuario == $this->session->userdata('email')){
 //INÍCIO DE EXIBIÇÃO DO CHAT
 
-echo form_open('chat_mensagem').'<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+echo form_open('chat_mensagem/refresh').'<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => 'Refresh', 'class'=>'btn btn-primary'));
 echo form_close();
 echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
