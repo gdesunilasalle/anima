@@ -13,7 +13,7 @@
               <i class="fa fa-building fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Anima</h4>
-            <p class="text-muted">Baseada nas necessidades de locomoção dos estudantes da Unilasalle-RJ, os alunos de Sistema de Informção tiveram a ideia de promover um ambiente para compartilhamente de meio de transporte de um modo confiável e agradável.</p>
+            <p class="text-muted">Atentos às necessidades de locomoção dos estudantes da Unilasalle-RJ, os alunos de Sistema de Informção tiveram a idéia de promover um ambiente para compartilhamente de meio de transporte de um modo confiável e agradável.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -21,7 +21,7 @@
               <i class="fa fa-car fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Carona</h4>
-            <p class="text-muted">Anima tem como objetivo promover a segurança e integração dos alunos. Assim, as caronas poderão ser promovidas por meios de transportes públicos, privados e a pé. Dessa forma, os alunos de diferentes cursos podem se conhecer melhor.</p>
+            <p class="text-muted">O Anima tem como objetivo possibilitar a integração dos alunos que diariamente possuem mesma origem e/ou destino no dia a dia. Assim, as caronas podem ser por meios de transportes públicos ou privados, a pé ou de bicicleta.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -29,7 +29,7 @@
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Segurança</h4>
-            <p class="text-muted">O método de carona promovido pelo Anima tem como prioridade a segurança. Dessa maneira, somente alunos da Unilasalle-RJ com matriculas ativas e e-mail institucional poderão desfrutar desse serviço.</p>
+            <p class="text-muted">O método de carona promovido pelo Anima é acessível somente por alunos e funcionários da Unilasalle-RJ com e-mail institucional. Dessa forma, fica mais fácil saber com quem você anda.</p>
           </div>
         </div>
       </div>
