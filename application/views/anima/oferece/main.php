@@ -25,6 +25,7 @@
 <CENTER>
 <!-- INICIO DOS CAMPOS DO FORMULÁRIO -->
 <center>
+ <div id="mapid" style="height: 200px;width: 40%;"></div>
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
 <font class="required">Meio de Transporte</font>
 <br>
