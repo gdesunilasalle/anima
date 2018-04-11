@@ -13,6 +13,10 @@ function endereco(address, casa) {
       return "Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030";
     case "Mestre dos Sucos":
       return "R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401";
+    case "Plaza Shopping":
+      return "Rua Quinze de Novembro, 8 - Centro, Niterói - RJ, 24020-125";
+    case "Bay Market":
+      return "Av. Visconde do Rio Branco, 360 - Centro, Niterói - RJ, 24020-002";
     case casa:
       return casa
     default:
@@ -46,24 +50,24 @@ function loadestimativa(casa) {
   switch (transporte) {
     case "A pé":
       mensagem2 = "<br><br>Opa, notei que a pé demora ";
-      url = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&mode=walking&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&mode=walking&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
     case "Carro":
     case "Uber":
     case "Táxi":
       mensagem2 = "<br><br>Opa, notei que de carro nesse momento está demorando ";
-      url = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
     case "bus":
       mensagem2 = "<br><br>Opa, notei que de ônibus, nesse momento está demorando ";
-      url = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      url = "https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
     case "Bicicleta":
       mensagem2 = '<br><br>Opa, notei que de bike nesse momento está demorando ';
-      url = "https://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?&mode=bicycling&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      url = "https://maps.googleapis.com/maps/api/distancematrix/json?&mode=bicycling&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
     default:
