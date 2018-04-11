@@ -20,8 +20,19 @@ public function __construct() {
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
         }else{
-                redirect(base_url('busca'));
-        }
+            $email = ($this->session->userdata('email'));
+            $result1  = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email' AND host = '1' ");
+            $result2  = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email' AND passageiro != '0' ");
+                if( $result1 > 0) {
+                    $direciona= '2';
+                }
+                    else if( $result2 > 0) {
+                        $direciona= '3';
+                    } 
+                if($direciona=='2' || $direciona=='3'){
+                redirect(base_url('minha'));
+            }else{redirect(base_url('busca'));}
           
         }
+}
 }

@@ -8,12 +8,12 @@
         {
             $email = ($this->session->userdata('email'));
             $this->db->query("DELETE FROM transportesemcurso WHERE usuario = '$email'");
-            $this->db->query("DELETE FROM chat WHERE host = '$email' or passageiro = '$email");            
+            $this->db->query("DELETE FROM chat WHERE host = '$email' OR passageiro = '$email'");            
         }
         function sairCarona($data)
         {
             $email = ($this->session->userdata('email'));
             $this->db->query("DELETE FROM transportesemcurso WHERE usuario = '$email' AND host = 0");
-            $this->db->query("DELETE FROM chat WHERE passageiro = '$email' or host = '$email'"); 
+            $this->db->query("DELETE FROM chat WHERE passageiro = '$email' OR host = '$email'"); 
         }
 }
