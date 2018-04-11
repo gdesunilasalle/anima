@@ -31,7 +31,7 @@ if(($this->session->userdata('email')) == ($info->emailusuario))
 {
 	echo 
 	form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn-primary')).
-	'<a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a>';
+	'<a href="oferece" class="btn btn-primary">Alterar carona</a> <a href="Apagacarona" class="btn btn-danger">Remover carona</a>';
 }
 
 //ADICIONAR BOTÃO DE CHAT

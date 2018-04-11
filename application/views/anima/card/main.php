@@ -26,14 +26,17 @@ echo '<div class="card w-100">
 			<p class="text-secondary" align="left">
 			Usuários confirmados:
 			<br>';
-
-if($confirmados!=NULL){
+$count='0';
+if($confirmados!=NULL || $info->emailusuario == $this->session->userdata('email')){
 foreach ($confirmados as $infoconfirmados) {
+	if ($infoconfirmados->emailusuario == $this->session->userdata('email') ) {
+		$count++;
+}
 		echo $infoconfirmados->emailusuario;
 		echo '<br>';
 	}
 
-if ($info->emailusuario == $this->session->userdata('email') || $infoconfirmados->emailusuario == $this->session->userdata('email')){
+if ($info->emailusuario == $this->session->userdata('email')){
 //INÍCIO DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
 echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-primary'));
@@ -63,20 +66,11 @@ value="" required><input type="hidden" name="dproponente" id="dproponente" value
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
-<a href="busca" class="btn btn-primary">Voltar para busca</a><a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
+<a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="Apagacarona" class="btn btn-danger">Remover carona</a>';
 echo form_close();
 
-}else{
 
-echo '<center>';
-		echo form_open('adere');
-		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
-		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
-} 
-	}else if($confirmados==NULL && $info->emailusuario != $this->session->userdata('email')){
-
-	
-		echo '<i>Nenhum usuário confirmado ainda</i>';
+	}else if($info->emailusuario != $this->session->userdata('email') && $count!='1'){
 		echo '<center>';
 		echo form_open('adere');
 		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
@@ -84,7 +78,7 @@ echo '<center>';
 		echo form_close();
 			}
 
-else if ($info->emailusuario == $this->session->userdata('email') || $infoconfirmados->emailusuario == $this->session->userdata('email')){
+else if ($count=='1'){
 //INÍCIO DE EXIBIÇÃO DO CHAT UANDO O USUÁRIO É PASSAGEIRO
 echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-primary'));
@@ -114,14 +108,20 @@ value="" required><input type="hidden" name="dproponente" id="dproponente" value
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
-<a href="busca" class="btn btn-primary">Voltar para busca</a><a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
+<a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-danger">Sair da carona</a>';
 echo form_close();
+}   
 }else{
-	echo '<center>';
-	echo form_open('adere');
-	echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
-	echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
-	}      
+
+		echo '<i>Nenhum usuário confirmado ainda, <b>seja o primeiro!</b></i><center>';
+		echo form_open('adere');
+		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
+		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
+		echo form_close();
+
+
+
+}
 }
 ?>
 </form>
