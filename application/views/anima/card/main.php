@@ -34,8 +34,8 @@ foreach ($confirmados as $infoconfirmados) {
 }
 		
 		if($info->emailusuario == $this->session->userdata('email')){
-			echo form_open('chat_mensagem/chuta').'<p class="text-secondary" align="left"><input type="hidden" name="dusuario" id="dusuario" value="'.$infoconfirmados->emailusuario.'">'.$infoconfirmados->emailusuario.' '.
-			form_submit(array('id' => 'submit', 'value' => 'X', 'class'=>'btn btn-sm btn-outline-warning'));
+			echo form_open('chat_mensagem/chuta').'<p class="text-secondary" align="left"><input type="hidden" name="dusuario" id="dusuario" value="'.$infoconfirmados->emailusuario.'">'.
+			form_submit(array('id' => 'submit', 'value' => 'X', 'class'=>'btn btn-sm btn-outline-warning')).$infoconfirmados->emailusuario;
 			echo form_close();
 			 
 		}else{echo $infoconfirmados->emailusuario;}
