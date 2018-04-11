@@ -318,15 +318,7 @@ img::-moz-selection {
 
 /* SÉRIE DE CLASSES CRIADAS*/
 
-/*Teste esses comandos para o rodape ficar fixo no fim da pagina*/
-html, body {height:100%;}
-
 header.martelotte {
-/*Teste esses comandos para o rodape ficar fixo no fim da pagina*/
-  min-height:100%;
-  position:relative;
-/*Teste esses comandos para o rodape ficar fixo no fim da pagina*/
-
   text-align: center;
   color: white;
   background-image: url("../img/posloginbg.jpg");

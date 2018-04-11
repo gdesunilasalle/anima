@@ -13,7 +13,7 @@
               <i class="fa fa-building fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Anima</h4>
-            <p class="text-muted">Atentos às necessidades de locomoção dos estudantes da Unilasalle-RJ, os alunos de Sistema de Informação tiveram a idéia de promover um ambiente para compartilhamento de meio de transporte de um modo confiável e agradável.</p>
+            <p class="text-muted">Atentos às necessidades de locomoção dos estudantes da Unilasalle-RJ, os alunos de Sistema de Informção tiveram a idéia de promover um ambiente para compartilhamento de meio de transporte de um modo confiável e agradável.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">

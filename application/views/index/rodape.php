@@ -1,7 +1,8 @@
    <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
-   <div class="footer-copyright py-3 text-center sombras text-white" style="background-color:#660298; position:absolute; bottom:0;">
+   <div class="footer-copyright py-3 text-center sombras text-white" style="background-color:#660298;">
                       Copyright © 2018 <a href="#"> Anima </a>. Todos os direitos reservados.
-  </div> <!--Teste para o rodape  style="background-color:#660298; position:absolute; bottom:0;"-->
+
+                   </div>
   </style>
 
     <!-- Como funciona? Modals -->
