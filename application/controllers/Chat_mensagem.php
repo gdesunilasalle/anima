@@ -4,6 +4,7 @@ function __construct() {
 parent::__construct();
 $this->load->model('card_model');
 $this->load->model('confirma_model');
+$this->load->model('chuta_model');
 }
 public function index() {
 ob_start();
@@ -49,5 +50,13 @@ public function refresh() {
         $this->load->view('anima/card/topo');
         $this->load->view('anima/card/main',$detalhes);
         $this->load->view('index/rodape');
+}
+public function chuta() {
+ob_start();
+$data = $this->input->post('dusuario');
+        $this->chuta_model->chutausuario($data);
+        $this->session->set_flashdata('message', '
+<div class="alert alert-success" role="alert"><strong>Usuário retirado da carona com sucesso! </strong></div>'); 
+                redirect(base_url('minha'));
 }
 }
