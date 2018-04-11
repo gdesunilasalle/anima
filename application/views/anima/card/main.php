@@ -4,6 +4,12 @@
 <center>
 <section id="cadastro">
 <div class="container">
+<script>
+$(document).ready(function(){
+var $textarea = $('#chat');
+$textarea.scrollTop($textarea[0].scrollHeight);
+});
+</script>
 <h2 class="section-heading text-uppercase sombras">Detalhes da carona</h2>
 <h3 class="section-subheading sombras">E então... Anima?!</h3>
 <?php foreach ($caronas as $info) {
@@ -28,18 +34,17 @@ foreach ($confirmados as $infoconfirmados) {
 	}
 
 if ($info->emailusuario == $this->session->userdata('email') || $infoconfirmados->emailusuario == $this->session->userdata('email')){
-//INÍCIO DE EXIBIÇÃO DO CHAT
-
-echo form_open('chat_mensagem/refresh').'<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-form_submit(array('id' => 'submit', 'value' => 'Refresh', 'class'=>'btn btn-primary'));
+//INÍCIO DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
+echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-primary'));
 echo form_close();
-echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
+echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
 
 foreach ($chat as $infochat) {
 
 
-
-			echo $infochat->horachat;
+			if($infochat->horachat){
+			echo '('.$infochat->horachat.')';}
 			echo ' '; 
 			/*if ($infochat->hostchat){
 			echo $infochat->hostchat;}*/
@@ -51,14 +56,14 @@ foreach ($chat as $infochat) {
 echo '
 ';			
 			}
-			echo '</textarea></div>';
-//FIM DE EXIBIÇÃO DO CHAT
-  echo form_open('chat_mensagem').'<p><input type="text" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+			echo '</textarea>';
+//FIM DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
+  echo form_open('chat_mensagem').'<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
+value="" required><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
-<a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
+<a href="busca" class="btn btn-primary">Voltar para busca</a><a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
 echo form_close();
 
 }else{
@@ -67,10 +72,7 @@ echo '<center>';
 		echo form_open('adere');
 		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
 		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
-
-
 } 
-
 	}else if($confirmados==NULL && $info->emailusuario != $this->session->userdata('email')){
 
 	
@@ -83,17 +85,17 @@ echo '<center>';
 			}
 
 else if ($info->emailusuario == $this->session->userdata('email') || $infoconfirmados->emailusuario == $this->session->userdata('email')){
-//INÍCIO DE EXIBIÇÃO DO CHAT
-echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
-
-echo form_open('chat_mensagem').'<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-form_submit(array('id' => 'submit', 'value' => 'Refresh', 'class'=>'btn btn-primary'));
+//INÍCIO DE EXIBIÇÃO DO CHAT UANDO O USUÁRIO É PASSAGEIRO
+echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-primary'));
 echo form_close();
-echo '<div class="form-group"><textarea readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
+echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
 
 foreach ($chat as $infochat) {
 
-			echo $infochat->horachat;
+
+			if($infochat->horachat){
+			echo '('.$infochat->horachat.')';}
 			echo ' '; 
 			/*if ($infochat->hostchat){
 			echo $infochat->hostchat;}*/
@@ -105,21 +107,21 @@ foreach ($chat as $infochat) {
 echo '
 ';			
 			}
-			echo '</textarea></div>';
-//FIM DE EXIBIÇÃO DO CHAT
-  echo form_open('chat_mensagem').'<p><input type="text" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required></p><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+			echo '</textarea>';
+//FIM DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
+  echo form_open('chat_mensagem').'<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
+value="" required><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
-<a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
+<a href="busca" class="btn btn-primary">Voltar para busca</a><a href="apagacarona/sairdacarona/'.$info->emailusuario.'" class="btn btn-primary">Sair da carona</a>';
 echo form_close();
 }else{
 	echo '<center>';
 	echo form_open('adere');
 	echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
 	echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
-}      
+	}      
 }
 ?>
 </form>

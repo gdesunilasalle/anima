@@ -6,6 +6,11 @@ $this->load->model('card_model');
 $this->load->model('confirma_model');
 }
 public function index() {
+ob_start();
+if($this->session->userdata('logado')){
+
+
+
 $data = array(
 'mensagem' => $this->input->post('dmensagem'),
 'autor' => $this->input->post('dproponente'),
@@ -26,6 +31,9 @@ $this->card_model->grava_chat($data);
         $this->load->view('anima/card/topo');
         $this->load->view('anima/card/main',$detalhes);
         $this->load->view('index/rodape');
+}else{
+                redirect(base_url());
+        }
 }
 
 public function refresh() {
