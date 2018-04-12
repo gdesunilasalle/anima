@@ -24,7 +24,7 @@
 <center>
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
 <?php foreach ($local as $info) { ?>
-<div class="col-5">
+<div class="col-8">
 <select class="form-control form-control-lg" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!--> <-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value> Meio de Transporte </option>
     <option value="A pé">A pé</option>
