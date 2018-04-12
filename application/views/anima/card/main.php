@@ -72,7 +72,14 @@ value="" required><input type="hidden" name="dproponente" id="dproponente" value
 
 form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
 
-<a href="busca" class="btn btn-primary">Voltar para busca</a> <a href="Apagacarona" class="btn btn-danger">Remover carona</a>';
+<a href="busca" class="btn btn-primary">Voltar para busca</a>
+<a class="btn btn-primary" data-toggle="modal" href="#alertaModal1">
+           <div class="comofunciona-hover">
+           <div class="comofunciona-hover-content">      
+           </div>
+           </div>
+           Apagar carona
+           </a>';
 echo form_close();
 
 

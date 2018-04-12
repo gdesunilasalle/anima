@@ -1,10 +1,8 @@
    <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
-   <div class="footer-copyright py-3 text-center sombras text-white" style="background-color:#660298;">
-                      Copyright © 2018 <a href="#"> Anima </a>. Todos os direitos reservados.
-
+   <div class="footer-copyright py-3 text-left sombras text-white" style="background-color:#660298;">
+                      ©Copyright 2018 <a href="#"> Anima </a> Todos os direitos reservados
                    </div>
   </style>
-
     <!-- Como funciona? Modals -->
     <!-- Modal 1 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -167,6 +165,34 @@
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- confirmações Modals -->
+    <!-- alertaModal1 = REMOVER CARONA -->
+    <div class="comofunciona-modal modal fade" id="alertaModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body" align="center">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">REMOVER CARONA?</h2>
+                  <p class="item-intro text-muted">Tem certeza que deseja remover a carona?</p>
+                  <p><a href="Apagacarona" class="btn btn-danger">Remover carona</a></p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Cancelar</button>
                 </div>
               </div>
             </div>
