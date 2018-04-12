@@ -12,13 +12,13 @@
     <!-- Custom fonts for this template -->
     <link href="<?php echo base_url('vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
-    <link href='http://overpass-30e2.kxcdn.com/overpass.css' rel='stylesheet' type='text/css'>
-    <link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
+    <link href="http://overpass-30e2.kxcdn.com/overpass.css" rel="stylesheet" type="text/css">
+    <link href="http://overpass-30e2.kxcdn.com/overpass-mono.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url(); ?>">Anima?!</a>
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>

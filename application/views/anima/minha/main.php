@@ -1,6 +1,5 @@
-<div>
 <header class="martelotte">
-      <div class="container">
+<div class="container">
 <center>
 <section id="cadastro">
       <div class="container">
@@ -40,9 +39,6 @@ if(($this->session->userdata('email')) == ($info->emailusuario))
            Apagar carona
            </a>';
 }
-
-//ADICIONAR BOTÃO DE CHAT
-
 else{echo form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary'));
 }
 echo form_close();
@@ -73,16 +69,10 @@ echo form_close();
 <?php echo form_open('card'); ?>
 <input type="hidden" name="dusuario" id="dusuario" value="<?php echo $info->emailusuario; ?>">
 <?php
-
-// alterar tudo para o formato correto de interagir com carona onde sou pasasageiro
-
 if(($this->session->userdata('email')) == ($info->emailusuario))
 {
 	echo '<a href="Apagacarona" class="btn btn-primary">Remover carona</a> <a href="oferece" class="btn btn-primary">Alterar carona</a>';
 }
-
-//ADICIONAR BOTÃO DE CHAT
-
 else{echo form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn-primary'));
 }
 echo form_close();
