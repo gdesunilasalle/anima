@@ -53,7 +53,6 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
                   <p class="item-intro text-muted">Tem certeza que deseja remover o(a) passageiro(a): </p>
                   <p align="center" class="item-intro text-dark">'
                  .$infoconfirmados->emailusuario.form_open('chat_mensagem/chuta').'<input type="hidden" name="dusuario" id="dusuario" value="'.$infoconfirmados->emailusuario.'">'.form_submit(array('id' => 'submit', 'value' => 'Remover passageiro(a)', 'class'=>'btn btn-danger')).form_close().'
-				
                   <br>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -73,7 +72,7 @@ if ($info->emailusuario == $this->session->userdata('email')){
 echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
 echo form_close();
-echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
+echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>'; 
 
 foreach ($chat as $infochat) {
 
@@ -119,7 +118,7 @@ else if ($count=='1'){
 echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
 echo form_close();
-echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8 id="chat">'; 
+echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>'; 
 
 foreach ($chat as $infochat) {
 

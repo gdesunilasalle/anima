@@ -21,6 +21,14 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
  <script src="<?php echo base_url('js/cep.js'); ?>"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
+<!-- Plugin JavaScript -->
+<script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+<!-- Contato form JavaScript -->
+<script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
+<script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
+<!-- Custom scripts for this template -->
   </head>
   <body id="page-top" class="poslogin">
     <!-- Navigation -->
