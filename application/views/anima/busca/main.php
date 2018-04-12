@@ -9,16 +9,14 @@
 	<?php echo $this->session->flashdata('message');?>
 	<?php
 	if(!$caronas){
-		echo '<h3 class="section-subheading sombras">Nenhuma oferda de carona disponível no momento...</h3><br><br><br><br><br><br><br><br>';
+		echo '<h3 class="section-subheading sombras">Nenhuma oferta de carona disponível no momento...</h3><br><br><br><br><br><br><br><br>';
 	}else{
 foreach ($caronas as $info) {
-
 echo '<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success">'.$info->emailusuario.'</h5>
   </div>
   <div class="card-body">
-
    		<p class="text-secondary">
 			'.$info->origemusuario.'</p>
 			<p class="text-secondary">
@@ -32,6 +30,7 @@ echo '<div class="card w-100">
 form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-primary')).form_close().'
 </div>
 </div>
+<br>
 ';
 }
 }

@@ -14,8 +14,9 @@
             </div>
             <div class="col-lg-3">
                 <input style="text-align: center;" class="form-control col-xs-1" type="password" name="txt-senha" placeholder="Senha">
-          <a href="#inicio"><u>Esqueci minha senha</u></a>
             </div>
+            <div class="col-md-4 col-sm-6 comofunciona-item">
+            <a class="comofunciona-link" data-toggle="modal" href="#alertaModal4">Esqueci minha senha</a></div>
 <br>
     <div class="g-recaptcha" data-sitekey="6Ld0pkwUAAAAAPoc-WBI4SQmUu6dKz6eJIeUtJn8"></div>
           <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt">
