@@ -78,7 +78,7 @@ $minutes = $now['minutes'] - $now['minutes']%30;
  <input type="hidden" name="dhost" value="1">
 <h3 style="display:none;height:0px;margin-top:10px;" class="section-subheading sombras" id="estimativas"></h3>
 <br>
-<?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-l text-uppercase')); ?>
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-l')); ?>
 </div>
 <br>
 <?php echo form_close(); ?></div>
