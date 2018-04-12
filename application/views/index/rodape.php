@@ -190,7 +190,7 @@
                   <h2 class="text-uppercase">ESQUECEU SUA SENHA?</h2>
                   <p class="item-intro text-muted">Informe o seu email de cadastro e enviaremos um link de recuperação!</p>
                   <p><input style="text-align: center;" class="form-control" type="text" name="txt-user" placeholder="Email La Salle"></p>
-                  <p><a href="#" class="btn btn-sucess">Recuperar senha!</a></p>
+                  <p><a href="#" class="btn btn-success">Recuperar senha!</a></p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Voltar</button>
