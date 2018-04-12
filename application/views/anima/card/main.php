@@ -65,7 +65,7 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
         </div>
       </div>
     </div>';
-		}else{echo $infoconfirmados->emailusuario;}
+		}else{echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;}
 	}
 
 if ($info->emailusuario == $this->session->userdata('email')){
