@@ -23,6 +23,47 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('demail');?>" 
 <input type="text" placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');?>" required>
 <br>
+<script>
+    function curso_outros(that) {
+        if (that.value == "outro") {
+            document.getElementById("especifica").style.display = "block";
+        } else {
+            document.getElementById("especifica").style.display = "none";
+        }
+    }
+</script>
+  <font class="required">Informe seu Curso ou Cargo</font> <br>
+  <select required class="form-control" name="dcurso" onchange="curso_outros(this);">
+    <option disabled selected>Selecione</option>
+    <option disabled>Graduação:</option>
+    <option value="Unilasalle-RJ">Unilasalle-RJ</option>
+    <option value="Administração">Administração</option>
+    <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
+    <option value="Ciências Contábeis">Ciências Contábeis</option>
+    <option value="Direito">Direito</option>
+    <option value="Engenharia Civil">Engenharia Civil</option>
+    <option value="Engenharia de Produção">Engenharia de Produção</option>
+    <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+    <option value="História">História</option>
+    <option value="Pedagogia">Pedagogia</option>
+    <option value="Sistemas de Informação">Sistemas de Informação</option>
+    <option value="outro">Outra(o) não especificado(a)</option>
+    <option disabled>Pós-Graduação:</option>
+    <option value="Direito Civil e Processual Civil">Direito Civil e Processual Civil</option>
+    <option value="Docência no ensino superior: práxis educativa">Docência no ensino superior: práxis educativa</option>
+    <option value="Estratégias Tributárias">Estratégias Tributárias</option>
+    <option value="Gestão de negócios">Gestão de negócios</option>
+    <option value="outro">Outra(o) não especificado(a)</option>
+    <option disabled>Cargos:</option>
+    <option value="Professor">Professor</option>
+    <option value="outro">Funcionário (outros)</option>
+  </select>
+  <div id="especifica" style="display: none;">
+    <br>
+    <font class="required">Especifique seu Curso ou Cargo</font> <br>
+      <input type="text" placeholder="Digite aqui seu Curso ou Cargo" class="form-control" name="despecifica" id="despecifica" maxlength="20" size="10">
+    </div>
+<br>
 <font class="required">CEP</font> <br>
 <?php echo form_error('dcep'); ?>
 <input type="text" placeholder="Digite aqui o seu CEP" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" oninvalid="this.setCustomValidity('Não esqueça de preencher seu CEP!')"
