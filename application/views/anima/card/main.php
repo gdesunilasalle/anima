@@ -23,7 +23,7 @@ echo '<div class="card w-100">
 			<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
 			<br>
 			Meio de transporte: '.$info->meio.'</p></b>
-			<p class="text-secondary" align="left">
+			<p class="text-dark" align="left">
 			Usuários confirmados:
 			</p>';
 $count='0';
@@ -32,10 +32,11 @@ foreach ($confirmados as $infoconfirmados) {
 	if ($infoconfirmados->emailusuario == $this->session->userdata('email') ) {
 		$count++;
 }
-		
 		if($info->emailusuario == $this->session->userdata('email')){
 			
-echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-danger" data-toggle="modal" href="#'.$infoconfirmados->emailusuario.'"> X </a> '.$infoconfirmados->emailusuario.'</p>
+echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-danger" data-toggle="modal" href="#'.$infoconfirmados->emailusuario.'"> X </a> '.$infoconfirmados->emailusuario.'<i> - '.$infoconfirmados->cursousuario;
+    if($infoconfirmados->especificacursousuario){echo ' - '.$infoconfirmados->especificacursousuario;}
+    echo '</i></p>
 <!-- alertaModal3 = REMOVER PASSAGEIRO -->
     <div class="comofunciona-modal modal fade" id="'.$infoconfirmados->emailusuario.'" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -64,7 +65,7 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
         </div>
       </div>
     </div>';
-		}else{echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;}
+		}else{echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario.'</p>';}
 	}
 
 if ($info->emailusuario == $this->session->userdata('email')){
@@ -155,7 +156,7 @@ echo form_close();
 }   
 }else{
 
-		echo '<i>Nenhum usuário confirmado ainda, <b>seja o primeiro!</b></i><center>';
+		echo '<p class="text-secondary" align="left"><i>Nenhum usuário confirmado ainda, <b>seja o primeiro!</b></i></p><center>';
 		echo form_open('adere');
 		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
 		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';

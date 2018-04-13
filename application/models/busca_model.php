@@ -6,15 +6,13 @@
                 $CI = &get_instance();
                 //$this->db2 = $CI->load->database('Anima', TRUE);
         }
-
         function userInformation()
         {   
             $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE host = 1 AND usuario != '$email' ORDER BY horario");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario, curso as cursousuario, especificacurso as especificacursousuario FROM transportesemcurso WHERE host = 1 AND usuario != '$email' ORDER BY horario");
             return $query->result();
         }
-
-                function apagaCarona()
+        function apagaCarona()
         {
             $query = $this->db->query("DELETE origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = ($this->session->userdata('email')");
             return $query->result();
