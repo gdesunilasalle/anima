@@ -7,9 +7,8 @@
       <div class="container">
   <h2 class="section-heading text-uppercase sombras">Dados do usuário</h2>
   <h3 class="section-subheading sombras">Preencha corretamente os dados abaixo se desejar alterar seus dados</h3>
-	<br>
 <?php foreach ($dados as $dadosusuario) { ?>
-<div class="card w-75">
+<div class="card w-95">
 	  <div class="card-header">
     <h5 class="text-success">Olá, <?php echo ($dadosusuario->edita_nomecompleto); ?>. O que deseja alterar? </h5>
     <?php echo $this->session->flashdata('message');?>
@@ -32,6 +31,46 @@ onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_em
 <input type="text" placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_matricula); ?>" required>
 <br>
+<script>
+    function curso_outros(that) {
+        if (that.value == "Outro") {
+            document.getElementById("especifica").style.display = "block";
+        } else {
+            document.getElementById("especifica").style.display = "none";
+        }
+    }
+</script>
+  <font class="required">Informe seu Curso ou Cargo</font> <br>
+  <select required class="form-control" name="dcurso" onchange="curso_outros(this);">
+    <option selected value="<?php echo ($dadosusuario->cursousuario); ?>"><?php echo ($dadosusuario->cursousuario); ?></option>
+    <option disabled>Graduação:</option>
+    <option value="Unilasalle-RJ">Unilasalle-RJ</option>
+    <option value="Administração">Administração</option>
+    <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
+    <option value="Ciências Contábeis">Ciências Contábeis</option>
+    <option value="Direito">Direito</option>
+    <option value="Engenharia Civil">Engenharia Civil</option>
+    <option value="Engenharia de Produção">Engenharia de Produção</option>
+    <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+    <option value="História">História</option>
+    <option value="Pedagogia">Pedagogia</option>
+    <option value="Sistemas de Informação">Sistemas de Informação</option>
+    <option value="Outro">Outra(o) não especificado(a)</option>
+    <option disabled>Pós-Graduação:</option>
+    <option value="Direito Civil e Processual Civil">Direito Civil e Processual Civil</option>
+    <option value="Docência no ensino superior: práxis educativa">Docência no ensino superior: práxis educativa</option>
+    <option value="Estratégias Tributárias">Estratégias Tributárias</option>
+    <option value="Gestão de negócios">Gestão de negócios</option>
+    <option value="Outro">Outra(o) não especificado(a)</option>
+    <option disabled>Cargos:</option>
+    <option value="Professor">Professor</option>
+    <option value="Outro">Funcionário (outros)</option>
+  </select>
+  <div id="especifica" style="display: none;">
+    <p align="left" class="text-secondary"><font class="required">Especifique seu Curso ou Cargo</font><br>
+    <input type="text" placeholder="Digite aqui seu Curso ou Cargo" class="form-control" value="<?php echo ($dadosusuario->especificacursousuario);?>" name="despecifica" id="despecifica" maxlength="20" size="10">
+  </div>
+<p align="left" class="text-secondary">
 <font class="required">CEP</font> <br>
 <?php echo form_error('dcep'); ?>
 <input type="text" placeholder="Digite aqui o seu CEP" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" oninvalid="this.setCustomValidity('Não esqueça de preencher seu CEP!')"

@@ -10,7 +10,7 @@
         function dadosUsuario()
         {
             $emailcadastrado = $this->session->userdata('email');
-            $query = $this->db->query("SELECT nomecompleto as edita_nomecompleto, matricula as edita_matricula, email as edita_email, logradouro as edita_logradouro, numero as edita_numero, complemento as edita_complemento, cep as edita_cep FROM cadastrousuario WHERE email = '$emailcadastrado'" );
+            $query = $this->db->query("SELECT nomecompleto as edita_nomecompleto, curso as cursousuario, especifica_curso as especificacursousuario, matricula as edita_matricula, email as edita_email, logradouro as edita_logradouro, numero as edita_numero, complemento as edita_complemento, cep as edita_cep FROM cadastrousuario WHERE email = '$emailcadastrado'" );
             return $query->result();
         }
 }

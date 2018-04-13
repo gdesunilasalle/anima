@@ -25,7 +25,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');
 <br>
 <script>
     function curso_outros(that) {
-        if (that.value == "outro") {
+        if (that.value == "Outro") {
             document.getElementById("especifica").style.display = "block";
         } else {
             document.getElementById("especifica").style.display = "none";
@@ -47,16 +47,16 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');
     <option value="História">História</option>
     <option value="Pedagogia">Pedagogia</option>
     <option value="Sistemas de Informação">Sistemas de Informação</option>
-    <option value="outro">Outra(o) não especificado(a)</option>
+    <option value="Outro">Outra(o) não especificado(a)</option>
     <option disabled>Pós-Graduação:</option>
     <option value="Direito Civil e Processual Civil">Direito Civil e Processual Civil</option>
     <option value="Docência no ensino superior: práxis educativa">Docência no ensino superior: práxis educativa</option>
     <option value="Estratégias Tributárias">Estratégias Tributárias</option>
     <option value="Gestão de negócios">Gestão de negócios</option>
-    <option value="outro">Outra(o) não especificado(a)</option>
+    <option value="Outro">Outra(o) não especificado(a)</option>
     <option disabled>Cargos:</option>
     <option value="Professor">Professor</option>
-    <option value="outro">Funcionário (outros)</option>
+    <option value="Outro">Funcionário (outros)</option>
   </select>
   <div id="especifica" style="display: none;">
     <br>

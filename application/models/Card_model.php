@@ -7,13 +7,13 @@
         }
         function exibecarona($data)
         {
-            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especificacurso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$data' ");
+            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especifica_curso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$data' ");
             return $query->result();
         }
         function exibeconfirmados($data, $id)
         {   
             
-            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especificacurso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$id' ");
+            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especifica_curso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$id' ");
             return $query->result();
         }
         function consultaid($data)
