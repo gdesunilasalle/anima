@@ -19,7 +19,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Um clique</h2>
-                  <p class="item-intro text-muted">Encontre caronas de maneira rápida e agil.</p>
+                  <p class="item-intro text-muted">Encontre caronas de maneira rápida e ágil.</p>
                   <img class="img-fluid d-block mx-auto" src="img/comofunciona/01-full.jpg" alt="">
                   <p>A partir da Timeline você encontrará pessoas com o mesmo destino e/ou origem que você. Conheça pessoas novas e tenha sempre boa companhia em seu trajeto diário!</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -32,62 +32,7 @@
         </div>
       </div>
     </div>
-    <!-- Modal 2 -->
-    <div class="comofunciona-modal modal fade" id="comofuncionaModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Explore</h2>
-                  <p class="item-intro text-muted">Esqueça o Tradicionalismo!</p>
-                  <img class="img-fluid d-block mx-auto" src="img/comofunciona/02-full.jpg" alt="">
-                  <p>Usando os nossos filtros de busca, você poderá localizar facilmente as caronas adequadas ao seu trajeto. Explore esse novo mundo!</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3 -->
-    <div class="comofunciona-modal modal fade" id="comofuncionaModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Reunam-se</h2>
-                  <p class="item-intro text-muted">Pontos de encontros acessíveis a todos.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/comofunciona/03-full.jpg" alt="">
-                  <p>A partir do aplicativo identifique outros usuários que compartilharão com você essa nova experiência. Forme grupos e escreva momentos!</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     <!-- Modal 4 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -105,7 +50,7 @@
                   <h2 class="text-uppercase">Meios de Transportes</h2>
                   <p class="item-intro text-muted">Surpreenda-se com as possibilidades.</p>
                   <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/04-full.jpg'); ?>" alt="">
-                  <p>O Anima surge com diferentes meios de transportes para compartilhar a sua trajetória. Carro , Ônibus, Uber, Bicicleta e a pé são as possibilidades de locomoção disponíveis em nosso aplicativo. A distância nunca mais será a mesma!</p>
+                  <p>O Anima surge com diferentes meios de transportes para compartilhar a sua trajetória. Carro , Ônibus, Uber, Bicicleta e a pé são as possibilidades de mobilidade disponíveis em nosso aplicativo. A distância nunca mais será a mesma!</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Fechar</button>
@@ -116,34 +61,7 @@
         </div>
       </div>
     </div>
-    <!-- Modal 5 -->
-    <div class="comofunciona-modal modal fade" id="comofuncionaModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Segurança</h2>
-                  <p class="item-intro text-muted">A Segurança é importante!</p>
-                  <img class="img-fluid d-block mx-auto" src="<?php echo base_url('img/comofunciona/05-full.jpg'); ?>" alt="">
-                  <p>Apenas alunos e funcionários com e-mail institucional poderão usufruir deste serviço. Com isso, aumentamos a segurança e você sempre saberá com quem está indo. Anima!?</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     <!-- Modal 6 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal6" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
