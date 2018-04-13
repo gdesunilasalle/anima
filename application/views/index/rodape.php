@@ -135,7 +135,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">REMOVER CARONA?</h2>
                   <p class="item-intro text-muted">Tem certeza que deseja remover a carona?</p>
-                  <p><a href="Apagacarona" class="btn btn-danger">Remover carona</a></p>
+                  <p><a href="<?php echo base_url('apagacarona'); ?>" class="btn btn-danger">Remover carona</a></p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Cancelar</button>

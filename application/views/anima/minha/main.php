@@ -11,6 +11,9 @@
 <div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
+    <p class="text-secondary"><i><?php echo $info->cursousuario;
+    if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
+    echo '</i></p>';?>
   </div>
   <div class="card-body">
 
@@ -55,6 +58,9 @@ echo form_close();
 <div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success"><?php echo $info->emailusuario; ?></h5>
+    <p class="text-secondary"><i><?php echo $info->cursousuario;
+    if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
+    echo '</i></p>';?>
   </div>
   <div class="card-body">
    		<p class="text-secondary">

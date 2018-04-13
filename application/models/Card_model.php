@@ -7,7 +7,7 @@
         }
         function exibecarona($data)
         {
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
+            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especificacurso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$data' ");
             return $query->result();
         }
         function exibeconfirmados($data, $id)

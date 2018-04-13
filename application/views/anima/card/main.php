@@ -17,6 +17,9 @@ $horalocal = date("Y-m-d H:i:s", strtotime('+19 hours'));
 echo '<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success">'.$info->emailusuario.'</h5>
+    <p class="text-secondary"><i>'.$info->cursousuario;
+    if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
+    echo '</i></p>
   </div>
   <div class="card-body">
    		<p class="text-secondary">

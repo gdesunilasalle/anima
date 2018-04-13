@@ -6,11 +6,10 @@
                 $CI = &get_instance();
                 //$this->db2 = $CI->load->database('Anima', TRUE);
         }
-
         function minhacarona()
         {   
             $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE host = 1 AND usuario = '$email' ORDER BY horario");
+            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, curso as cursousuario, especificacurso as especificacursousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE host = 1 AND usuario = '$email' ORDER BY horario");
             return $query->result();
         }
         function consultahost()
@@ -21,12 +20,11 @@
             if($result){
             return $result->passageiro;
             return $passageiro->result();}
-        
         }
         function passageiro($host)
         {   
             $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE ID = '$host' ");
+            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especificacurso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE ID = '$host' ");
             return $query->result();
         }
 
