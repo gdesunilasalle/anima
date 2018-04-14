@@ -9,15 +9,21 @@ class Adere extends CI_Controller
     public function index()
     {
         ob_start();
-        
+
         if ($this->session->userdata('logado')) {
-            
+
             $data       = ($this->session->userdata('email'));
             $proponente = $this->input->post('dproponente');
+
+            $aderente = array(
+            'proponente' => $this->input->post('dproponente'),
+            'cursousuario' => $this->input->post('dcursousuario'),
+            'especificacursousuario' => $this->input->post('despecificacursousuario'));
+            
             $id         = $this->adere_model->consultaid($proponente);
             $meio       = $this->adere_model->consultameio($id, $proponente);
-            $status     = $this->adere_model->criacarona($id, $data, $meio, $proponente);
-            
+            $status     = $this->adere_model->criacarona($id, $data, $meio, $proponente, $aderente);
+
             if ($status == 3) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Não foi possível entrar na carona escolhida! </strong>O Uber está cheio!<br></div>');
                 redirect(base_url('busca'));

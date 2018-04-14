@@ -33,7 +33,7 @@ form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn
 	'<a href="'.base_url('oferece').'" class="btn btn-primary">Alterar carona</a>
            <a class="btn btn-primary" data-toggle="modal" href="#alertaModal1">
            <div class="comofunciona-hover">
-           <div class="comofunciona-hover-content">      
+           <div class="comofunciona-hover-content">
            </div>
            </div>
            Apagar carona

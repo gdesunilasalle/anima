@@ -1,5 +1,5 @@
 <header class="martelotte">
-<div class="container">  
+<div class="container">
 <center>
 <section id="cadastro">
       <div class="container">
@@ -34,6 +34,7 @@ form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-prima
 </div>
 </div>
 <br>
+
 ';
 }
 }
@@ -43,4 +44,3 @@ form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-prima
 <br><br><br><br><br><br>
 </header>
 </section>
-

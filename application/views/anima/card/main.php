@@ -12,8 +12,15 @@ $textarea.scrollTop($textarea[0].scrollHeight);
 </script>
 <h2 class="section-heading text-uppercase sombras">Detalhes da carona</h2>
 <h3 class="section-subheading sombras">E então... Anima?!</h3>
+<?php $horalocal = date("Y-m-d H:i:s", strtotime('+19 hours'));
+$count='0';
+?>
+
 <?php foreach ($caronas as $info) {
-$horalocal = date("Y-m-d H:i:s", strtotime('+19 hours'));
+
+// INICIO DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO É O DONO DA CARONA ===========================
+
+if($info->emailusuario == $this->session->userdata('email')){
 echo '<div class="card w-100">
 	  <div class="card-header">
     <h5 class="text-success">'.$info->emailusuario.'</h5>
@@ -29,14 +36,8 @@ echo '<div class="card w-100">
 			<p class="text-dark" align="left">
 			Usuários confirmados:
 			</p>';
-$count='0';
-if($confirmados!=NULL || $info->emailusuario == $this->session->userdata('email')){
-foreach ($confirmados as $infoconfirmados) {
-	if ($infoconfirmados->emailusuario == $this->session->userdata('email') ) {
-		$count++;
-}
-		if($info->emailusuario == $this->session->userdata('email')){
-			
+if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
+
 echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-danger" data-toggle="modal" href="#'.$infoconfirmados->emailusuario.'"> X </a> '.$infoconfirmados->emailusuario.'<i> - '.$infoconfirmados->cursousuario;
     if($infoconfirmados->especificacursousuario){echo ' - '.$infoconfirmados->especificacursousuario;}
     echo '</i></p>
@@ -68,102 +69,130 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
         </div>
       </div>
     </div>';
-		}else{echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario.'</p>';}
 	}
+	echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+	form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
+	echo form_close();
+	echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>';
+	foreach ($chat as $infochat) {
+				if($infochat->horachat){
+				echo '('.$infochat->horachat.')';}
+				echo ' ';
+				/*if ($infochat->hostchat){
+				echo $infochat->hostchat;}*/
+				echo ' ';
+				if ($infochat->passageirochat){
+				echo $infochat->passageirochat;}
+				echo ': ';
+				echo $infochat->mensagemchat;
+				echo '';
+				}
+				echo '</textarea>';
+	  echo form_open('chat_mensagem').'
+		<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" required>
+		<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">
+		<input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'">
+		<input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
+		form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
+		<a href="busca" class="btn btn-primary">Voltar para busca</a>
+		<a class="btn btn-primary" data-toggle="modal" href="#alertaModal1">
+		           <div class="comofunciona-hover">
+		           <div class="comofunciona-hover-content">
+		           </div>
+		           </div>
+		           Apagar carona
+		           </a>';
 
-if ($info->emailusuario == $this->session->userdata('email')){
-//INÍCIO DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
-echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
-echo form_close();
-echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>'; 
+// FIM DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO É O DONO DA CARONA ===========================
 
-foreach ($chat as $infochat) {
+// INICIO DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO É PASSAGEIRO ===========================
 
-			if($infochat->horachat){
-			echo '('.$infochat->horachat.')';}
-			echo ' '; 
-			/*if ($infochat->hostchat){
-			echo $infochat->hostchat;}*/
-			echo ' ';
-			if ($infochat->passageirochat){
-			echo $infochat->passageirochat;}
-			echo ': ';
-			echo $infochat->mensagemchat;
-echo '
-';			
+}else if($info->emailusuario != $this->session->userdata('email')){
+
+		foreach ($confirmados as $infoconfirmados) {
+		if ($infoconfirmados->emailusuario == $this->session->userdata('email') ) {
+			$count++;
+	}}if ($count!='0'){
+
+		echo '<div class="card w-100">
+			  <div class="card-header">
+		    <h5 class="text-success">'.$info->emailusuario.'</h5>
+		    <p class="text-secondary"><i>'.$info->cursousuario;
+		    if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
+		    echo '</i></p>
+		  </div>
+		  <div class="card-body">
+		   		<p class="text-secondary">
+					<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
+					<br>
+					Meio de transporte: '.$info->meio.'</p></b>
+					<p class="text-dark" align="left">
+					Usuários confirmados:
+					</p>';
+		if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
+		foreach ($confirmados as $infoconfirmados) {
+		echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;
 			}
-			echo '</textarea>';
-//FIM DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
-  echo form_open('chat_mensagem').'<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
-
-form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
-
-<a href="busca" class="btn btn-primary">Voltar para busca</a>
-<a class="btn btn-primary" data-toggle="modal" href="#alertaModal1">
-           <div class="comofunciona-hover">
-           <div class="comofunciona-hover-content">      
-           </div>
-           </div>
-           Apagar carona
-           </a>';
-echo form_close();
-	}else if($info->emailusuario != $this->session->userdata('email') && $count!='1'){
-		echo '<center>';
-		echo form_open('adere');
-		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
-		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
+		}
+		echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
+		form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
 		echo form_close();
-			}
+		echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>';
 
-else if ($count=='1'){
-//INÍCIO DE EXIBIÇÃO DO CHAT UANDO O USUÁRIO É PASSAGEIRO
-echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
-echo form_close();
-echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>'; 
+		foreach ($chat as $infochat) {
 
-foreach ($chat as $infochat) {
-
-
-			if($infochat->horachat){
-			echo '('.$infochat->horachat.')';}
-			echo ' '; 
-			/*if ($infochat->hostchat){
-			echo $infochat->hostchat;}*/
-			echo ' ';
-			if ($infochat->passageirochat){
-			echo $infochat->passageirochat;}
-			echo ': ';
-			echo $infochat->mensagemchat;
-echo '
-';			
-			}
-			echo '</textarea>';
-//FIM DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
-  echo form_open('chat_mensagem').'<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100" 
-value="" required><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
-
-form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'
-
-<a href="busca" class="btn btn-primary">Voltar para busca</a>
-<a class="btn btn-primary" data-toggle="modal" href="#alertaModal2">
+					if($infochat->horachat){
+					echo '('.$infochat->horachat.')';}
+					echo ' ';
+					/*if ($infochat->hostchat){
+					echo $infochat->hostchat;}*/
+					echo ' ';
+					if ($infochat->passageirochat){
+					echo $infochat->passageirochat;}
+					echo ': ';
+					echo $infochat->mensagemchat;
+		echo '
+		';
+					}
+					echo '</textarea>';
+		//FIM DE EXIBIÇÃO DO CHAT QUANDO O USUÁRIO É O HOST
+		  echo form_open('chat_mensagem').'<input type="text" autocomplete="off" placeholder="Digite sua mensagem" class="form-control" name="dmensagem" id="dmensagem" size="10" maxlength="100"
+		value="" required><input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'"><input type="hidden" name="dhora" id="dhora" value="'.$horalocal.'"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'"></div>'.
+		form_submit(array('id' => 'submit', 'value' => 'Enviar mensagem', 'class'=>'btn btn-primary')).'<a href="busca" class="btn btn-primary">Voltar para busca</a> <a class="btn btn-primary" data-toggle="modal" href="#alertaModal2">
            <div class="comofunciona-hover">
-           <div class="comofunciona-hover-content">      
+           <div class="comofunciona-hover-content">
            </div>
            </div>
            Sair da carona
            </a>';
-echo form_close();
-}   
-}else{
-
-		echo '<p class="text-secondary" align="left"><i>Nenhum usuário confirmado ainda, <b>seja o primeiro!</b></i></p><center>';
-		echo form_open('adere');
-		echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
-		echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
-		echo form_close();
+	}else{
+		// INICIO DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO ESTÁ OLHANDO A CARONA MAS AINDA NAO É PASSAGEIRO ===========================
+		echo '<div class="card w-100">
+			  <div class="card-header">
+		    <h5 class="text-success">'.$info->emailusuario.'</h5>
+		    <p class="text-secondary"><i>'.$info->cursousuario;
+		    if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
+		    echo '</i></p>
+		  </div>
+		  <div class="card-body">
+		   		<p class="text-secondary">
+					<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
+					<br>
+					Meio de transporte: '.$info->meio.'</p></b>
+					<p class="text-dark" align="left">
+					Usuários confirmados:
+					</p>';
+		if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
+		foreach ($confirmados as $infoconfirmados) {
+		echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;
+			}
+		}
+			echo '<center>';
+			echo form_open('adere');
+			echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
+			echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="busca" class="btn btn-primary">Voltar para busca</a>';
+			echo form_close();
+	}
 }
 }
 ?>

@@ -7,12 +7,11 @@
         }
         function exibecarona($data)
         {
-            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especifica_curso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$data' ");
+            $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especifica_curso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data' ");
             return $query->result();
         }
         function exibeconfirmados($data, $id)
-        {   
-            
+        {
             $query = $this->db->query("SELECT origem as origemusuario, curso as cursousuario, especifica_curso as especificacursousuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE passageiro = '$id' ");
             return $query->result();
         }
@@ -24,13 +23,12 @@
             return $passageiro->result(); //peguei o 6
         }
         function usuarioativo($data)
-        {   
+        {
             $query = $this->db->query("SELECT origem as origemusuario, destino as destinousuario, horario as horariousuario, meiotransporte as meio, usuario as emailusuario FROM transportesemcurso WHERE usuario = '$data'");
             return $query->result();
         }
         function le_chat($data)
-        {   $email = ($this->session->userdata('email'));
-            $query = $this->db->query("SELECT DATE_FORMAT(hora, '%H:%i') as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE passageiro = '$data' OR host = '$data'");
+        {   $query = $this->db->query("SELECT DATE_FORMAT(hora, '%H:%i') as horachat, host as hostchat, passageiro as passageirochat, mensagem as mensagemchat FROM chat WHERE passageiro = '$data' OR host = '$data'");
             return $query->result();
         }
         function grava_chat($data)
