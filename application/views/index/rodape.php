@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Modal 4 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Modal 6 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal6" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -162,10 +162,10 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">SAIR DA CARONA?</h2>
                   <p class="item-intro text-muted">Tem certeza que deseja sair da carona?</p>
-                  <?php echo '<a href="apagacarona/sairdacarona/'.$this->session->userdata('email').'" class="btn btn-danger">Sair da carona</a></p>
+                  <a href="<?php $email = $this->session->userdata('email'); echo base_url('apagacarona/sairdacarona/'); echo $email; ?>" class="btn btn-danger">Sair da carona</a></p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Cancelar</button>';?>
+                    Cancelar</button>
                 </div>
               </div>
             </div>

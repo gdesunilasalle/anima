@@ -39,7 +39,7 @@ parent::__construct();
                 }else if ($meio == 'Carro' && $result2 >= 4){
                     return 4;
                 }else if ($meio != 'Carro' && $meio != 'Uber') {
-                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`, `curso`, `especifica_curso`) VALUES ('$data', '$id')");
+                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
                     $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                     return 2;
                 }

@@ -11,10 +11,12 @@ echo '<h3 class="section-subheading sombras">Você não está participando de ne
   echo '<h3 class="section-heading text-uppercase sombras">Carona oferecida por mim</h3>
 <h3 class="section-subheading sombras">Aqui você pode editar a carona, removê-la ou conversar com seus colegas pelo chat</h3>';
 foreach ($caronas as $info) {
-echo $this->session->flashdata('message').'
-<div class="card w-100">
-	  <div class="card-header">
-    <h5 class="text-success">'.$info->emailusuario.'</h5>
+  $username = substr($info->emailusuario, 0, strpos($info->emailusuario, '@'));
+  $username = str_replace(".", " ", "$username");
+  $username = ucwords($username);
+echo $this->session->flashdata('message').'<div class="card w-100">
+			  <div class="card-header">
+		    <h5 class="text-success">'.$username.'</h5>
     <p class="text-secondary"><i>'.$info->cursousuario;
     if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
     echo '</i></p>
@@ -43,10 +45,14 @@ form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn
 echo '<h3 class="section-heading text-uppercase sombras">Carona onde sou passageiro</h3>
 <h3 class="section-subheading sombras">Aqui você pode sair da carona ou conversar com seus colegas pelo chat</h3>';
 foreach ($passageiro as $info){
-echo $this->session->flashdata('message').'
-<div class="card w-100">
-	  <div class="card-header">
-    <h5 class="text-success">'.$info->emailusuario.'</h5>
+  $username = substr($info->emailusuario, 0, strpos($info->emailusuario, '@'));
+  $username = str_replace(".", " ", "$username");
+  $username = ucwords($username);
+echo $this->session->flashdata('message').
+
+		'<div class="card w-100">
+			  <div class="card-header">
+		    <h5 class="text-success">'.$username.'</h5>
     <p class="text-secondary"><i>'.$info->cursousuario;
     if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
     echo '</i></p>'.'

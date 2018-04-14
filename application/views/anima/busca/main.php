@@ -12,9 +12,14 @@
 		echo '<h3 class="section-subheading sombras">Nenhuma oferta de carona disponível no momento...</h3><br><br><br><br><br><br><br><br>';
 	}else{
 foreach ($caronas as $info) {
-echo '<div class="card w-100">
-	  <div class="card-header">
-    <h5 class="text-success">'.$info->emailusuario.'</h5>
+
+  		$username = substr($info->emailusuario, 0, strpos($info->emailusuario, '@'));
+  		$username = str_replace(".", " ", "$username");
+  		$username = ucwords($username);
+
+  		echo '<div class="card w-100">
+  			  <div class="card-header">
+  		    <h5 class="text-success">'.$username.'</h5>
     <p class="text-secondary"><i>'.$info->cursousuario;
     if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
     echo '</i></p>
