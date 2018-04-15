@@ -3,6 +3,12 @@
   <head>
     <link rel="shortcut icon" href="<?php echo base_url('img/favicon.ico'); ?>" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/png">
+    <link href="<?php echo base_url('img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
+    <link href="<?php echo base_url('img/apple-touch-icon-152x152.png'); ?>" rel="apple-touch-icon" sizes="152x152">
+    <link href="<?php echo base_url('img/apple-touch-icon-167x167.png'); ?>" rel="apple-touch-icon" sizes="167x167">
+    <link href="<?php echo base_url('img/apple-touch-icon-180x180.png'); ?>" rel="apple-touch-icon" sizes="180x180">
+    <link href="<?php echo base_url('img/apple-touch-icon-192x192.png'); ?>" rel="icon" sizes="192x192">
+    <link href="<?php echo base_url('img/apple-touch-icon-128x128.png'); ?>" rel="icon" sizes="128x128">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -17,8 +23,8 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href='http://overpass-30e2.kxcdn.com/overpass.css' rel='stylesheet' type='text/css'>
-<link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
+    <link href='http://overpass-30e2.kxcdn.com/overpass.css' rel='stylesheet' type='text/css'>
+    <link href='http://overpass-30e2.kxcdn.com/overpass-mono.css' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('css/agency.css'); ?>" rel="stylesheet">
  <script src="<?php echo base_url('js/cep.js'); ?>"></script>
