@@ -22,9 +22,14 @@ $count='0';
 // INICIO DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO É O DONO DA CARONA ===========================
 
 if($info->emailusuario == $this->session->userdata('email')){
+
+	$username = substr($info->emailusuario, 0, strpos($info->emailusuario, '@'));
+	$username = str_replace(".", " ", "$username");
+	$username = ucwords($username);
+
 echo '<div class="card w-100">
 	  <div class="card-header">
-    <h5 class="text-success">'.$info->emailusuario.'</h5>
+    <h5 class="text-success">'.$username.'</h5>
     <p class="text-secondary"><i>'.$info->cursousuario;
     if($info->especificacursousuario){echo ' - '.$info->especificacursousuario;}
     echo '</i></p>
@@ -79,19 +84,23 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
 	form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
 	echo form_close();
 	echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>';
-	foreach ($chat as $infochat) {
-	if($infochat->horachat){
-	echo '('.$infochat->horachat.')';}
-	echo ' ';
-	/*if ($infochat->hostchat){
-	echo $infochat->hostchat;}*/
-	echo ' ';
-	if ($infochat->passageirochat){
-	echo $infochat->passageirochat;}
-	echo ': ';
-	echo $infochat->mensagemchat;
-	echo '
-	';
+foreach ($chat as $infochat) {
+if($infochat->horachat){
+echo '('.$infochat->horachat.')';}
+echo ' ';
+/*if ($infochat->hostchat){
+echo $infochat->hostchat;}*/
+echo ' ';
+if ($infochat->passageirochat){
+$username = substr($infochat->passageirochat, 0, strpos($infochat->passageirochat, '@'));
+$username = str_replace(".", " ", "$username");
+$username = ucwords($username);
+echo $username;
+}
+echo ': ';
+echo $infochat->mensagemchat;
+echo '
+';
 				}
 				echo '</textarea>';
 	  echo form_open('chat_mensagem').'

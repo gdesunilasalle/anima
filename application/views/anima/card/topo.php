@@ -2,14 +2,7 @@
 <html lang="en">
   <head>
     <link rel="shortcut icon" href="<?php echo base_url('img/favicon.ico'); ?>" type="image/x-icon">
-    <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/png">
-    <link href="<?php echo base_url('img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
-    <link href="<?php echo base_url('img/apple-touch-icon-152x152.png'); ?>" rel="apple-touch-icon" sizes="152x152">
-    <link href="<?php echo base_url('img/apple-touch-icon-167x167.png'); ?>" rel="apple-touch-icon" sizes="167x167">
-    <link href="<?php echo base_url('img/apple-touch-icon-180x180.png'); ?>" rel="apple-touch-icon" sizes="180x180">
-    <link href="<?php echo base_url('img/apple-touch-icon-192x192.png'); ?>" rel="icon" sizes="192x192">
-    <link href="<?php echo base_url('img/apple-touch-icon-128x128.png'); ?>" rel="icon" sizes="128x128">
-    <meta charset="utf-8">
+    <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/png">    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
