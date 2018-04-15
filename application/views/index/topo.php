@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="shortcut icon" href="<?php echo base_url('img/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
