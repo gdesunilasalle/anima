@@ -24,24 +24,9 @@ parent::__construct();
                     $this->db->query("UPDATE transportesemcurso SET passageiro = '$id', host = 0, curso='$aderente[cursousuario]', especifica_curso='$aderente[especificacursousuario]' WHERE usuario = '$data'");
                     $this->db->query("DELETE FROM chat WHERE passageiro = '$data' or host = '$data'");
                     $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
-
-                    return 2;
-                }else if ($meio == 'Uber' && $result2 < 3) {
+                }else{
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`, `curso`, `especifica_curso`) VALUES ('$data', '$id', '$aderente[cursousuario]', '$aderente[especificacursousuario]')");
                     $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
-                    return 2;
-                }else if ($meio == 'Uber' && $result2 >= 3){
-                    return 3;
-                }else if ($meio == 'Carro' && $result2 < 4 ) {
-                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`, `curso`, `especifica_curso`) VALUES ('$data', '$id', '$aderente[cursousuario]', '$aderente[especificacursousuario]')");
-                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
-                    return 2;
-                }else if ($meio == 'Carro' && $result2 >= 4){
-                    return 4;
-                }else if ($meio != 'Carro' && $meio != 'Uber') {
-                    $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`) VALUES ('$data', '$id')");
-                    $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
-                    return 2;
                 }
         }
 }

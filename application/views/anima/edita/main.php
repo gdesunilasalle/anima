@@ -79,7 +79,7 @@ onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_ce
 <font class="required">Logradouro</font> <br>
 <?php echo form_error('dlogradouro'); ?>
 <input type="text" placeholder="Digite aqui o Logradouro" class="form-control" name="dlogradouro" id="dlogradouro"  oninvalid="this.setCustomValidity('Não esqueça de preencher o Logradouro!')" onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_logradouro); ?>" required>
-<br />
+<br>
 <font class="required">Número</font> <br>
 <?php echo form_error('dnumero'); ?>
 <input type="text" placeholder="Digite aqui o número" class="form-control" name="dnumero" id="dnumero" oninvalid="this.setCustomValidity('Não esqueça de preencher o número!')" onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_numero); ?>" required>
@@ -104,7 +104,9 @@ Complemento <br>
 </div>
 </div>
 <br>
-<?php } ?>
+<?php
+break;
+} ?>
 </div>
 </div>
 </header>

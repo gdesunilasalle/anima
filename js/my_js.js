@@ -4,7 +4,7 @@ if (document.getElementById('name').value == "" || document.getElementById('emai
 alert("Fill All Fields !");
 } else {
 document.getElementById('form').submit();
-alert("Form Submitted Successfully...");
+alert("Formulário enviado com sucesso!");
 }
 }
 //Function To Display Popup

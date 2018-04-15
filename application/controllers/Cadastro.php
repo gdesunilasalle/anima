@@ -24,7 +24,7 @@ $this->form_validation->set_rules('dlogradouro', 'Logradouro', 'required|min_len
 //VALIDAÇÃO DO NUMERO
 $this->form_validation->set_rules('dnumero', 'Número', 'required|min_length[1]|max_length[10]');
 //VALIDAÇÃO DO COMPLEMENTO
-$this->form_validation->set_rules('dcomplemento', 'Complemento', 'min_length[2]|max_length[100]');
+$this->form_validation->set_rules('dcomplemento', 'Complemento', 'max_length[100]');
 //VALIDAÇÃO DO CEP
 $this->form_validation->set_rules('dcep', 'CEP', 'required|exact_length[8]');
 //VALIDAÇÃO DA SENHA

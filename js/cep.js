@@ -31,7 +31,7 @@
             if(validacep.test(cep)) {
 
                 //Preenche os campos com "..." enquanto consulta webservice.
-                document.getElementById('dlogradouro').value="...";
+                document.getElementById('dlogradouro').value="Carregando logradouro, aguarde...";
 
 
                 //Cria um elemento javascript.

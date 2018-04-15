@@ -208,14 +208,21 @@ echo '
 					</p>';
 		if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
 		foreach ($confirmados as $infoconfirmados) {
-		echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;
+			echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;
+			$count++;
 			}
 		}
 			echo '<center>';
+			if($info->meio == 'Uber' && $count == 3){
+				echo '<div class="alert alert-danger" role="alert"><strong>Chegou tarde demais! </strong>Este Uber está lotado!<br></div><a href="'.base_url().'busca" class="btn btn-primary">Voltar para busca</a>';
+			}else if($info->meio == 'Carro' && $count == 4){
+				echo '<div class="alert alert-danger" role="alert"><strong>Chegou tarde demais! </strong>Este Carro está lotado!<br></div><a href="'.base_url().'busca" class="btn btn-primary">Voltar para busca</a>';
+			}else{
 			echo form_open('adere');
 			echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
 			echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="'.base_url().'busca" class="btn btn-primary">Voltar para busca</a>';
 			echo form_close();
+			}
 	}
 }
 }
