@@ -31,7 +31,11 @@ class Usuarios extends CI_Controller
                 try {
                     $this->load->library("form_validation");
                     $this->form_validation->set_rules('txt-user', 'Email La Salle', 'required|valid_email|callback_email_check');
-                    $this->form_validation->set_message('email_check', 'É obrigatório o uso de email com os domínios @soulasalle.com.br ou @lasalle.org.br');
+                    $this->form_validation->set_message('email_check', '<center><div class="alert alert-danger w-75" role="alert"><strong>É obrigatório o uso de email @soulasalle.com.br ou @lasalle.org.br! </strong>Tente novamente.</div>
+</center>');
+
+
+
                     $this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[8]');
                     if (!$this->form_validation->run())
                         throw new UnexpectedValueException(validation_errors()); // Erros adversos de validação
@@ -40,14 +44,14 @@ class Usuarios extends CI_Controller
                     $query    = $this->db->select("*")->from("cadastrousuario")->where("email", $user)->get();
                     $verifica = $this->db->select("*")->from("cadastrousuario")->where("is_verified", $user)->get();
                     if ($query->num_rows() != 1) {
-                        throw new UnexpectedValueException('Usuario inexistente, efetue seu cadastro.'); // User Incorreto
+                        throw new UnexpectedValueException('<center><div class="alert alert-danger w-75" role="alert"><strong>Usuario inexistente, efetue seu cadastro.</strong></div></center>'); // User Incorreto
                     } else if ($verifica->num_rows() == 1) { //NAO ENVIAR ESSE ARQUIVO PARA O SERVIDOR!!!!
-                        throw new UnexpectedValueException('<div class="alert alert-danger" role="alert"><strong>Conta ainda não ativada! </strong>Acesse seu email La Salle e clique no link de ativação.<br>Não deixe de verificar a caixa <i>SPAM</i> de seu email!<br></div>'); // Usuário não ativado
+                        throw new UnexpectedValueException('<center><div class="alert alert-danger w-75" role="alert">Conta ainda não ativada! </strong>Acesse seu email La Salle e clique no link de ativação.<br>Não deixe de verificar a caixa <i>SPAM</i> de seu email!<br></div></center>'); // Usuário não ativado
                     }
                     $row = $query->row();
                     if (!password_verify($password, $row->senha)) {
                         // Senha Incorreta
-                        throw new UnexpectedValueException('<div class="alert alert-danger" role="alert"><strong>Senha incorreta! </strong>Digite novamente</div>'); // Exception Senha incorreta
+                        throw new UnexpectedValueException('<center><div class="alert alert-danger w-75" role="alert"><strong>Senha incorreta! </strong>Tente novamente.</div></center>'); // Exception Senha incorreta
                         $dadosSessao['userlogado'] = NULL;
                         $dadosSessao['logado']     = FALSE;
                         $this->session->set_userdata($dadosSessao);

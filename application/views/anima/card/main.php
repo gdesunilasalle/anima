@@ -12,10 +12,11 @@ $textarea.scrollTop($textarea[0].scrollHeight);
 </script>
 <h2 class="section-heading text-uppercase sombras">Detalhes da carona</h2>
 <h3 class="section-subheading sombras">E então... Anima?!</h3>
-<?php $horalocal = date("Y-m-d H:i:s", strtotime('+19 hours'));
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+$horalocal = date("Y-m-d H:i:s");
 $count='0';
 ?>
-
 <?php foreach ($caronas as $info) {
 
 // INICIO DA EXIBIÇÃO DE CARD QUANDO O USUÁRIO É O DONO DA CARONA ===========================
