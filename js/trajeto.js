@@ -2,26 +2,37 @@ var mensagem2 = "";
 var casag = "";
 
 function endereco(address, casa) {
-  switch (address) {
-    case "Unilasalle-RJ":
-      return "Rua Gastão Gonçalves, 79";
-    case "Terminal":
-      return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
-    case "Rodoviária":
-      return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
-    case "Barcas":
-      return "Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030";
-    case "Mestre do Suco":
-      return "R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401";
-    case "Plaza Shopping":
-      return "Rua Quinze de Novembro, 8 - Centro, Niterói - RJ, 24020-125";
-    case "Bay Market":
-      return "Av. Visconde do Rio Branco, 360 - Centro, Niterói - RJ, 24020-002";
-    case casa:
-      return casa
-    default:
-      return undefined;
-  }
+var cases = {};
+cases['Unilasalle-RJ'] = function() {
+  return 'Rua Gastão Gonçalves, 79';
+};
+cases['Terminal'] = function() {
+  return 'Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010';
+};
+cases['Rodoviária'] = function() {
+  return 'Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010';
+};
+cases['Barcas'] = function() {
+  return 'Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030';
+};
+cases['Mestre do Suco'] = function() {
+  return 'R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401';
+};
+cases['Plaza Shopping'] = function() {
+  return 'Rua Quinze de Novembro, 8 - Centro, Niterói - RJ, 24020-125';
+};
+cases['Bay Market'] = function() {
+  return 'Av. Visconde do Rio Branco, 360 - Centro, Niterói - RJ, 24020-002';
+};
+cases[casa] = function() {
+  return casa;
+}
+
+if(typeof cases[address] == 'function') {
+  return cases[address]();
+} else {
+  return undefined;
+}
 }
 
 function loadestimativa(casa) {
@@ -29,6 +40,7 @@ function loadestimativa(casa) {
   var estimativa = document.getElementById("estimativas");
   estimativa.innerHTML = "";
   estimativa.style.display = "none";
+  estimativa.style.height = "auto";
   var origem = document.getElementById("select-origem")
     .options[document.getElementById("select-origem")
       .selectedIndex].value;
@@ -47,6 +59,8 @@ function loadestimativa(casa) {
     return;
   }
   let url = "";
+
+
   switch (transporte) {
     case "A pé":
       mensagem2 = "<br><br>Opa, notei que a pé demora ";

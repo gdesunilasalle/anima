@@ -78,13 +78,12 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     <option value="Plaza Shopping">Plaza Shopping</option>
     <option value="Bay Market">Bay Market</option>
   </select>
- <br>
  <input type="hidden" name="dhost" value="1">
 <?php foreach ($curso as $infocurso) {
 echo '<input type="hidden" name="dcurso" value="'.$infocurso->cursousuario.'">
 <input type="hidden" name="despecificacurso" value="'.$infocurso->especifica_cursousuario.'">';
 } ?>
-<h3 style="display:none;height:0px;margin-top:10px;font-weight: bold;-webkit-text-stroke-width: 0.2px;-webkit-text-stroke-color: black;" class="section-subheading sombras" id="estimativas"></h3>
+<div style="display:none;height:0px;margin-top:10%;margin-bottom: 10%;font-weight: bold;-webkit-text-stroke-width: 0.2px;-webkit-text-stroke-color: black;" class="section-subheading sombras" id="estimativas"></div>
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-l')); ?>
 </div>
