@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <link rel="shortcut icon" href="<?php echo base_url('img/favicon.ico'); ?>" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url('img/icon.png'); ?>" type="image/png">
@@ -30,6 +30,7 @@
     <script src="<?php echo base_url('js/cep.js'); ?>"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="<?php echo base_url('js/trajeto.js'); ?>"></script>
   </head>
   <body id="page-top">
     <!-- Navigation -->

@@ -62,7 +62,9 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas - Estação Arariboia</option>
-    <option value="Mestre dos Sucos">Mestre dos Sucos</option>
+    <option value="Mestre do Suco">Mestre do Suco</option>
+    <option value="Plaza Shopping">Plaza Shopping</option>
+    <option value="Bay Market">Bay Market</option>
   </select>
   <br>
   <select required class="form-control form-control-lg" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
@@ -72,15 +74,17 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     <option value="Terminal">Terminal</option>
     <option value="Rodoviária">Rodoviária</option>
     <option value="Barcas">Barcas - Estação Arariboia</option>
-    <option value="Mestre dos Sucos">Mestre dos Sucos</option>
-  </select></fielset>
+    <option value="Mestre do Suco">Mestre do Suco</option>
+    <option value="Plaza Shopping">Plaza Shopping</option>
+    <option value="Bay Market">Bay Market</option>
+  </select>
  <br>
  <input type="hidden" name="dhost" value="1">
 <?php foreach ($curso as $infocurso) {
 echo '<input type="hidden" name="dcurso" value="'.$infocurso->cursousuario.'">
 <input type="hidden" name="despecificacurso" value="'.$infocurso->especifica_cursousuario.'">';
 } ?>
-<h3 style="display:none;height:0px;margin-top:10px;" class="section-subheading sombras" id="estimativas"></h3>
+<h3 style="display:none;height:0px;margin-top:10px;font-weight: bold;-webkit-text-stroke-width: 0.2px;-webkit-text-stroke-color: black;" class="section-subheading sombras" id="estimativas"></h3>
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-l')); ?>
 </div>

@@ -11,7 +11,7 @@ function endereco(address, casa) {
       return "Terminal Rodoviário Roberto Silveira, Av. Felíciano Sodré, S/N - Centro, Niterói - RJ, 24030-010";
     case "Barcas":
       return "Praça Arariboia, Praça Araribóia - Centro, Niterói - RJ, 24020-030";
-    case "Mestre dos Sucos":
+    case "Mestre do Suco":
       return "R. Dr. Paulo César, 221 - Pé Pequeno, Niterói - RJ, 24220-401";
     case "Plaza Shopping":
       return "Rua Quinze de Novembro, 8 - Centro, Niterói - RJ, 24020-125";
@@ -60,7 +60,7 @@ function loadestimativa(casa) {
       url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
-    case "bus":
+    case "Ônibus":
       mensagem2 = "<br><br>Opa, notei que de ônibus, nesse momento está demorando ";
       url = "https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
