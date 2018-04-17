@@ -81,7 +81,7 @@ echo '<p class="text-secondary" align="left"><a class="btn btn-sm btn-outline-da
 	}
 	}
 	echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-	form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
+	form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-success'));
 	echo form_close();
 	echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>';
 foreach ($chat as $infochat) {
@@ -158,7 +158,7 @@ echo '
 			}
 		}
 		echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
-		form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-outline-dark'));
+		form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-success'));
 		echo form_close();
 		echo '</p><div class="form-group"><textarea id="chat" readonly class="form-control" style="min-width: 100%; resize: none" rows=8>';
 
