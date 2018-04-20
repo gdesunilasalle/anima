@@ -23,12 +23,12 @@ echo $this->session->flashdata('message').'<div class="card w-100">
   </div>
   <div class="card-body">
    		<p class="text-secondary">
-			'.$info->origemusuario.'
-			<br>
-			'.$info->destinousuario.'
-			<br>
-			'.$info->horariousuario.'
-			<br>
+			'.$info->origemusuario.'</p>
+			<p class="text-secondary">
+			'.$info->destinousuario.'</p>
+			<p class="text-secondary">Hoje -
+			'.$info->horariousuario.'h</p>
+			<p class="text-secondary">
 			'.$info->meio.'</p>'.form_open('card').'
 <input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn-primary')).
@@ -59,13 +59,13 @@ echo $this->session->flashdata('message').
   </div>
   <div class="card-body">
    		<p class="text-secondary">
-      '.$info->origemusuario.'
-      <br>
-      '.$info->destinousuario.'
-      <br>
-      '.$info->horariousuario.'
-      <br>
-      '.$info->meio.'</p>'.form_open('card').'
+			'.$info->origemusuario.'</p>
+			<p class="text-secondary">
+			'.$info->destinousuario.'</p>
+			<p class="text-secondary">Hoje -
+			'.$info->horariousuario.'h</p>
+			<p class="text-secondary">
+			'.$info->meio.'</p>'.form_open('card').'
 <input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.form_submit(array('id' => 'submit', 'value' => 'Ver detalhes', 'class'=>'btn btn-primary')).form_close().'
 </div>
 </div>';

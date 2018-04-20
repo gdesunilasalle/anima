@@ -148,15 +148,16 @@ echo '
 					<p class="text-dark" align="left">
 					Usuários confirmados:
 					</p>';
-		if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
-		foreach ($confirmados as $infoconfirmados) {
-			$username = substr($infoconfirmados->emailusuario, 0, strpos($infoconfirmados->emailusuario, '@'));
-			$username = str_replace(".", " ", "$username");
-			$username = ucwords($username);
-
-		echo '<p class="text-secondary" align="left">'.$username;
-			}
-		}
+					if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
+					foreach ($confirmados as $infoconfirmados) {
+						$username = substr($infoconfirmados->emailusuario, 0, strpos($infoconfirmados->emailusuario, '@'));
+						$username = str_replace(".", " ", "$username");
+						$username = ucwords($username);
+						echo '<p class="text-secondary" align="left">'.$username.' - <i>'.$infoconfirmados->cursousuario.'</i>';
+						 if($info->especificacursousuario){echo ' (<i>'.$infoconfirmados->especificacursousuario.'</i>)';}
+						$count++;
+						}
+					}
 		echo form_open('chat_mensagem/refresh').'<p align="right"><input type="hidden" name="dusuario" id="dusuario" value="'.$info->emailusuario.'">'.
 		form_submit(array('id' => 'submit', 'value' => '⟳', 'class'=>'btn btn-sm btn-success'));
 		echo form_close();
@@ -218,7 +219,11 @@ echo '
 					</p>';
 		if(!$confirmados){echo '<p class="text-secondary" align="left"><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nenhum usuário presente no momento...</i></p>';}else{
 		foreach ($confirmados as $infoconfirmados) {
-			echo '<p class="text-secondary" align="left">'.$infoconfirmados->emailusuario;
+			$username = substr($infoconfirmados->emailusuario, 0, strpos($infoconfirmados->emailusuario, '@'));
+			$username = str_replace(".", " ", "$username");
+			$username = ucwords($username);
+			echo '<p class="text-secondary" align="left">'.$username.' - <i>'.$infoconfirmados->cursousuario.'</i>';
+			 if($info->especificacursousuario){echo ' (<i>'.$infoconfirmados->especificacursousuario.'</i>)';}
 			$count++;
 			}
 		}
@@ -230,6 +235,10 @@ echo '
 			}else{
 			echo form_open('adere');
 			echo '<input type="hidden" name="dproponente" id="dproponente" value="'.$info->emailusuario.'">';
+			foreach ($curso_passageiro as $info){
+			echo '<input type="hidden" name="dcursousuario" value="'.$info->curso_usuario.'">
+			<input type="hidden" name="despecificacursousuario" value="'.$info->especifica_curso_usuario.'">';
+			}
 			echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="'.base_url().'busca" class="btn btn-primary">Voltar para busca</a>';
 			echo form_close();
 			}

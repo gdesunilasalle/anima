@@ -35,4 +35,9 @@
         {   $email = ($this->session->userdata('email'));
             $this->db->query("INSERT INTO chat (`hora`, `host`, `passageiro`, `mensagem`) VALUES ('$data[hora]', '$data[autor]', '$email', '$data[mensagem]')");
         }
+        function curso_passageiro()
+        {   $email = ($this->session->userdata('email'));
+            $query = $this->db->query("SELECT curso as curso_usuario, especifica_curso as especifica_curso_usuario FROM cadastrousuario WHERE email = '$email'");
+            return $query->result();
+        }
 }

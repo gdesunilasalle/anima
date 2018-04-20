@@ -29,8 +29,8 @@ foreach ($caronas as $info) {
 			'.$info->origemusuario.'</p>
 			<p class="text-secondary">
 			'.$info->destinousuario.'</p>
-			<p class="text-secondary">
-			'.$info->horariousuario.'</p>
+			<p class="text-secondary">Hoje -
+			'.$info->horariousuario.'h</p>
 			<p class="text-secondary">
 			'.$info->meio.'</p>'
 .form_open('card').'
