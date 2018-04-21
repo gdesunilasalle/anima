@@ -239,7 +239,7 @@ echo '
 			echo '<input type="hidden" name="dcursousuario" value="'.$info->curso_usuario.'">
 			<input type="hidden" name="despecificacursousuario" value="'.$info->especifica_curso_usuario.'">';
 			}
-			echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary')); echo '<a href="'.base_url().'busca" class="btn btn-primary">Voltar para busca</a>';
+			echo form_submit(array('id' => 'submit', 'value' => 'Estou dentro!', 'class'=>'btn btn-primary'  style="width: 200px")); echo '<a href="'.base_url().'busca" class="btn btn-primary" style="width: 200px">Voltar para busca</a>';
 			echo form_close();
 			}
 	}
