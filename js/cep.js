@@ -4,6 +4,7 @@
             document.getElementById('dlogradouro').value=("");
             document.getElementById('dbairro').value=("");
             document.getElementById('dcidade').value=("");
+            document.getElementById('dcomplemento').value=("");
     }
 
     function retorno_logradouro(conteudo) {
@@ -12,6 +13,8 @@
             document.getElementById('dlogradouro').value=(conteudo.logradouro);
             document.getElementById('dbairro').value=(conteudo.bairro);
             document.getElementById('dcidade').value=(conteudo.localidade);
+            document.getElementById('dcomplemento').value=(conteudo.complemento);
+
 
         } //end if.
         else {
@@ -39,6 +42,7 @@
                 document.getElementById('dlogradouro').value="Carregando logradouro, aguarde...";
                 document.getElementById('dbairro').value="Carregando bairro, aguarde...";
                 document.getElementById('dcidade').value="Carregando cidade, aguarde...";
+                document.getElementById('dcomplemento').value="Carregando complemento, aguarde...";
 
                 //Cria um elemento javascript.
                 var script = document.createElement('script');
