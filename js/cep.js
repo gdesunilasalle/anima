@@ -11,7 +11,7 @@
             //Atualiza os campos com os valores.
             document.getElementById('dlogradouro').value=(conteudo.logradouro);
             document.getElementById('dbairro').value=(conteudo.bairro);
-            document.getElementById('dcidade').value=(conteudo.cidade);
+            document.getElementById('dcidade').value=(conteudo.localidade);
 
         } //end if.
         else {
