@@ -71,8 +71,16 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" re
 <br>
 <font class="required">Logradouro</font> <br>
 <?php echo form_error('dlogradouro'); ?>
-<input type="text" placeholder="Digite aqui o Logradouro" class="form-control" name="dlogradouro" id="dlogradouro"  oninvalid="this.setCustomValidity('Não esqueça de preencher o Logradouro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dlogradouro');?>" required>
-<br />
+<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dlogradouro" id="dlogradouro"  oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da logradouro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dlogradouro');?>" required>
+<br>
+<font class="required">Bairro</font> <br>
+<?php echo form_error('dbairro'); ?>
+<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dbairro" id="dbairro" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático do bairro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
+<br>
+<font class="required">Cidade</font> <br>
+<?php echo form_error('dcidade'); ?>
+<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
+<br>
 <font class="required">Número</font> <br>
 <?php echo form_error('dnumero'); ?>
 <input type="text" placeholder="Digite aqui o número" class="form-control" name="dnumero" id="dnumero" oninvalid="this.setCustomValidity('Não esqueça de preencher o número!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dnumero');?>" required>
@@ -143,13 +151,13 @@ política constitui na sua aceitação aos novos Termos e Condições de uso do 
 
 I.Objeto
 
-O ANIMA é um projeto idealizado e realizado por alunos da UNILASALLE-RJ, e trata-se de um sistema de caronas unificado e institucional para a comunidade acadêmica da UNILASALLE-RJ - alunos, professores e funcionários. Os usuários do ANIMA podem adicionar seu destino online e ou pesquisar por caronas oferecidas e compartilhar viagens com outros membros. 
+O ANIMA é um projeto idealizado e realizado por alunos da UNILASALLE-RJ, e trata-se de um sistema de caronas unificado e institucional para a comunidade acadêmica da UNILASALLE-RJ - alunos, professores e funcionários. Os usuários do ANIMA podem adicionar seu destino online e ou pesquisar por caronas oferecidas e compartilhar viagens com outros membros.
 O acesso é exclusivo à comunidade acadêmica, através do e-mail institucional @lasalle.org.br ou @soulasalle.com.br.
 Os serviços objeto dos presentes Termos e Condições de Uso consistem em disponibilizar ao Usuário um espaço para que ofereça e busque por caronas anunciadas. ANIMA, portanto, possibilita aos usuários travarem conhecimento uns dos outros e permite que eles combinem entre si diretamente, sem sua intervenção na finalização da carona, não sendo nessa qualidade, fornecedor ou responsável de quaisquer negociações e/ou serviços anunciados exclusivamente por seus usuários.
 
 II. Capacidade para cadastrar‐se
 
-As ferramentas do ANIMA estão disponíveis apenas para as pessoas que estejam vinculadas com a UNILASALLE-RJ. 
+As ferramentas do ANIMA estão disponíveis apenas para as pessoas que estejam vinculadas com a UNILASALLE-RJ.
 Se o ANIMA detectar, através do sistema de verificação de dados, irregularidades ou uso inadequado do sistema, irá inabilitar definitivamente todos os cadastros de quem violar tal regra.
 Política para Usuários menores de idade: Menores de 18 anos não podem utilizar o sistema.
 
@@ -236,7 +244,7 @@ i. Cadastro obrigatório: Ao se registrar no ANIMA, os usuários devem cadastrar
 ii. Enquetes: ocasionalmente o ANIMA faz enquetes aos usuários para melhor entender as necessidades de seu público visando o aprimoramento de suas funcionalidades. Algumas vezes o ANIMA poderá compartilhar os resultados das enquetes com parceiros institucionais dentro da UNILASALLE-RJ, tais quais laboratórios de pesquisa e outros órgãos internos da instituição. O ANIMA nunca divulga informações sobre um específico usuário com terceiros sem o consentimento expresso por escrito do usuário.
 O ANIMA registra todas as caronas realizadas através do aplicativo e utiliza este registro para compreensão do seu impacto positivo (quantidade de pessoas atingidas, maiores fluxos de caronas, redução de emissões de CO2  e outros que possam vir a ser determinados através de consulta ao banco de dados).
 Uso da informação por outros Usuários.
-Para facilitar a interação entre todos os membros da comunidade do ANIMA, suas soluções permitem um acesso limitado a certos dados de contato dos demais usuários tais como nome de usuário, e-mail e endereço. Ademais, certos dados estarão disponíveis a outros usuários, uma vez que estejam em um contexto de uma mesma carona. 
+Para facilitar a interação entre todos os membros da comunidade do ANIMA, suas soluções permitem um acesso limitado a certos dados de contato dos demais usuários tais como nome de usuário, e-mail e endereço. Ademais, certos dados estarão disponíveis a outros usuários, uma vez que estejam em um contexto de uma mesma carona.
 Sob nenhuma circunstância, se deve comunicar Informação Pessoal ou telefone de outro usuário a nenhum terceiro sem o consentimento do usuário afetado.
 
 Ordem de autoridades competentes ‐ Requerimentos Legais
@@ -254,7 +262,7 @@ Os usuários devem atualizar seus Dados Pessoais regularmente, conforme se alter
 XIV. Legislação Aplicável e Foro de eleição
 Todos os itens destes Termos e Condições de Uso estão regidos pelas leis vigentes na República Federativa do Brasil. Para todos os assuntos referentes à interpretação e ao cumprimento deste Contrato, as partes se submetem ao Foro Central da Cidade do Rio de Janeiro.
 
-                    </textarea>  
+                    </textarea>
                   <br>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     Voltar</button>

@@ -23,12 +23,12 @@ onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_no
 <br>
 <font class="required">Email</font> <br>
 <?php echo form_error('demail'); ?>
-<input type="text" placeholder="Digite aqui seu email La Salle (exemplo@soulasalle.com.br ou exemplo@lasalle.org)" class="form-control" name="demail" id="demail" oninvalid="this.setCustomValidity('Não esqueça de preencher seu email da La Salle!')"
+<input type="text" disabled placeholder="Digite aqui seu email La Salle (exemplo@soulasalle.com.br ou exemplo@lasalle.org)" class="form-control" name="demail" id="demail" oninvalid="this.setCustomValidity('Não esqueça de preencher seu email da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_email); ?>" required>
 <br>
 <font class="required">Matrícula</font> <br>
 <?php echo form_error('dmatricula'); ?>
-<input type="text" placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
+<input type="text" disabled placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_matricula); ?>" required>
 <br>
 <script>
