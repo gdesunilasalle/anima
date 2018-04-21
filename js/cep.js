@@ -3,6 +3,7 @@
             //Limpa valores do formul�rio de cep.
             document.getElementById('dlogradouro').value=("");
             document.getElementById('dbairro').value=("");
+            document.getElementById('dcidade').value=("");
     }
 
     function retorno_logradouro(conteudo) {
@@ -10,6 +11,8 @@
             //Atualiza os campos com os valores.
             document.getElementById('dlogradouro').value=(conteudo.logradouro);
             document.getElementById('dbairro').value=(conteudo.bairro);
+            document.getElementById('dcidade').value=(conteudo.cidade);
+
         } //end if.
         else {
             //CEP n�o Encontrado.
@@ -35,6 +38,7 @@
                 //Preenche os campos com "..." enquanto consulta webservice.
                 document.getElementById('dlogradouro').value="Carregando logradouro, aguarde...";
                 document.getElementById('dbairro').value="Carregando bairro, aguarde...";
+                document.getElementById('dcidade').value="Carregando cidade, aguarde...";
 
                 //Cria um elemento javascript.
                 var script = document.createElement('script');
