@@ -14,6 +14,7 @@
             document.getElementById('dbairro').value=(conteudo.bairro);
             document.getElementById('dcidade').value=(conteudo.localidade);
             document.getElementById('dcomplemento').value=(conteudo.complemento);
+            if(document.getElementById('dcomplemento').value=="") document.getElementById('dcomplemento').value="Sem complemento";
 
 
         } //end if.
