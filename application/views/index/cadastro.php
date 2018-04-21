@@ -64,7 +64,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');
       <input type="text" placeholder="Digite aqui seu Curso ou Cargo" class="form-control" name="despecifica" id="despecifica" maxlength="20" size="10">
     </div>
 <br>
-<font class="required">CEP</font> <br>
+<font class="required">CEP</font> <img src="<?php echo base_url('img/cep.gif');?>"><br>
 <?php echo form_error('dcep'); ?>
 <input type="text" placeholder="Digite aqui o seu CEP" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" oninvalid="this.setCustomValidity('Não esqueça de preencher seu CEP!')"
 onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" required>
@@ -81,13 +81,9 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" re
 <?php echo form_error('dcidade'); ?>
 <input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
 <br>
-<font class="required">Número</font> <br>
-<?php echo form_error('dnumero'); ?>
-<input type="text" placeholder="Digite aqui o número" class="form-control" name="dnumero" id="dnumero" oninvalid="this.setCustomValidity('Não esqueça de preencher o número!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dnumero');?>" required>
-<br>
 Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
-<input type="text" placeholder="Digite aqui o complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
+<input type="text" disabled placeholder="Digite aqui o complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
 <br>
 <font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>
