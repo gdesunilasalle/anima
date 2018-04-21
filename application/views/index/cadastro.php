@@ -71,19 +71,19 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" re
 <br>
 <font class="required">Logradouro</font> <br>
 <?php echo form_error('dlogradouro'); ?>
-<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dlogradouro" id="dlogradouro"  oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da logradouro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dlogradouro');?>" required>
+<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dlogradouro" id="dlogradouro"  oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da logradouro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dlogradouro');?>" required>
 <br>
 <font class="required">Bairro</font> <br>
 <?php echo form_error('dbairro'); ?>
-<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dbairro" id="dbairro" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático do bairro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
+<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dbairro" id="dbairro" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático do bairro!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
 <br>
 <font class="required">Cidade</font> <br>
 <?php echo form_error('dcidade'); ?>
-<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
+<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
 <br>
 Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
-<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
+<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
 <br>
 <font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>

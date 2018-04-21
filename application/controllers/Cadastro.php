@@ -20,9 +20,11 @@ $this->form_validation->set_message('email_check', 'É obrigatório o uso de ema
 //VALIDAÇÃO DA MATRÍCULA
 $this->form_validation->set_rules('dmatricula', 'Matrícula La Salle', 'required|regex_match[/^[0-9]{10}$/]', 'required|exact_length[10]');
 //VALIDAÇÃO DO LOGRADOURO
-$this->form_validation->set_rules('dlogradouro', 'Logradouro', 'required|min_length[3]|max_length[100]');
-//VALIDAÇÃO DO NUMERO
-$this->form_validation->set_rules('dnumero', 'Número', 'required|min_length[1]|max_length[10]');
+$this->form_validation->set_rules('dlogradouro', 'Logradouro', 'required');
+//VALIDAÇÃO DA CIDADE
+$this->form_validation->set_rules('dcidade', 'Cidade', 'required');
+//VALIDAÇÃO DA BAIRRO
+$this->form_validation->set_rules('dbairro', 'Bairro', 'required');
 //VALIDAÇÃO DO COMPLEMENTO
 $this->form_validation->set_rules('dcomplemento', 'Complemento', 'max_length[100]');
 //VALIDAÇÃO DO CEP
@@ -54,7 +56,8 @@ $data = array(
 'curso' => $this->input->post('dcurso'),
 'especifica_curso' => $this->input->post('despecifica'),
 'logradouro' => $this->input->post('dlogradouro'),
-'numero' => $this->input->post('dnumero'),
+'cidade' => $this->input->post('dcidade'),
+'bairro' => $this->input->post('dbairro'),
 'complemento' => $this->input->post('dcomplemento'),
 'cep' => $this->input->post('dcep'),
 'senha' => $criptografado,
