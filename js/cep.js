@@ -14,7 +14,7 @@ var complemento;
         elemento.removeAttribute('readonly');
         elemento.removeAttribute('disabled');
         str = ((elemento.id).substr(1)).toUpperCase();
-        elemento.placeholder= "Por favor informar o(a) "+str;
+        elemento.placeholder= "Por favor informar "+str;
       }
     }
     function travar(elemento){
@@ -28,11 +28,12 @@ var complemento;
             logradouro.value=(conteudo.logradouro);
             bairro.value=(conteudo.bairro);
             cidade.value=(conteudo.localidade);
-            if(complemento.value=="") complemento.value="Sem complemento";
-            complemento.value=(conteudo.complemento);
             checa(logradouro);
             checa(bairro);
             checa(cidade);
+            if(conteudo.complemento.length!=0)complemento.value=(conteudo.complemento);
+            complemento.value="Sem complemento";
+
 
 
         } //end if.
