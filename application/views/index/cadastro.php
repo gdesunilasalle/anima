@@ -64,7 +64,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');
       <input type="text" placeholder="Digite aqui seu Curso ou Cargo" class="form-control" name="despecifica" id="despecifica" maxlength="20" size="10">
     </div>
 <br>
-<font class="required">CEP</font> <img src="<?php echo base_url('img/cep.gif');?>"><br>
+<font class="required">CEP</font> <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCep.cfm" target="_blank" ><img src="<?php echo base_url('img/cep.gif');?>"></a><br>
 <?php echo form_error('dcep'); ?>
 <input type="text" placeholder="Digite aqui o seu CEP" class="form-control" name="dcep" id="dcep" size="10" maxlength="9" onblur="pesquisacep(this.value);" oninvalid="this.setCustomValidity('Não esqueça de preencher seu CEP!')"
 onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" required>
@@ -83,7 +83,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" re
 <br>
 Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
-<input type="text" disabled placeholder="Digite aqui o complemento" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
+<input type="text" disabled placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcomplemento" id="dcomplemento" value="<?php echo set_value('dcomplemento');?>">
 <br>
 <font class="required">Senha</font> <br>
 <?php echo form_error('dsenha'); ?>
