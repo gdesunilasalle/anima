@@ -1,4 +1,7 @@
-
+var logradouro;
+var bairro;
+var cidade;
+var complemento;
   function limpa_formulario_cep() {
             //Limpa valores do formul�rio de cep.
             document.getElementById('dlogradouro').value=("");
@@ -6,15 +9,30 @@
             document.getElementById('dcidade').value=("");
             document.getElementById('dcomplemento').value=("");
     }
-
+    function checa(elemento){
+      if(elemento.value == ""){
+        elemento.removeAttribute('readonly');
+        elemento.removeAttribute('disabled');
+        str = ((elemento.id).substr(1)).toUpperCase();
+        elemento.placeholder= "Por favor informar o(a) "+str;
+      }
+    }
+    function travar(elemento){
+      elemento.readOnly= true;
+      elemento.disabled= true;
+    }
     function retorno_logradouro(conteudo) {
         if (!("erro" in conteudo)) {
             //Atualiza os campos com os valores.
-            document.getElementById('dlogradouro').value=(conteudo.logradouro);
-            document.getElementById('dbairro').value=(conteudo.bairro);
-            document.getElementById('dcidade').value=(conteudo.localidade);
-            document.getElementById('dcomplemento').value=(conteudo.complemento);
-            if(document.getElementById('dcomplemento').value=="") document.getElementById('dcomplemento').value="Sem complemento";
+
+            logradouro.value=(conteudo.logradouro);
+            bairro.value=(conteudo.bairro);
+            cidade.value=(conteudo.localidade);
+            if(complemento.value=="") complemento.value="Sem complemento";
+            complemento.value=(conteudo.complemento);
+            checa(logradouro);
+            checa(bairro);
+            checa(cidade);
 
 
         } //end if.
@@ -26,6 +44,14 @@
     }
 
     function pesquisacep(valor) {
+      logradouro = document.getElementById('dlogradouro');
+      bairro = document.getElementById('dbairro');
+      cidade = document.getElementById('dcidade');
+      complemento = document.getElementById('dcomplemento');
+        travar(logradouro);
+        travar(bairro);
+        travar(cidade);
+        travar(complemento);
 
         //Nova vari�vel "cep" somente com d�gitos.
         var cep = valor.replace(/\D/g, '');
