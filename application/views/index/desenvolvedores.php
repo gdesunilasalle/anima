@@ -100,10 +100,7 @@
               <h4>Lucas José</h4>
               <p class="text-muted">Desenvolvedor web front-end</p>
               <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
+                     
                 </li>
                 <li class="list-inline-item">
                   <a href="https://www.facebook.com/lucas.jose.355" target="_Blank"">
@@ -112,6 +109,7 @@
                 </li>
                 <li class="list-inline-item">
                   <a href="#">
+                   <a href="https://www.linkedin.com/in/lucas-jos%C3%A9-93a2b6153/" target="_Blank"">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
