@@ -17,7 +17,7 @@ $this->load->model('user_registration_model');
                 $this->load->view('index/desenvolvedores');
                 $this->load->view('index/contato');
                 $this->load->view('index/rodape');
-                echo '<script>alert("Email confirmado com sucesso!\n\nPreencha Apelido e Senha para acessar o sistema.");</script>';
+                echo '<script>alert("E-mail confirmado com sucesso!\n\nPreencha E-mail e Senha para acessar o sistema.");</script>';
 
          $result = $this->user_registration_model->verify_user($_GET['email']); //PEGA O HASH REFERENTE AO EMAIL DO USUARIO
          if($result){

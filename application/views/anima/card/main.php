@@ -37,10 +37,10 @@ echo '<div class="card w-100">
   <div class="card-body">
    		<p class="text-secondary">
 			<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
+			<p class="text-secondary">Meio de transporte: '.$info->meio.'</p></b>
 			<p>
 			<a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
 			</p>
-			Meio de transporte: '.$info->meio.'</p></b>
 			<p class="text-dark" align="left">
 			Usuários confirmados:
 			</p>';
@@ -145,10 +145,10 @@ echo '
 		  <div class="card-body">
 		   		<p class="text-secondary">
 					<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
+					<p class="text-secondary">Meio de transporte: '.$info->meio.'</p></b>
 					<p>
 					<a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
 					</p>
-					Meio de transporte: '.$info->meio.'</p></b>
 					<p class="text-dark" align="left">
 					Usuários confirmados:
 					</p>';
@@ -216,10 +216,10 @@ echo '
 		  <div class="card-body">
 		   		<p class="text-secondary">
 					<b>O trajeto da carona é '.$info->origemusuario.' - '.$info->destinousuario.', hoje '.$info->horariousuario.'h
+					<p class="text-secondary">Meio de transporte: '.$info->meio.'</p></b>
 					<p>
 					<a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
 					</p>
-					Meio de transporte: '.$info->meio.'</p></b>
 					<p class="text-dark" align="left">
 					Usuários confirmados:
 					</p>';
