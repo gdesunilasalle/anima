@@ -87,7 +87,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/gabriel-roland-367200158" target="_Blank">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
