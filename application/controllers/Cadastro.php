@@ -66,10 +66,9 @@ $data = array(
 
 //ENVIA EMAIL
 $this->email->from('leonardo.martelotte@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
-$address = $_POST['demail']; //EMAIL DE DESTINO
 $subject="Bem vindo ao Anima!";  //TITULO EMAIL
-$body = $this->load->view('email/cadastra.php',$address,TRUE);
-$this->email->to($address);
+$body = $this->load->view('email/cadastra.php', $data, TRUE);
+$this->email->to($data['email']);
 $this->email->subject($subject);
 $this->email->set_mailtype("html");
 $this->email->message($body);

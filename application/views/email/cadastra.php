@@ -15,7 +15,7 @@ $username = ucwords($username);
 <br>
 <p>Olá, <?php echo $username;?>.</p>
 <p>Obrigado por fazer parte do Anima, sua conta foi criada com sucesso!</p>
-<p>Clique <a style="color:#660298;" href="<?php echo base_url().'index.php/user_registration?'.'email='.$_POST['demail'].'&hash='.$data['hash'];?>">AQUI</a> para validar o seu cadastro!</p>
+<p>Clique <a style="color:#660298;" href="<?php echo base_url().'index.php/user_registration?'.'email='.$_POST['demail'].'&hash='.$hash;?>">AQUI</a> para validar o seu cadastro!</p>
 <br>
 <p><i>Equipe Anima<i></p>
 <br>
