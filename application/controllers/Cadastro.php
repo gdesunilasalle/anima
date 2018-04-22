@@ -65,27 +65,15 @@ $data = array(
 );
 
 //ENVIA EMAIL
-      $this->email->from('anima@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
-      $address = $_POST['demail']; //EMAIL DE DESTINO
-      $subject="Bem vindo ao Anima?!";  //TITULO EMAIL
-      $message= /*-----------INICIO DO CORPO DO EMAIL-----------*/
-        'Olá, '.$_POST['dnomecompleto'].'!
-
-        Obrigado por fazer parte do Anima!
-
-        Sua conta foi criada com sucesso!
-
-        Clique no link de confirmação abaixo para validar o seu cadastro:
-
-        ' . base_url() . 'index.php/user_registration?' .
-        'email=' . $_POST['demail'] . '&hash=' . $data['hash'] ;
-
-
-    /*-----------FIM DO CORPO DO EMAIL-----------*/
-      $this->email->to($address);
-      $this->email->subject($subject);
-      $this->email->message($message);
-      $this->email->send();
+$this->email->from('leonardo.martelotte@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
+$address = $_POST['demail']; //EMAIL DE DESTINO
+$subject="Bem vindo ao Anima!";  //TITULO EMAIL
+$body = $this->load->view('email/cadastra.php',$address,TRUE);
+$this->email->to($address);
+$this->email->subject($subject);
+$this->email->set_mailtype("html");
+$this->email->message($body);
+$this->email->send();
 
 //Transfering data to Model
 $this->insert_model->form_insert($data);

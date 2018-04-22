@@ -52,22 +52,14 @@ $data = array(
 'hash' => md5(rand(0, 1000)),
 );
 //ENVIA EMAIL
-      $this->email->from('anima@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
+      $this->email->from('leonardo.martelotte@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
       $address = $_POST['demail']; //EMAIL DE DESTINO
       $subject="Dados cadastrais alterados com sucesso!";  //TITULO EMAIL
-      $message= /*-----------INICIO DO CORPO DO EMAIL-----------*/
-        'Olá, '.$_POST['dnomecompleto'].'!
-
-        Obrigado por fazer parte do Anima!
-
-        Os dados de sua conta foram alterados com sucesso!
-
-        ';
-
-    /*-----------FIM DO CORPO DO EMAIL-----------*/
+      $body = $this->load->view('email/confirma.php',$address,TRUE);
       $this->email->to($address);
       $this->email->subject($subject);
-      $this->email->message($message);
+      $this->email->set_mailtype("html");
+      $this->email->message($body);
       $this->email->send();
 
 //Transfering data to Model

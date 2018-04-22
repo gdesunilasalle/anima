@@ -20,12 +20,7 @@ if($this->session->userdata('logado')){
         /* FIM DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
         $detalhes['chat'] = $this->card_model->le_chat($data);
 
-
-
         $detalhes['curso_passageiro'] = $this->card_model->curso_passageiro($data);
-
-
-
 
         $this->load->view('anima/card/topo');
         $this->load->view('anima/card/main',$detalhes);
