@@ -90,4 +90,4 @@ echo '<input type="hidden" name="dcurso" value="'.$infocurso->cursousuario.'">
 <br>
 <?php echo form_close(); ?></div>
 </center>
-<?php } ?>
+<?php break;} ?>
