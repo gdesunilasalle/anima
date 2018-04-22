@@ -1,4 +1,4 @@
-var logradouro;
+﻿var logradouro;
 var bairro;
 var cidade;
 var complemento;
@@ -19,7 +19,6 @@ var complemento;
     }
     function travar(elemento){
       elemento.readOnly= true;
-      elemento.disabled= true;
     }
     function retorno_logradouro(conteudo) {
         if (!("erro" in conteudo)) {
