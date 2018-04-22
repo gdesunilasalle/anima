@@ -29,6 +29,9 @@ foreach ($caronas as $info) {
 			'.$info->origemusuario.'</p>
 			<p class="text-secondary">
 			'.$info->destinousuario.'</p>
+      <p>
+      <a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
+      </p>
 			<p class="text-secondary">Hoje -
 			'.$info->horariousuario.'h</p>
 			<p class="text-secondary">

@@ -19,17 +19,17 @@
    			<?php echo form_error('dnomecompleto'); ?>
         <font class="required">Nome Completo</font>
 <input type="text" readonly placeholder="Digite aqui seu nome completo" class="form-control" name="dnomecompleto" id="dnomecompleto" oninvalid="this.setCustomValidity('Não esqueça de preencher seu nome completo!')"
-onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_nomecompleto); ?>" required>
+onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_nomecompleto); ?>">
 <br>
 <font class="required">Email</font> <br>
 <?php echo form_error('demail'); ?>
 <input type="text" readonly placeholder="Digite aqui seu email La Salle (exemplo@soulasalle.com.br ou exemplo@lasalle.org)" class="form-control" name="demail" id="demail" oninvalid="this.setCustomValidity('Não esqueça de preencher seu email da La Salle!')"
-onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_email); ?>" required>
+onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_email); ?>">
 <br>
 <font class="required">Matrícula</font> <br>
 <?php echo form_error('dmatricula'); ?>
 <input type="text" readonly placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
-onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_matricula); ?>" required>
+onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_matricula); ?>">
 <br>
 <script>
     function curso_outros(that) {
@@ -44,7 +44,6 @@ onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_ma
   <select required class="form-control" name="dcurso" onchange="curso_outros(this);">
     <option selected value="<?php echo ($dadosusuario->cursousuario); ?>"><?php echo ($dadosusuario->cursousuario); ?></option>
     <option disabled>Graduação:</option>
-    <option value="Unilasalle-RJ">Unilasalle-RJ</option>
     <option value="Administração">Administração</option>
     <option value="Arquitetura e Urbanismo">Arquitetura e Urbanismo</option>
     <option value="Ciências Contábeis">Ciências Contábeis</option>

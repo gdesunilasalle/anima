@@ -26,6 +26,9 @@ echo $this->session->flashdata('message').'<div class="card w-100">
 			'.$info->origemusuario.'</p>
 			<p class="text-secondary">
 			'.$info->destinousuario.'</p>
+      <p>
+      <a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
+      </p>
 			<p class="text-secondary">Hoje -
 			'.$info->horariousuario.'h</p>
 			<p class="text-secondary">
@@ -62,6 +65,9 @@ echo $this->session->flashdata('message').
 			'.$info->origemusuario.'</p>
 			<p class="text-secondary">
 			'.$info->destinousuario.'</p>
+      <p>
+      <a class="btn btn-outline-success" target="_blank" href="https://www.google.com/maps/dir/'.$info->origemusuario.'/'.$info->destinousuario.'">Visualizar rota</a>
+      </p>
 			<p class="text-secondary">Hoje -
 			'.$info->horariousuario.'h</p>
 			<p class="text-secondary">
