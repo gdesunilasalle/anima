@@ -16,9 +16,11 @@
               <p class="text-muted">Gestor do Projeto Anima<br>Desenvolvedor Full stack</p>
             <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="mailto:leonardo.martelotte@soulasalle.com.br" target="_Blank">
-                    <i class="fa fa-envelope"></i></a>
-                  <li class="list-inline-item">
+                  <a href="https://github.com/leonardomartelotte" target="_Blank">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
                     <a href="https://br.linkedin.com/in/leonardo-martelotte-a727a550" target="_Blank">
                       <i class="fa fa-linkedin"></i>
                   </a>
@@ -118,7 +120,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <br>
-            <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Estaremos sempre nos aperfeiçoando para melhorarmos cada vez mais a qualidade de nosso serviço. Obrigado por escolher o Anima.</p>
+            <p class="large text-muted">Desenvolvemos um serviço ajustado a sua necessidade. Obrigado por escolher o Anima.</p>
           </div>
         </div>
       </div>
