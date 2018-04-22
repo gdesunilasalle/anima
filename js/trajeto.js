@@ -1,4 +1,4 @@
-var mensagem2 = "";
+﻿var mensagem2 = "";
 var casag = "";
 
 function endereco(address, casa) {
@@ -64,24 +64,24 @@ function loadestimativa(casa) {
   switch (transporte) {
     case "A pé":
       mensagem2 = "<br><br>Opa, notei que a pé demora ";
-      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&mode=walking&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback);
+      url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&mode=walking&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      loadJSON(url, callback, 'jsonp');
       return;
     case "Carro":
     case "Uber":
     case "Táxi":
       mensagem2 = "<br><br>Opa, notei que de carro nesse momento está demorando ";
-      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback);
+      url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      loadJSON(url, callback, 'jsonp');
       return;
     case "Ônibus":
       mensagem2 = "<br><br>Opa, notei que de ônibus, nesse momento está demorando ";
-      url = "https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback);
+      url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      loadJSON(url, callback, 'jsonp');
       return;
     case "Bicicleta":
       mensagem2 = '<br><br>Opa, notei que de bike nesse momento está demorando ';
-      url = "https://maps.googleapis.com/maps/api/distancematrix/json?&mode=bicycling&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
+      url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?&mode=bicycling&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
       loadJSON(url, callback);
       return;
     default:
@@ -102,5 +102,4 @@ function callback(data) {
 
 function setup() {
   noCanvas();
-  setInterval(loadestimativa(casag), 1000);
 }
