@@ -65,19 +65,19 @@ function loadestimativa(casa) {
     case "A pé":
       mensagem2 = "<br><br>Opa, notei que a pé demora ";
       url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&mode=walking&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback, 'jsonp');
+      loadJSON(url, callback);
       return;
     case "Carro":
     case "Uber":
     case "Táxi":
       mensagem2 = "<br><br>Opa, notei que de carro nesse momento está demorando ";
       url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback, 'jsonp');
+      loadJSON(url, callback);
       return;
     case "Ônibus":
       mensagem2 = "<br><br>Opa, notei que de ônibus, nesse momento está demorando ";
       url = "http://crossorigin.me/https://maps.googleapis.com/maps/api/distancematrix/json?&departure_time=now&mode=transit&transit_mode=bus&origins=" + origem + "&destinations=" + destino + "&key=AIzaSyD7u7OILQGaak0e4TQoCgJHr5oDNxa6hgM";
-      loadJSON(url, callback, 'jsonp');
+      loadJSON(url, callback);
       return;
     case "Bicicleta":
       mensagem2 = '<br><br>Opa, notei que de bike nesse momento está demorando ';
