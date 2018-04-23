@@ -1,6 +1,6 @@
    <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
 <div class="footer-copyright py-0 text-center sombras text-white" style="background-color:#660298;">
-&nbsp;                    
+&nbsp;
 </div>
   </style>
     <!-- Como funciona? Modals -->
@@ -32,7 +32,6 @@
         </div>
       </div>
     </div>
-
     <!-- Modal 4 -->
     <div class="comofunciona-modal modal fade" id="comofuncionaModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
@@ -119,60 +118,7 @@
         </div>
       </div>
     </div>
-    <!-- alertaModal1 = REMOVER CARONA -->
-    <div class="comofunciona-modal modal fade" id="alertaModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body" align="center">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">REMOVER CARONA?</h2>
-                  <p class="item-intro text-muted">Tem certeza que deseja remover a carona?</p>
-                  <p><a href="<?php echo base_url('apagacarona'); ?>" class="btn btn-danger">Remover carona</a></p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Cancelar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- alertaModal2 = SAIR DA CARONA -->
-    <div class="comofunciona-modal modal fade" id="alertaModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body" align="center">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">SAIR DA CARONA?</h2>
-                  <p class="item-intro text-muted">Tem certeza que deseja sair da carona?</p>
-                  <a href="<?php $email = $this->session->userdata('email'); echo base_url('apagacarona/sairdacarona/'); echo $email; ?>" class="btn btn-danger">Sair da carona</a></p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Cancelar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
