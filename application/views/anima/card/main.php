@@ -1,5 +1,4 @@
-<div>
-<header class="martelotte">
+<header class="martelotte"  id="wrap">
 <div class="container">
 <center>
 <section id="cadastro">
@@ -258,3 +257,21 @@ echo '
 </div>
 </div>
 </header>
+<div class="py-0 text-secundary" style="position: fixed; width: 100%; bottom: 0; background-color:#660298;">
+&nbsp;
+</div>
+<!-- INÍCIO DO RODAPÉ -->
+<!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
+
+
+</body>
+<script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
+<script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<!-- Plugin JavaScript -->
+<script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+<!-- Contato form JavaScript -->
+<script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
+<script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
+<!-- Custom scripts for this template -->
+<script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
+</html>

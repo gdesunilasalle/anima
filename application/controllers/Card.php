@@ -24,7 +24,6 @@ if($this->session->userdata('logado')){
 
         $this->load->view('anima/card/topo');
         $this->load->view('anima/card/main',$detalhes);
-        $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }
