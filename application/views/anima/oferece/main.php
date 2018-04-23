@@ -1,6 +1,5 @@
-<header class="martelotte">
+<header class="martelotte" id="wrap">
 <div class="container">
-<center>
 <section id="cadastro">
       <div class="container">
             <h2 class="section-heading text-uppercase sombras">Oferecer carona</h2>
@@ -87,7 +86,17 @@ echo '<input type="hidden" name="dcurso" value="'.$infocurso->cursousuario.'">
 <br>
 <?php echo form_submit(array('id' => 'submit', 'value' => 'Salvar proposta', 'class'=>'btn btn-primary btn-l')); ?>
 </div>
-<br>
+
+
 <?php echo form_close(); ?></div>
 </center>
 <?php break;} ?>
+
+<!-- INÍCIO DO RODAPÉ -->
+<!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
+<div class="py-0 text-secundary" style="position: fixed; width: 100%; bottom: 0; background-color:#660298;">
+&nbsp;
+</div>
+</style>
+</body>
+</html>

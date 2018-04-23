@@ -1,5 +1,5 @@
    <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
-   <div class="footer-copyright py-3 text-center sombras text-white" style="background-color:#660298;">
+   <div class="footer-copyright py-0 text-center sombras text-white" style="background-color:#660298;">
                       <font class="text-center">©Copyright 2018 <a href="#"> Anima </a> Todos os direitos reservados</font>
                    </div>
   </style>

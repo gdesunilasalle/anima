@@ -15,13 +15,12 @@ $data['curso'] = $this->oferece_model->buscacurso();
 
 
 /* INICIO DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
-$data['host'] = $this->confirma_model->confirma_host(); 
-$data['passageiro'] = $this->confirma_model->confirma_passageiro(); 
+$data['host'] = $this->confirma_model->confirma_host();
+$data['passageiro'] = $this->confirma_model->confirma_passageiro();
 /* FIM DAS FUNÇOES DE CONFERE CARONAS ATIVAS COMO HOST OU PASSAGEIRO */
 
     $this->load->view('anima/oferece/topo');
     $this->load->view('anima/oferece/main',$data);
-    $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }
