@@ -1,9 +1,10 @@
-<section id="contato">
+<header class="martelotte" id="wrap">
+<section>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading-text-uppercase">Envie suas dúvidas, críticas ou sugestões!</h2>
-            <h3 class="section-subheading">Entraremos em contato o mais rápido possível</h3>
+            <h2 class="section-heading-text-uppercase sombras">Envie suas dúvidas, críticas ou sugestões!</h2>
+            <h3 class="section-subheading sombras">Entraremos em contato o mais rápido possível</h3>
             <?php echo $this->session->flashdata('message');?>
           </div>
         </div>
@@ -13,24 +14,24 @@
             <form id="contatoForm" name="envie sua mensagem" novalidate>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="form-group">
+                  <div class="form-group" align="left">
                     <font class="required">Nome</font> <br>
                     <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite aqui o seu nome" required data-validation-required-message="Entre com seu nome.">
                     <p class="help-block text-danger"></p>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" align="left">
                     <font class="required">Email</font> <br>
                     <input class="form-control" id="email" name="email" type="email" placeholder="Digite aqui seu email" required data-validation-required-message="Entre com seu endereço de email.">
                     <p class="help-block text-danger"></p>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" align="left">
                     <font class="required">Telefone</font> <br>
                     <input class="form-control" id="telefone" name="telefone" type="tel" placeholder="Digite aqui seu telefone com DDD e código de país" required data-validation-required-message="Entre com seu telefone.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group">
+                  <div class="form-group" align="left">
                     <font class="required">Mensagem</font> <br>
                     <textarea class="form-control" id="mensagem" name="mensagem" style="margin-top: 0px; margin-bottom: 0px; height: 196px;" placeholder="Digite aqui a mensagem a ser enviada" required data-validation-required-message="Entre com a mensagem."></textarea>
                     <p class="help-block text-danger"></p>
@@ -47,5 +48,22 @@
           </div>
         </div>
       </div>
-      <br><br><br><br>
     </section>
+</header>
+    <!-- INÍCIO DO RODAPÉ -->
+    <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
+    <div class="py-0 text-secundary" style="position: fixed; width: 100%; bottom: 0; background-color:#660298;">
+    &nbsp;
+    </div>
+    </style>
+    </body>
+    <script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <!-- Plugin JavaScript -->
+    <script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+    <!-- Contato form JavaScript -->
+    <script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
+    <script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
+    <!-- Custom scripts for this template -->
+    <script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
+    </html>

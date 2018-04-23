@@ -1,4 +1,4 @@
-<?php  
+<?php
 class Contato extends CI_Controller {
 function __construct() {
 parent::__construct();
@@ -6,12 +6,11 @@ $this->load->model('contato_model');
 }
 public function index(){
       ob_start();
-    
+
     if($this->session->userdata('logado')){
 
     $this->load->view('anima/contato/topo');
     $this->load->view('anima/contato/main');
-    $this->load->view('index/rodape');
         }else{
                 redirect(base_url());
         }
@@ -29,10 +28,8 @@ $this->session->set_flashdata('message', '
 if($this->session->userdata('logado')){
 
         redirect(base_url('contato'));}else{
-                
+
                 redirect(base_url());
         }
 }
 }
-
-

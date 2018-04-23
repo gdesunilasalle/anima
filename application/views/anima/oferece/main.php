@@ -99,4 +99,13 @@ echo '<input type="hidden" name="dcurso" value="'.$infocurso->cursousuario.'">
 </div>
 </style>
 </body>
+<script src="<?php echo base_url('vendor/jquery/jquery.min.js'); ?>"></script>
+<script src="<?php echo base_url('vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<!-- Plugin JavaScript -->
+<script src="<?php echo base_url('vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+<!-- Contato form JavaScript -->
+<script src="<?php echo base_url('js/jqBootstrapValidation.js'); ?>"></script>
+<script src="<?php echo base_url('js/contato_me.js'); ?>"></script>
+<!-- Custom scripts for this template -->
+<script src="<?php echo base_url('js/agency.min.js'); ?>"></script>
 </html>
