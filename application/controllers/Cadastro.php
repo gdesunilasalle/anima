@@ -18,7 +18,7 @@ $this->form_validation->set_rules('dnomecompleto', 'Nome completo', 'required|mi
 $this->form_validation->set_rules('demail', 'E-mail', 'required|valid_email|callback_email_check');
 $this->form_validation->set_message('email_check', 'É obrigatório o uso de email com os domínios @soulasalle.com.br ou @lasalle.org.br');
 //VALIDAÇÃO DA MATRÍCULA
-$this->form_validation->set_rules('dmatricula', 'Matrícula La Salle', 'required|regex_match[/^[0-9]{10}$/]', 'required|min_length[6]');
+$this->form_validation->set_rules('dmatricula', 'Matrícula La Salle');
 //VALIDAÇÃO DO LOGRADOURO
 $this->form_validation->set_rules('dlogradouro', 'Logradouro', 'required');
 //VALIDAÇÃO DA CIDADE
