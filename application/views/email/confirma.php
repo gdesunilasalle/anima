@@ -16,7 +16,6 @@ $username = ucwords($username);
 <p>Olá <?php echo $username;?>!</p>
 <p>Seus dados foram alterados com sucesso, obrigado por usar o Anima!</p>
 <br>
-<p>Este é um e-mail automático, por favor não responda. Qualquer dúvida ou problema com o seu registro, favor entrar em contato através do formulário em nosso site <a style="color:#660298;" href="www.anima.pe.hu" target="_blank">www.anima.pe.hu</a></p>
 <p><i>Equipe Anima<i></p>
 <br>
 </div>

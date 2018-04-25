@@ -5,6 +5,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading-text-uppercase sombras">Envie suas dúvidas, críticas ou sugestões!</h2>
             <h3 class="section-subheading sombras">Entraremos em contato o mais rápido possível</h3>
+            <?php echo $this->session->flashdata('message_contato');?>
           </div>
         </div>
         <?php echo form_open('contato/grava'); ?>

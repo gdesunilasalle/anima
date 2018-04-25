@@ -52,7 +52,7 @@ $data = array(
 'hash' => md5(rand(0, 1000)),
 );
 //ENVIA EMAIL
-      $this->email->from('anima@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
+      $this->email->from('anima.uni@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
       $address = $_POST['demail']; //EMAIL DE DESTINO
       $subject="Dados cadastrais alterados com sucesso!";  //TITULO EMAIL
       $body = $this->load->view('email/confirma.php',$address,TRUE);
