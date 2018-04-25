@@ -80,7 +80,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dcep');?>" re
 <br>
 <font class="required">Cidade</font> <br>
 <?php echo form_error('dcidade'); ?>
-<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dbairro');?>" required>
+<input type="text" readonly placeholder="Informe o CEP para preenchimento automático" class="form-control" name="dcidade" id="dcidade" oninvalid="this.setCustomValidity('Informe o CEP para preenchimento automático da cidade!')" onchange="this.setCustomValidity('')" value="<?php echo set_value('dcidade');?>" required>
 <br>
 Complemento <br>
 <?php echo form_error('dcomplemento'); ?>
