@@ -28,7 +28,7 @@ onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_em
 <br>
 <font class="required">Matrícula</font> <br>
 <?php echo form_error('dmatricula'); ?>
-<input type="text" readonly placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" size="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
+<input type="text" readonly placeholder="Digite sua matrícula da La Salle" class="form-control" name="dmatricula" id="dmatricula" maxlength="10" oninvalid="this.setCustomValidity('Não esqueça de preencher a sua matricula da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_matricula); ?>">
 <br>
 <script>
