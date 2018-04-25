@@ -24,7 +24,7 @@
 <input id="dusuario" name="dusuario" type="hidden" value="<?php print_r($this->session->userdata('email'));?>">
 <?php foreach ($local as $info) { ?>
 <div class="col-8">
-<select required class="form-control form-control-lg" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
+<select required class="form-control form-control-md" name="dmeiotransporte" id="select-transporte" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value> Meio de Transporte </option>
     <option value="A pé">A pé</option>
     <option value="Carro">Carro</option>
@@ -34,7 +34,7 @@
     <option value="Táxi">Táxi</option>
   </select>
   <br>
-  <select required class="form-control form-control-lg" name="dhorario">
+  <select required class="form-control form-control-md" name="dhorario">
     <option disabled selected value> Horário </option>
   <?php
 date_default_timezone_set("America/Sao_Paulo");
@@ -54,7 +54,7 @@ $minutes = $now['minutes'] - $now['minutes']%30;
   }?>
 </select>
   <br>
-  <select required class="form-control form-control-lg" name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
+  <select required class="form-control form-control-md" name="dorigem" id="select-origem" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value>Origem</option>
     <option value="<?php echo $info->logradourousuario.' - '.$info->bairrousuario.' - '.$info->cidadeusuario;?>"><?php echo $info->logradourousuario.' - '.$info->bairrousuario.' - '.$info->cidadeusuario;?></option>
     <option value="Unilasalle-RJ">Unilasalle-RJ</option>
@@ -66,7 +66,7 @@ $minutes = $now['minutes'] - $now['minutes']%30;
     <option value="Bay Market">Bay Market</option>
   </select>
   <br>
-  <select required class="form-control form-control-lg" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
+  <select required class="form-control form-control-md" name="ddestino" id="select-destino" onchange="loadestimativa('<?php echo $info->logradourousuario;?>');"><!-- Receber o logradouro dentro dos parenteses dessa função (Parametro)    -->
     <option disabled selected value>Destino</option>
     <option value="Unilasalle-RJ">Unilasalle-RJ</option>
     <option value="<?php echo $info->logradourousuario.' - '.$info->bairrousuario.' - '.$info->cidadeusuario;?>"><?php echo $info->logradourousuario.' - '.$info->bairrousuario.' - '.$info->cidadeusuario;?></option>
