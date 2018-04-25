@@ -5,6 +5,7 @@
 
           </div>
           <?php echo $this->session->flashdata('message');?>
+          <?php echo $this->session->flashdata('message_contato');?>
           <?php if(isset($e)){ echo $e->getMessage();}?>
           <?php echo form_open('usuarios');?>
      <center>

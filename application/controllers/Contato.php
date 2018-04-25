@@ -23,7 +23,7 @@ public function grava(){
       'mensagem'        => $this->input->post('mensagem'),
 );
 $this->contato_model->enviacontato($data);
-$this->session->set_flashdata('message', '
+$this->session->set_flashdata('message_contato', '
 <div class="alert alert-success" role="alert"><strong>Mensagem enviada com sucesso! </strong>Obrigado por entrar em contato, responderemos em breve!</div>');
 if($this->session->userdata('logado')){
 
