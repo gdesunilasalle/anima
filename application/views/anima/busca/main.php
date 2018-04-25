@@ -49,11 +49,12 @@ form_submit(array('id' => 'submit', 'value' => 'Animo!', 'class'=>'btn btn-prima
 ?>
 </div>
 </div>
-<div class="py-0 text-secundary" style="width: 100%; background-color:#660298;">
+</header>
+<div class="py-0 text-secundary" style="position: fixed; width: 100%; bottom: 0; background-color:#660298;">
 &nbsp;
 </div>
-</header>
 </section>
+
 
 <!-- INÍCIO DO RODAPÉ -->
 <!--<div class="copyright  intro-lead-in sombras text-white" style="background-color:#660298"> -->
