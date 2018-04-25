@@ -17,6 +17,7 @@ $username = ucwords($username);
 <p>Obrigado por fazer parte do Anima, sua conta foi criada com sucesso!</p>
 <p>Clique <a style="color:#660298;" href="<?php echo base_url().'index.php/user_registration?'.'email='.$_POST['demail'].'&hash='.$hash;?>">AQUI</a> para validar o seu cadastro!</p>
 <br>
+<p>Este é um e-mail automático, por favor não responda. Qualquer dúvida ou problema com o seu registro, favor entrar em contato através do formulário em nosso site <a style="color:#660298;" href="www.anima.pe.hu" target="_blank">www.anima.pe.hu</a></p>
 <p><i>Equipe Anima<i></p>
 <br>
 </div>
