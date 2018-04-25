@@ -15,7 +15,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dnomecompleto
 <br>
 <font class="required">Email</font> <br>
 <?php echo form_error('demail'); ?>
-<input type="text" placeholder="Digite aqui seu email La Salle (exemplo@soulasalle.com.br ou exemplo@lasalle.org)" class="form-control" name="demail" id="demail" oninvalid="this.setCustomValidity('Não esqueça de preencher seu email da La Salle!')"
+<input type="text" placeholder="Digite aqui seu email La Salle (@soulasalle.com.br ou @lasalle.org.br)" class="form-control" name="demail" id="demail" oninvalid="this.setCustomValidity('Não esqueça de preencher seu email da La Salle!')"
 onchange="this.setCustomValidity('')" value="<?php echo set_value('demail');?>" required>
 <br>
 <font class="required">Matrícula</font> <br>
@@ -33,6 +33,7 @@ onchange="this.setCustomValidity('')" value="<?php echo set_value('dmatricula');
     }
 </script>
   <font class="required">Informe seu Curso ou Cargo</font> <br>
+  <?php echo form_error('dcurso'); ?>
   <select required class="form-control" name="dcurso" onchange="curso_outros(this);">
     <option disabled selected>Selecione</option>
     <option disabled>Graduação:</option>

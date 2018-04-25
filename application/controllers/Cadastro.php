@@ -18,7 +18,9 @@ $this->form_validation->set_rules('dnomecompleto', 'Nome completo', 'required|mi
 $this->form_validation->set_rules('demail', 'E-mail', 'required|valid_email|callback_email_check');
 $this->form_validation->set_message('email_check', 'É obrigatório o uso de email com os domínios @soulasalle.com.br ou @lasalle.org.br');
 //VALIDAÇÃO DA MATRÍCULA
-$this->form_validation->set_rules('dmatricula', 'Matrícula La Salle');
+$this->form_validation->set_rules('dmatricula', 'Matrícula La Salle', 'required|min_length[8]');
+//VALIDAÇÃO DA MATRÍCULA
+$this->form_validation->set_rules('dcurso', 'Curso ou Cargo', 'required');
 //VALIDAÇÃO DO LOGRADOURO
 $this->form_validation->set_rules('dlogradouro', 'Logradouro', 'required');
 //VALIDAÇÃO DA CIDADE
@@ -65,7 +67,7 @@ $data = array(
 );
 
 //ENVIA EMAIL
-$this->email->from('leonardo.martelotte@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
+$this->email->from('anima@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
 $subject="Bem vindo ao Anima!";  //TITULO EMAIL
 $body = $this->load->view('email/cadastra.php', $data, TRUE);
 $this->email->to($data['email']);
