@@ -243,6 +243,7 @@ O ANIMA registra todas as caronas realizadas através do aplicativo e utiliza es
 Uso da informação por outros Usuários.
 Para facilitar a interação entre todos os membros da comunidade do ANIMA, suas soluções permitem um acesso limitado a certos dados de contato dos demais usuários tais como nome de usuário, e-mail e endereço. Ademais, certos dados estarão disponíveis a outros usuários, uma vez que estejam em um contexto de uma mesma carona.
 Sob nenhuma circunstância, se deve comunicar Informação Pessoal ou telefone de outro usuário a nenhum terceiro sem o consentimento do usuário afetado.
+iii. O Anima armazena automaticamente todos os dados das caronas, incluindo os chats, entretanto, não se responsabiliza caso a perda desses dados se dê por razões ou falhas técnicas próprias da empresa que os armazena.
 
 Ordem de autoridades competentes ‐ Requerimentos Legais
 O ANIMA coopera com as autoridades competentes e com terceiros para garantir o cumprimento das leis, por exemplo, em matéria de proteção de direitos de propriedade industrial e intelectual, prevenção de fraudes e outros.

@@ -26,6 +26,7 @@ parent::__construct();
                     $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                 }else{
                     $this->db->query("INSERT INTO transportesemcurso (`usuario`, `passageiro`, `curso`, `especifica_curso`) VALUES ('$data', '$id', '$aderente[cursousuario]', '$aderente[especificacursousuario]')");
+                    $this->db->query("INSERT INTO historicotransportes (`usuario`, `curso`, `especifica_curso`, `passageiro_de`) VALUES ('$data', '$aderente[cursousuario]', '$aderente[especificacursousuario]', '$aderente[proponente]')");
                     $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$proponente', '$data', 'Entrou na carona...')");
                 }
         }

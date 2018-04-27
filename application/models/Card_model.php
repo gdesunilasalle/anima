@@ -34,6 +34,8 @@
         function grava_chat($data)
         {   $email = ($this->session->userdata('email'));
             $this->db->query("INSERT INTO chat (`hora`, `host`, `passageiro`, `mensagem`) VALUES ('$data[hora]', '$data[autor]', '$email', '$data[mensagem]')");
+            $this->db->query("INSERT INTO historicochat (`hora`, `host`, `passageiro`, `mensagem`) VALUES ('$data[hora]', '$data[autor]', '$email', '$data[mensagem]')");
+
         }
         function curso_passageiro()
         {   $email = ($this->session->userdata('email'));

@@ -21,16 +21,16 @@ function gravacarona($data)
             $result = $this->db->query("SELECT * FROM transportesemcurso WHERE usuario = '$email' ")->num_rows();
         if( $result > 0) {
         $this->db->query("UPDATE transportesemcurso SET origem = '$data[origem]', destino = '$data[destino]', horario = '$data[horario]', meiotransporte = '$data[meiotransporte]', usuario = '$data[usuario]', curso = '$data[curso]', especifica_curso = '$data[especificacurso]', host = '$data[host]', passageiro = 0 WHERE usuario = '$email'");
-        $this->db->query("INSERT INTO historicotransportes (`origem`, `destino`, `horario`, `meiotransporte`, `curso`, `especifica_curso`)
-              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[curso]', '$data[especificacurso]')");
+        $this->db->query("INSERT INTO historicotransportes (`origem`, `destino`, `horario`, `meiotransporte`, `curso`, `especifica_curso`, `usuario`, `host`, `passageiro_de`)
+              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[curso]', '$data[especificacurso]', '$data[usuario]', '$data[host]', '0')");
         $this->db->query("DELETE FROM chat WHERE passageiro = '$email'");
         $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$email', '$email', 'Entrou na carona...')");
 } else {
         $email = ($this->session->userdata('email'));
         $this->db->query("INSERT INTO transportesemcurso (`origem`, `destino`, `horario`, `meiotransporte`, `usuario`, `host`, `curso`, `especifica_curso`)
               VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[usuario]', '$data[host]', '$data[curso]', '$data[especificacurso]')");
-        $this->db->query("INSERT INTO historicotransportes (`origem`, `destino`, `horario`, `meiotransporte`, `curso`, `especifica_curso`)
-              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[curso]', '$data[especificacurso]')");
+        $this->db->query("INSERT INTO historicotransportes (`origem`, `destino`, `horario`, `meiotransporte`, `curso`, `especifica_curso`, `usuario`, `host`, `passageiro_de`)
+              VALUES ('$data[origem]', '$data[destino]', '$data[horario]', '$data[meiotransporte]', '$data[curso]', '$data[especificacurso]', '$data[usuario]', '$data[host]', '0')");
         $this->db->query("INSERT INTO chat (`host`, `passageiro`, `mensagem`) VALUES ('$email', '$email', 'Entrou na carona...')");
         }
         }
