@@ -51,6 +51,7 @@ $data = array(
 'is_verified' => '1',
 'hash' => md5(rand(0, 1000)),
 );
+$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
 //ENVIA EMAIL
       $this->email->from('anima.uni@soulasalle.com.br', 'Anima?!'); //EMAIL DE ORIGEM
       $address = $_POST['demail']; //EMAIL DE DESTINO
@@ -63,7 +64,7 @@ $data = array(
       $this->email->send();
 
 //Transfering data to Model
-$this->insert_model->form_update($data);
+$this->insert_model->form_update($data,$file);
 //$this->user_registration_model->insert_record($this->data);
 $this->session->set_flashdata('message', '
 <div class="alert alert-success" role="alert"><strong>Dados cadastrais alterados com sucesso! </strong>Um email de confirmação foi enviado para você!</div>');

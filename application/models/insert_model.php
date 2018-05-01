@@ -6,8 +6,8 @@ parent::__construct();
 function form_insert($data){
 $this->db->insert('cadastrousuario', $data);
 }
-function form_update($data){
+function form_update($data, $file){
 $email = ($this->session->userdata('email'));
-$this->db->query("UPDATE cadastrousuario SET nomecompleto = '$data[nomecompleto]', senha = '$data[senha]', matricula = '$data[matricula]', curso = '$data[curso]', especifica_curso = '$data[especifica_curso]', logradouro = '$data[logradouro]', complemento = '$data[complemento]', bairro = '$data[bairro]', cidade = '$data[cidade]', cep = '$data[cep]' WHERE email = '$email'");
+$this->db->query("UPDATE cadastrousuario SET nomecompleto = '$data[nomecompleto]', foto='$file', senha = '$data[senha]', matricula = '$data[matricula]', curso = '$data[curso]', especifica_curso = '$data[especifica_curso]', logradouro = '$data[logradouro]', complemento = '$data[complemento]', bairro = '$data[bairro]', cidade = '$data[cidade]', cep = '$data[cep]' WHERE email = '$email'");
 }
 }

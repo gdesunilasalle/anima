@@ -10,14 +10,22 @@
 <?php foreach ($dados as $dadosusuario) { ?>
 <div class="card w-95">
 	  <div class="card-header">
+      <?php echo '<img class="mx-auto rounded-circle" src="data:image/jpeg;base64,'.base64_encode($dadosusuario->fotousuario).'" height="60" width="60" class="img-thumnail" />';?>
+      <br>
+      <br>
     <h5 class="text-success">Olá, <?php echo ($dadosusuario->edita_nomecompleto); ?>. O que deseja alterar? </h5>
     <?php echo $this->session->flashdata('message');?>
   </div>
   <div class="card-body">
-<?php echo form_open('alteracadastro'); ?>
+<?php echo form_open_multipart('alteracadastro');?>
    		<p align="left" class="text-secondary">
-   			<?php echo form_error('dnomecompleto'); ?>
-        <font class="required">Nome Completo</font>
+Foto do usuário
+<br>
+<input type="file" name="image" id="image" accept="image/*">
+<br>
+<br>
+<?php echo form_error('dnomecompleto'); ?>
+<font class="required">Nome Completo</font>
 <input type="text" readonly placeholder="Digite aqui seu nome completo" class="form-control" name="dnomecompleto" id="dnomecompleto" oninvalid="this.setCustomValidity('Não esqueça de preencher seu nome completo!')"
 onchange="this.setCustomValidity('')" value="<?php echo ($dadosusuario->edita_nomecompleto); ?>">
 <br>
