@@ -17,10 +17,10 @@ public function index(){
     }
 public function grava(){
       $data = array(
-      'nome' => $this->input->post('nome'),
-      'email'         => $this->input->post('email'),
-      'telefone'        => $this->input->post('telefone'),
-      'mensagem'        => $this->input->post('mensagem'),
+      'nome'     => $this->input->post('nome'),
+      'email'    => $this->input->post('email'),
+      'telefone' => $this->input->post('telefone'),
+      'mensagem' => $this->input->post('mensagem'),
 );
 $this->contato_model->enviacontato($data);
 $this->session->set_flashdata('message_contato', '

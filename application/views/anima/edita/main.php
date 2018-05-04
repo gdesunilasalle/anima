@@ -10,7 +10,12 @@
 <?php foreach ($dados as $dadosusuario) { ?>
 <div class="card w-95">
 	  <div class="card-header">
-      <?php echo '<img class="mx-auto rounded-circle" src="data:image/jpeg;base64,'.base64_encode($dadosusuario->fotousuario).'" height="60" width="60" class="img-thumnail" />';?>
+      <?php if ($dadosusuario->fotousuario){
+        echo '<img class="mx-auto rounded-circle" src="data:image/jpeg;base64,'.base64_encode($dadosusuario->fotousuario).'" height="60" width="60" class="img-thumnail">';
+      }else{
+        echo '<img class="mx-auto rounded-circle" src="'.base_url('img/user-icon-1.png').'" height="60" width="60" class="img-thumnail">';
+      }
+      ?>
       <br>
       <br>
     <h5 class="text-success">Olá, <?php echo ($dadosusuario->edita_nomecompleto); ?>. O que deseja alterar? </h5>

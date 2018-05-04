@@ -7,7 +7,7 @@ parent::__construct();
  function enviacontato($data){
 
 $this->email->from($data['email'], $data['nome']); //EMAIL DE ORIGEM
-      $address = 'leonardo.martelotte@soulasalle.com.br'; //EMAIL DE DESTINO
+      $address = 'anima.uni@soulasalle.com.br'; //EMAIL DE DESTINO
       $subject="Contato Usuário Anima";  //TITULO EMAIL
       $message= /*-----------INICIO DO CORPO DO EMAIL-----------*/
       $data['email'].'
