@@ -6,10 +6,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sql137.main-hosting.eu',
-	'username' => 'u681875341_anima',
-	'password' => 'DlcUem3k21u9',
-	'database' => 'u681875341_anima',
+	'hostname' => '185.201.11.176',
+	'username' => 'u819903730_anima',
+	'password' => 'fqGz5EZ2aVL8',
+	'database' => 'u819903730_anima',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
