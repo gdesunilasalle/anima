@@ -53,7 +53,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('contato'); ?>">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('editausuario'); ?>">Dados cadastrais</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('EditaUsuario'); ?>">Dados cadastrais</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="<?php echo base_url('logout');?>">Sair</a>

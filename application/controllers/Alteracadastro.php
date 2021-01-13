@@ -32,7 +32,7 @@ $this->form_validation->set_rules('dconfirmasenha', 'Confirmação de senha', 'r
 if ($this->form_validation->run() == FALSE) {
 $data = array('nomecompleto','email', 'matricula','logradouro' ,'bairro', 'cidade', 'complemento', 'cep');
 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><strong>Erro! </strong>Os dados inseridos são inválidos.<br>Preencha corretamente os dados cadastrais.</a><br></div>');
-                redirect(base_url('editausuario'));
+                redirect(base_url('EditaUsuario'));
 } else {
 //Setting values for tabel columns
 $criptografado = password_hash($this->input->post('dsenha'), PASSWORD_DEFAULT);
@@ -68,7 +68,7 @@ $this->insert_model->form_update($data,$file);
 //$this->user_registration_model->insert_record($this->data);
 $this->session->set_flashdata('message', '
 <div class="alert alert-success" role="alert"><strong>Dados cadastrais alterados com sucesso! </strong>Um email de confirmação foi enviado para você!</div>');
-redirect(base_url('editausuario'));
+redirect(base_url('EditaUsuario'));
 }
 }
 }
